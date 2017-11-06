@@ -168,3 +168,32 @@
 \a nrResizeWindow(cdsLibManager list(-1082 1703 941 569))
 \a nrResizeWindow(cdsLibManager list(2758 1703 941 569))
 \a nrResizeWindow(cdsLibManager list(-1082 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(2758 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(-1082 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(2758 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(-1082 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(2758 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(-1082 1703 941 569))
+\a nrResizeWindow(cdsLibManager list(-1082 503 941 569))
+\a nrResizeWindow(cdsLibManager list(2758 503 941 569))
+\a nrSetCurrentWindow(cdsLibManager)
+\a cdsLibManager->libListBox->value = nil
+\a cdsLibManager->cellListBox->value = nil
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->cellLineEdit->value = ""
+\a cdsLibManager->libLineEdit->value = ""
+\a cdsLibManager->libListBox->value = "ee315_project"
+\a cdsLibManager->libLineEdit->value = "ee315_project"
+\a cdsLibManager->cellListBox->value = "hw_comparator_testbench"
+\a cdsLibManager->cellLineEdit->value = "hw_comparator_testbench"
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a cdsLibManager->viewListBox->value = nil
+\a cdsLibManager->viewLineEdit->value = ""
+\a cdsLibManager->viewListBox->value = "schematic"
+\a cdsLibManager->viewLineEdit->value = "schematic"
+\a nrSetCurrentWindow(cdsLibManager)
+\a nrSetWindowVisibility(cdsLibManager "hide")
+\o libManager is exiting.
+\a exit(0)
