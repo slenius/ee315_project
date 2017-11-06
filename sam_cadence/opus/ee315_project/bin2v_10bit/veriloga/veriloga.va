@@ -1,0 +1,17 @@
+// VerilogA for Project_Lib2, bin2v_10bit, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module bin2v_10bit(Din, Vout);
+input [0:9] Din;
+electrical [0:9] Din;
+output Vout;
+electrical Vout;
+
+analog begin
+
+V(Vout) <+ (((V(Din[9])*512+V(Din[8])*256+V(Din[7])*128+V(Din[6])*64+V(Din[5])*32+V(Din[4])*16+V(Din[3])*8+V(Din[2])*4+V(Din[1])*2+V(Din[0]))-511*1.2)/(1.2*1024));
+
+end
+endmodule

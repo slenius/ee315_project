@@ -1,0 +1,26 @@
+simulator( 'spectre )
+design(	 "/home/sam/ee315_project/sam_cadence/simulation/hw_comparator_testbench/spectre/schematic/netlist/netlist")
+resultsDir( "/home/sam/ee315_project/sam_cadence/simulation/hw_comparator_testbench/spectre/schematic" )
+modelFile( 
+    '("/afs/ir.stanford.edu/class/ee315/models/ee315_90nm.mod" "")
+)
+analysis('dc ?saveOppoint t  ?captab t  )
+analysis('tran ?stop "20n"  ?errpreset "conservative"  ?tranNoise "Transient Noise"  
+		?noisefmax "VAR(\"FMAX\")"  ?noisefmin ""  ?noiseseed "1"  ?noisescale ""  
+		?noisetmin ""  ?noiseupdate ""  ?tranNoiseMultiRuns "Multiple Runs"  ?noiseruns "1000"  
+		?noiseonoff ""  ?noiseinst ""  )
+desVar(	  "vid" 100u	)
+desVar(	  "vdd" 1.2	)
+desVar(	  "vcm" 600m	)
+desVar(	  "Cu" 2.5f	)
+desVar(	  "FMAX" "100g"	)
+envOption(
+	'firstRun  nil 
+	'autoDisplay  nil 
+	'analysisOrder  list("tran" "noise" "dc") 
+)
+save( 'v "/vop" "/vom" )
+temp( 27 ) 
+run()
+output\ histogram = histo(value((VT("/vop") - VT("/vom")) 2e-08) 2 -1.8 1.8)
+plot( output\ histogram ?expr '( "output histogram" ) )

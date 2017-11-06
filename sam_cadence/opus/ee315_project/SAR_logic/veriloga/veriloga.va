@@ -1,0 +1,98 @@
+// VerilogA for Project_Lib2, SAR_logic, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module SAR_logic(phiC, phiS, outp, outm, Dout, conP, conM) ;
+
+	output [0:9] Dout;
+	output [0:9] conP;
+	output [0:9] conM;
+	
+	input phiC, phiS, outp, outm;
+	
+	electrical [0:9] Dout;
+	electrical [0:9] conP;
+	electrical [0:9] conM;
+	electrical phiC, phiS, outp, outm;
+
+	parameter integer bits= 10;
+	parameter real tL= 80p from [0:inf);   //models the logic delay, do not change
+	parameter real vh= 1.2;
+	parameter real vl= 0.0;
+	
+        parameter real tt = 50p from [0:inf); //Transition time, do not change
+
+	real adc_out[0:bits-1], dac_controlP[0:bits-1], dac_controlM[0:bits-1];
+	
+	integer i, index, state;
+
+	analog begin
+	
+	@(cross(V(phiS)-0.5*vh, +1)) begin
+	
+		index= bits-1;
+		state=0;
+		for(i=bits-1; i>=0; i= i-1) begin
+			dac_controlP[i]= vl;
+			dac_controlM[i]=vl;
+			adc_out[i]=vl;
+		end
+	end
+
+	@(cross(V(phiS)-0.5*vh, -1)) begin
+	
+ 		state=1;
+	end
+
+	@(cross(V(phiC)-0.5*vh, -1)) begin
+		if (index >=0 && state==1) begin
+                        if((V(outp)-V(outm)) > 0.9*vh) begin
+                        	adc_out[index]= vh;
+				dac_controlP[index]= vh;
+				dac_controlM[index]= vl;
+			end
+                        if((V(outp)-V(outm)) < 0.1*vh) begin
+                        	adc_out[index]= vl;
+				dac_controlP[index]= vl;
+                                dac_controlM[index]= vh;
+			end
+                        index= index-1;
+                end
+	end
+
+	V(conP[9]) <+ transition(dac_controlP[9],tL,tt);
+	V(conP[8]) <+ transition(dac_controlP[8],tL,tt);
+	V(conP[7]) <+ transition(dac_controlP[7],tL,tt);
+	V(conP[6]) <+ transition(dac_controlP[6],tL,tt);
+	V(conP[5]) <+ transition(dac_controlP[5],tL,tt);
+	V(conP[4]) <+ transition(dac_controlP[4],tL,tt);
+	V(conP[3]) <+ transition(dac_controlP[3],tL,tt);
+	V(conP[2]) <+ transition(dac_controlP[2],tL,tt);
+	V(conP[1]) <+ transition(dac_controlP[1],tL,tt);
+	V(conP[0]) <+ transition(dac_controlP[0],tL,tt);
+	
+	V(conM[9]) <+ transition(dac_controlM[9],tL,tt);
+        V(conM[8]) <+ transition(dac_controlM[8],tL,tt);
+        V(conM[7]) <+ transition(dac_controlM[7],tL,tt);
+        V(conM[6]) <+ transition(dac_controlM[6],tL,tt);
+        V(conM[5]) <+ transition(dac_controlM[5],tL,tt);
+        V(conM[4]) <+ transition(dac_controlM[4],tL,tt);
+        V(conM[3]) <+ transition(dac_controlM[3],tL,tt);
+        V(conM[2]) <+ transition(dac_controlM[2],tL,tt);
+        V(conM[1]) <+ transition(dac_controlM[1],tL,tt);
+        V(conM[0]) <+ transition(dac_controlM[0],tL,tt);
+
+	V(Dout[9]) <+ transition(adc_out[9],tL,tt);
+        V(Dout[8]) <+ transition(adc_out[8],tL,tt);
+        V(Dout[7]) <+ transition(adc_out[7],tL,tt);
+        V(Dout[6]) <+ transition(adc_out[6],tL,tt);
+        V(Dout[5]) <+ transition(adc_out[5],tL,tt);
+        V(Dout[4]) <+ transition(adc_out[4],tL,tt);
+        V(Dout[3]) <+ transition(adc_out[3],tL,tt);
+        V(Dout[2]) <+ transition(adc_out[2],tL,tt);
+        V(Dout[1]) <+ transition(adc_out[1],tL,tt);
+        V(Dout[0]) <+ transition(adc_out[0],tL,tt);
+
+end	
+endmodule

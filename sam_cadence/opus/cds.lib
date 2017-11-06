@@ -1,0 +1,5 @@
+# EE315 cds.lib
+DEFINE basic $CDS_INST_DIR/tools/dfII/etc/cdslib/basic
+DEFINE ee315 $EE315_HOME/opus/ee315
+DEFINE ee315_project ~/ee315_project/sam_cadence/opus/ee315_project
+DEFINE Project_Lib2 $EE315_HOME/opus/Project_Lib2
