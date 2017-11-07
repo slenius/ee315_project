@@ -1,6 +1,6 @@
 clear all
 close all
-
+addpath('../common')
 % part C - regeneration time constant
 % hw5 p2 pt c
 
@@ -13,10 +13,10 @@ p1_c.v_fs = 2;
 lsb = p1_c.v_fs / c.n_codes;
 
 % update from captab sims
-c_l = 123e-15;
+c_l = 1.44e-14;
 
 % update from dc op point sim
-gm_m0 = 123e-3;
+gm_m0 = 151.1e-6;
 
 tau = c_l / gm_m0;
 
