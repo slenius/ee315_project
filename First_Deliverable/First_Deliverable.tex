@@ -74,12 +74,72 @@ and is shown below in Figure \ref{fig:InvChain}.
 \end{center}
 \end{figure}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{DC Analysis}
+  We performed DC operating point analysis on the comparator design to extract
+  transconductance for device $M_{0}$ and node capacitance at nodes $vop$ and
+  $vom$ using CAPTAB.
 
+  We measured a transconductance of 151.1${\mu S}$ and a capacitance of 14.4fF.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Regeneration Time Constant}
+  The time constant for the comparator's positive feedback regeneration phase
+  can be computed as
 
+  \begin{equation}
+    \tau = \frac{gm_0}{C_{vop}} = \frac{151.1\mu S}{14.4fF} = 95.3ps
+  \end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Sample Rate}
+  The sample rate is fundamentally limited by the $\tau$ of the comparator
+  combined with the desired reliability, here the probability of experiencing
+  a metastable state on a given conversion - ${P_{meta}}$
 
+  Here, we can directly compute the minimum resolvable voltage at the input as
+
+  \begin{equation}
+    v_{id,min} = 0.5 * P_{meta} * LSB = 997pV
+  \end{equation}
+
+  Where LSB is
+
+  \begin{equation}
+    LSB = \frac{V_{fullscale}}{2^{bits}} = 1.953mV
+  \end{equation}
+
+  We can compute the number of time constants that we are required to wait for
+  the output to resolve this voltage as
+
+  \begin{equation}
+    N_{taus} = ln(\frac{N_{codes}}{P_{meta}}) = 20.7
+  \end{equation}
+
+  With a clock duty cycle of 50\% this allows us to define what the clock
+  period is, as half of the clock cycle is devoted to waiting for the
+  comparator to resolve.
+
+  \begin{equation}
+    T_{clk} = 2 * N_{taus} * \tau = 3.954ns
+  \end{equation}
+
+  \begin{equation}
+    F_{clk,max} = \frac{1}{T_{clk}} = 252.9MHz
+  \end{equation}
+
+  As each conversion requires two cycles for sample and hold, and 10 cycles
+  to perform the conversion, the sample frequency from this clock frequency is
+
+  \begin{equation}
+      T_{sample,max} = 12 * T_{clk} = 47.448ns
+  \end{equation}
+
+  \begin{equation}
+    F_{sample,max} = \frac{1}{T_{sample}} = 21.075 MS/s
+  \end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Thermal Noise Voltage}
 We can model the circuit using the small signal model. We therefore have a gain of
 \begin{equation}
