@@ -23,6 +23,7 @@
 \definecolor{mylilas}{RGB}{170,55,241}
 \graphicspath{{Figures/}}
 \DeclareSIUnit\uvrms{\micro\volt{}_{RMS}}
+\DeclareSIUnit\mvrms{\milli\volt{}_{RMS}}
 
 \begin{document}
 \lstset{language=Matlab,%
@@ -80,7 +81,7 @@ and is shown below in Figure \ref{fig:InvChain}.
   transconductance for device $M_{0}$ and node capacitance at nodes $vop$ and
   $vom$ using CAPTAB.
 
-  We measured a transconductance of 151.1${\mu S}$ and a capacitance of 14.4fF.
+  We measured a transconductance of \SI{151.1}{\micro\siemens} and a capacitance of \SI{14.4}{\femto\farad}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Regeneration Time Constant}
@@ -88,7 +89,7 @@ and is shown below in Figure \ref{fig:InvChain}.
   can be computed as
 
   \begin{equation}
-    \tau = \frac{gm_0}{C_{vop}} = \frac{\SI{151.1e10}{\micro\siemens}}{14.4fF} = 95.3ps
+    \tau = \frac{gm_0}{C_{vop}} = \frac{\SI{151.1e10}{\micro\siemens}}{\SI{14.4}{\femto\farad}} = \SI{95.3}{\pico\second}
   \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,20 +101,20 @@ and is shown below in Figure \ref{fig:InvChain}.
   Here, we can directly compute the minimum resolvable voltage at the input as
 
   \begin{equation}
-    v_{id,min} = 0.5 * P_{meta} * LSB = 997pV
+    v_{id,min} = \frac{1}{2}  P_{meta}  LSB = \SI{997}{\pico\volt}
   \end{equation}
 
   Where LSB is
 
   \begin{equation}
-    LSB = \frac{V_{fullscale}}{2^{bits}} = 1.953mV
+    LSB = \frac{V_{fullscale}}{2^{bits}} = \SI{1.953}{\milli\volt}
   \end{equation}
 
   We can compute the number of time constants that we are required to wait for
   the output to resolve this voltage as
 
   \begin{equation}
-    N_{taus} = ln(\frac{N_{codes}}{P_{meta}}) = 20.7
+    N_{taus} = ln\left(\frac{N_{codes}}{P_{meta}}\right) = 20.7
   \end{equation}
 
   With a clock duty cycle of 50\% this allows us to define what the clock
@@ -121,26 +122,26 @@ and is shown below in Figure \ref{fig:InvChain}.
   comparator to resolve.
 
   \begin{equation}
-    T_{clk} = 2 * N_{taus} * \tau = 3.954ns
+    T_{clk} = 2 N_{taus} \cdot \tau = \SI{3.954}{\nano\second}
   \end{equation}
 
   \begin{equation}
-    F_{clk,max} = \frac{1}{T_{clk}} = 252.9MHz
+    F_{clk,max} = \frac{1}{T_{clk}} = \SI{252.9}{\mega\hertz}
   \end{equation}
 
   As each conversion requires two cycles for sample and hold, and 10 cycles
   to perform the conversion, the sample frequency from this clock frequency is
 
   \begin{equation}
-      T_{sample,max} = 12 * T_{clk} = 47.448ns
+      T_{sample,max} = 12 \cdot T_{clk} = \SI{47.448}{\nano\second}
   \end{equation}
 
   \begin{equation}
-    F_{sample,max} = \frac{1}{T_{sample}} = 21.075 MS/s
+    F_{sample,max} = \frac{1}{T_{sample}} = \SI{21.075}{\mega\siemens\per\second}  % not sure what the call is for unit "sample", but capital S called by \siemens, so should be find for current report. 
   \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Thermal Noise Voltage}
+\section{Thermal Noise Voltage - Hand Analysis}
 We can model the circuit using the small signal model. We therefore have a gain of
 \begin{equation}
 A_v=-\frac{g_{m_n}}{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}
@@ -155,8 +156,70 @@ We can then refer this to the input using the previously derived gain equation t
 \overline{V^2_{in,tot}}=\frac{\overline{V_{out,tot}^2}}{\left|A_v\right|^2}\left(\gamma\left(g_{m_n}+g_{m_p}\right)\left(r_{o,n}||r_{o,p}\right)\frac{kT}{C_L}\right)\left(\frac{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}{g_{m_n}}\right)^2
 \end{equation}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Thermal Noise Voltage - Simulation}
+We run the .noise simulation for the comparator test bench and find
+\begin{equation}
+\overline{V_{out,tot}}=\SI{1.03}{\mvrms}
+\end{equation}
+Referring this back to the input using the gain derived from the previous section ($A_V=1.0678$), we find
+\begin{equation}
+\overline{V_{in,tot}}=\SI{0.96}{\mvrms}
+\end{equation}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Transient Noise Simulation}
+We run the transient noise simulation of the comparator setting FMAX such that
+\begin{equation}
+FMAX=\frac{10}{2\pi\tau}\approx\SI{16.7}{\giga\hertz}
+\end{equation}
+where $\tau$ is the regenerative time constant derived in section III. The simulation results and associated error function fit are shown in Figure \ref{fig:TransientNoise}. From the fit, we find that the associated input referred noise is \SI{0.72}{\mvrms}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{Part_G.eps}
+\caption{Results from transient noise simulation at $\SI{-1}{\milli\volt}$,$\SI{-200}{\micro\volt}$,$\SI{-200}{\micro\volt}$, and $\SI{1}{\milli\volt}$}. 
+\label{fig:TransientNoise}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Total DAC Capacitance}
+The total DAC capacitance is simply the sum of all the DAC capacitors. In each DAC, there are 9 capacitors, with unit capacitor multipliers ($C_u=\SI{2.5}{\femto\farad}$) of 1, 1, 2, 4, 8, 16, 32, 64, and 128. This gives
+\begin{equation}
+C_{DAC_{single}}=256C_u=\SI{0.64}{\pico\farad}
+\end{equation}
+Therefore, the total DAC capacitance for the two DAC configuration is \SI{1.28}{\pico\farad}.
+
+The total sampling noise is simply
+\begin{equation}
+\overline{v_{n,samp}^2}=\frac{2kT}{C_{DAC_{single}}}\rightarrow\overline{v_{n,samp}}=\SI{0.11}{\mvrms}
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{SNR}
+To calculate the SNR, we must first find the total noise, which we write as
+\begin{equation}
+\overline{v_{n,total}^2}=\overline{v_{n,quant}^2}+\overline{v_{n,samp}^2}+\overline{v_{n,comp}^2}
+\end{equation}
+where $\overline{v_{n,samp}^2}$ and $\overline{v_{n,comp}^2}$ were previously calculated. To calculte the sampling noise, we write
+\begin{equation}
+\overline{v_{n,quant}^2}=\frac{\Delta^2}{12}=\frac{\left(\frac{2V_{ref}}{2^B}\right)^2}{12}\rightarrow\overline{v_{n,quant}}=\SI{0.5638}{\mvrms}
+\end{equation}
+where $V_{ref}=\SI{1}{V}$. the total noise is then
+\begin{equation}
+\overline{v_{n,total}}=\SI{0.92}{\mvrms}
+\end{equation}
+The SNR can be written as
+\begin{equation}
+SNR=10\log_{10}\left(\frac{P_{sig}}{P_{noise}}\right)
+\end{equation}
+Assuming a full scale signal amplitude of 2V, we find
+\begin{equation}
+SNR=\SI{ 66.7151}{\decibel}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}
