@@ -13,10 +13,10 @@ p1_c.v_fs = 2;
 lsb = p1_c.v_fs / c.n_codes;
 
 % update from captab sims
-c_l = 123e-15;
+c_l = 17e-15;
 
 % update from dc op point sim
-gm_m0 = 123e-3;
+gm_m0 = 151e-6;
 
 tau = c_l / gm_m0;
 
@@ -45,5 +45,5 @@ n_clks_per_conv = 2 + c.bits;
 t_sample = t_clk * n_clks_per_conv;
 f_sample = 1 / t_sample;
 
-fprintf('maximum sample frequency = %0.0f MHz\n', f_sample/1e6);
+fprintf('maximum sample frequency = %0.3f MHz\n', f_sample/1e6);
 
