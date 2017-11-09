@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  6 NOV 2017 19:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 NOV 2017 18:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -725,29 +725,29 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count191
 \c@blind@pangrammax=\count192
 ))
-Class revtex4-1 Info: Patching array package. on input line 27.
-Class revtex4-1 Info: Patching longtable package on input line 27.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 27.
+Class revtex4-1 Info: Patching array package. on input line 28.
+Class revtex4-1 Info: Patching longtable package on input line 28.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 28.
 
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 27.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 27.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 27.
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 28.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 28.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 28.
 
 (./First_Deliverable.aux)
 \openout1 = `First_Deliverable.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
 
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -831,16 +831,16 @@ File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
 \openout3 = `First_DeliverableNotes.bib'.
 
 \c__siunitx_mathsf_int=\count200
-LaTeX Font Info:    Try loading font information for U+msa on input line 27.
+LaTeX Font Info:    Try loading font information for U+msa on input line 28.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 27.
+LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 27.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 28.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/esvect/uesvect.fd
@@ -852,15 +852,15 @@ File: uesvect.fd
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 Package epstopdf Info: Source file: <Inverter_Design/TestBench.eps>
-(epstopdf)                    date: 2017-11-06 18:57:56
+(epstopdf)                    date: 2017-11-06 20:28:47
 (epstopdf)                    size: 11388 bytes
 (epstopdf)             Output file: <Inverter_Design/TestBench-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2017-11-06 19:01:04
+(epstopdf)                    date: 2017-11-06 20:28:47
 (epstopdf)                    size: 4971 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/TestBench-
 eps-converted-to.pdf Inverter_Design/TestBench.eps>
-(epstopdf)             \includegraphics on input line 59.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
 <Inverter_Design/TestBench-eps-converted-to.pdf, id=1, 294.09875pt x 166.6225pt
@@ -868,18 +868,18 @@ Package epstopdf Info: Output file is already uptodate.
 File: Inverter_Design/TestBench-eps-converted-to.pdf Graphic file (type pdf)
  <use Inverter_Design/TestBench-eps-converted-to.pdf>
 Package pdftex.def Info: Inverter_Design/TestBench-eps-converted-to.pdf used on
- input line 59.
+ input line 61.
 (pdftex.def)             Requested size: 205.24384pt x 116.28154pt.
 Package epstopdf Info: Source file: <Inverter_Design/Inverter_Chain.eps>
-(epstopdf)                    date: 2017-11-06 18:53:58
+(epstopdf)                    date: 2017-11-06 20:28:47
 (epstopdf)                    size: 9645 bytes
 (epstopdf)             Output file: <Inverter_Design/Inverter_Chain-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2017-11-06 18:54:54
+(epstopdf)                    date: 2017-11-06 20:28:47
 (epstopdf)                    size: 4995 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/Inverter_C
 hain-eps-converted-to.pdf Inverter_Design/Inverter_Chain.eps>
-(epstopdf)             \includegraphics on input line 71.
+(epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
 
 <Inverter_Design/Inverter_Chain-eps-converted-to.pdf, id=2, 230.8625pt x 74.277
@@ -888,37 +888,106 @@ File: Inverter_Design/Inverter_Chain-eps-converted-to.pdf Graphic file (type pd
 f)
  <use Inverter_Design/Inverter_Chain-eps-converted-to.pdf>
 Package pdftex.def Info: Inverter_Design/Inverter_Chain-eps-converted-to.pdf us
-ed on input line 71.
+ed on input line 73.
 (pdftex.def)             Requested size: 153.9368pt x 49.52765pt.
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./In
-verter_Design/TestBench-eps-converted-to.pdf> <./Inverter_Design/Inverter_Chain
--eps-converted-to.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./I
+nverter_Design/TestBench-eps-converted-to.pdf> <./Inverter_Design/Inverter_Chai
+n-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <GammaTest.eps>
+(epstopdf)                    date: 2017-11-08 17:13:46
+(epstopdf)                    size: 12981 bytes
+(epstopdf)             Output file: <GammaTest-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-08 17:14:41
+(epstopdf)                    size: 8697 bytes
+(epstopdf)             Command: <repstopdf --outfile=GammaTest-eps-converted-to
+.pdf GammaTest.eps>
+(epstopdf)             \includegraphics on input line 150.
+Package epstopdf Info: Output file is already uptodate.
+ <GammaTest-eps-converted-to.pdf, id=28, 248.93pt x 137.51375pt>
+File: GammaTest-eps-converted-to.pdf Graphic file (type pdf)
+
+<use GammaTest-eps-converted-to.pdf>
+Package pdftex.def Info: GammaTest-eps-converted-to.pdf used on input line 150.
+
+(pdftex.def)             Requested size: 205.24384pt x 113.38309pt.
+Package epstopdf Info: Source file: <Gamma.eps>
+(epstopdf)                    date: 2017-11-08 18:12:12
+(epstopdf)                    size: 168525 bytes
+(epstopdf)             Output file: <Gamma-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-08 18:12:20
+(epstopdf)                    size: 11912 bytes
+(epstopdf)             Command: <repstopdf --outfile=Gamma-eps-converted-to.pdf
+ Gamma.eps>
+(epstopdf)             \includegraphics on input line 157.
+Package epstopdf Info: Output file is already uptodate.
+
+<Gamma-eps-converted-to.pdf, id=29, 562.1pt x 421.575pt>
+File: Gamma-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Gamma-eps-converted-to.pdf>
+Package pdftex.def Info: Gamma-eps-converted-to.pdf used on input line 157.
+(pdftex.def)             Requested size: 359.18063pt x 269.3825pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2] [3 <./GammaTest-eps-converted-to.pdf> <./Gamma-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <Part_G.eps>
+(epstopdf)                    date: 2017-11-07 23:21:56
+(epstopdf)                    size: 26997 bytes
+(epstopdf)             Output file: <Part_G-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-07 23:21:59
+(epstopdf)                    size: 13821 bytes
+(epstopdf)             Command: <repstopdf --outfile=Part_G-eps-converted-to.pd
+f Part_G.eps>
+(epstopdf)             \includegraphics on input line 202.
+Package epstopdf Info: Output file is already uptodate.
+
+<Part_G-eps-converted-to.pdf, id=71, 562.1pt x 421.575pt>
+File: Part_G-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Part_G-eps-converted-to.pdf>
+Package pdftex.def Info: Part_G-eps-converted-to.pdf used on input line 202.
+(pdftex.def)             Requested size: 307.8736pt x 230.90205pt.
+ [4 <./Part_G-eps-converted-to.pdf>]
 No file First_Deliverable.bbl.
-[2] (./First_Deliverable.aux) ) 
+[5] (./First_Deliverable.aux) ) 
 Here is how much of TeX's memory you used:
- 15607 strings out of 493089
- 298161 string characters out of 6134842
- 456680 words of memory out of 5000000
- 18897 multiletter control sequences out of 15000+600000
- 12474 words of font info for 53 fonts, out of 8000000 for 9000
+ 15661 strings out of 493089
+ 299703 string characters out of 6134842
+ 460786 words of memory out of 5000000
+ 18941 multiletter control sequences out of 15000+600000
+ 14164 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,10411b,1056s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb>
-Output written on First_Deliverable.pdf (2 pages, 126349 bytes).
+ 42i,12n,40p,10411b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dv
+ips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
+b>
+Output written on First_Deliverable.pdf (5 pages, 201510 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
