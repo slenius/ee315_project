@@ -1,0 +1,14 @@
+# Log files
+*.log
+*Log
+*LogFile
+logFile
+
+# Lock files
+*.cdslck
+*.cdslck.*
+
+# Some sim outputs
+runObjFile
+*.primatives
+
