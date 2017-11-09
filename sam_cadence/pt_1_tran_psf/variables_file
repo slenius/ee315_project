@@ -1,0 +1,23 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "Nov  8 15:39:33 2017"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"Tstop" "variable" ( 3.19047619047619e-6 ) PROP( )
+"Tskip" "variable" ( 142.857142857143e-9 ) PROP( )
+"fin" "variable" ( 984.375e3 ) PROP( )
+"FMAX" "variable" ( 65.897166841553e9 ) PROP( )
+"tau" "variable" ( 95.3e-12 ) PROP( )
+"vref" "variable" ( 1 ) PROP( )
+"vl" "variable" ( 0 ) PROP( )
+"vh" "variable" ( 1.2 ) PROP( )
+"vdd" "variable" ( 1.2 ) PROP( )
+"vcm" "variable" ( 650e-3 ) PROP( )
+"fs" "variable" ( 21e6 ) PROP( )
+"dc_in" "variable" ( 0 ) PROP( )
+"amp" "variable" ( 2 ) PROP( )
+"temp" "variable" ( 27 ) PROP( )
+END
