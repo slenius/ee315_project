@@ -4,7 +4,6 @@ resultsDir( "/home/sam/ee315_project/sam_cadence/simulation/hw_comparator_testbe
 modelFile( 
     '("/afs/ir.stanford.edu/class/ee315/models/ee315_90nm.mod" "")
 )
-analysis('dc ?saveOppoint t  ?captab t  )
 analysis('tran ?stop "20n"  ?errpreset "conservative"  ?tranNoise "Transient Noise"  
 		?noisefmax "VAR(\"FMAX\")"  ?noisefmin ""  ?noiseseed "1"  ?noisescale ""  
 		?noisetmin ""  ?noiseupdate ""  ?tranNoiseMultiRuns "Multiple Runs"  ?noiseruns "1000"  
@@ -13,11 +12,14 @@ desVar(	  "vid" 100u	)
 desVar(	  "vdd" 1.2	)
 desVar(	  "vcm" 600m	)
 desVar(	  "Cu" 2.5f	)
-desVar(	  "FMAX" "100g"	)
+desVar(	  "FMAX" 0	)
 envOption(
 	'firstRun  nil 
 	'autoDisplay  nil 
 	'analysisOrder  list("tran" "noise" "dc") 
+)
+option( ?categ 'turboOpts
+	'uniMode  "Turbo" 
 )
 save( 'v "/vop" "/vom" )
 temp( 27 ) 
