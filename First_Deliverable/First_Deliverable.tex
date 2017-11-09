@@ -165,11 +165,16 @@ A_v=-\frac{g_{m_n}}{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}
 \end{equation}
 The total thermal noise from the nmos and pmos transistors can be written at the output as
 \begin{equation}
-\overline{V_{out,tot}^2}=2\cdot\left(\frac{4kT\gamma}{g_{m_p}}+\gamma g_{m_n}\left(r_{o,n}||r_{o,p}\right)\frac{kT}{C_L}\right)
+\overline{V_{out}^2}=2\left( \overline{i_{d_n}^2}  +\overline{i_{d_p}^2}  \right)Z_{eq}^2=8kT\gamma\left(g_{m_n}+g_{m_p}\right)R_{eq}^2\left|\frac{1}{1+sR_{eq}C_L}\right|^2\Delta f
 \end{equation}
-where we multiply by two to consider the complete differential noise. We can then refer this to the input using the previously derived gain equation to find
+where $R_{eq}=\left(r_{o,n}||r_{o,p}\right)$ and where we multiply by two to consider the complete differential noise after the single ended equivalent analysis. Integrating over frequency gives
 \begin{equation}
-\overline{V^2_{in,tot}}=\frac{\overline{V_{out,tot}^2}}{\left|A_v\right|^2}\left(\gamma\left(g_{m_n}+g_{m_p}\right)\left(r_{o,n}||r_{o,p}\right)\frac{kT}{C_L}\right)\left(\frac{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}{g_{m_n}}\right)^2
+\overline{V_{out,tot}^2}=2\gamma R_{eq}\left(g_{m_n}+g_{m_p}\right)\frac{kT}{C_L}\rightarrow \overline{V_{out,tot}}=\SI{2.86}{\mvrms}
+\end{equation}
+
+ We can then refer this to the input using the previously derived gain equation to find
+\begin{equation}
+\overline{V^2_{in,tot}}=\frac{\overline{V_{out,tot}^2}}{\left|A_v\right|^2}=\left(\gamma\left(g_{m_n}+g_{m_p}\right)R_{eq}\frac{kT}{C_L}\right)\left(\frac{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}{g_{m_n}}\right)^2\rightarrow=\overline{V_{in,tot}}=\SI{2.68}{\mvrms}
 \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,7 +187,7 @@ Referring this back to the input using the gain derived from the previous sectio
 \begin{equation}
 \overline{V_{in,tot}}=\SI{0.96}{\mvrms}
 \end{equation}
-The output and input referred noise are X\% and Y\% of the hand calculations. 
+The output and input referred noise give a percent error of -64.08\% with respect to the hand analysis. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Transient Noise Simulation}
@@ -190,7 +195,7 @@ We run the transient noise simulation of the comparator setting FMAX such that
 \begin{equation}
 FMAX=\frac{10}{2\pi\tau}\approx\SI{16.7}{\giga\hertz}
 \end{equation}
-where $\tau$ is the regenerative time constant derived in section III. The simulation results and associated error function fit are shown in Figure \ref{fig:TransientNoise}. From the fit, we find that the associated input referred noise is \SI{0.72}{\mvrms}.
+where $\tau$ is the regenerative time constant derived in section III. The simulation results and associated error function fit are shown in Figure \ref{fig:TransientNoise}. From the fit, we find that the associated input referred noise is \SI{0.72}{\mvrms}, giving a percent error of -73.02\% and -24.90\% with respect to hand analysis and the .noise simulation.
 
 \begin{figure}[h]
 \begin{center}
@@ -236,7 +241,7 @@ Assuming a full scale signal from \SI{-1}{\volt} to \SI{1}{\volt}, we find
 SNR=\SI{57.68}{\decibel}
 \end{equation}
 \begin{equation}
-SQNR=10\log_{10}\left(\frac{P_{sig}}{P_{noise,quant}}\right)\SI{61.97}{\decibel}
+SQNR=10\log_{10}\left(\frac{P_{sig}}{P_{n,quant}}\right)\SI{61.97}{\decibel}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

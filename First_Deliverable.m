@@ -68,7 +68,7 @@ hold on
 text(1e10,1.3,strcat({'\downarrow \gamma \approx '},{num2str(gamma)}),'fontsize',14)
 grid on
 xlabel('Frequecy [Hz]')
-ylabel('V/sqrt(Hz)')
+ylabel('\gamma')
 title('Noise Simulation to Extract Gamma')
 set(gca,'fontsize',14)
 gamma=Gamma(end,2);
