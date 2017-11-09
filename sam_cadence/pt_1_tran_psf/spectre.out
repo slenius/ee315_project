@@ -12,37 +12,37 @@ Protected by U.S. Patents:
 
 Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
 
-User: sam   Host: sam-linux-desktop   HostID: 7F0101   PID: 22175
-Memory  available: 1.3941 GB  physical: 12.5866 GB
-CPU Type: Intel(R) Core(TM) i7 CPU         950  @ 3.07GHz
+User: sam   Host: sam-laptop-linux   HostID: 7F0101   PID: 8090
+Memory  available: 26.4160 GB  physical: 33.3156 GB
+CPU Type: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
           Processor PhysicalID CoreID Frequency
-              0         0        0     1600.0
-              1         0        1     1600.0
-              2         0        2     1600.0
-              3         0        3     3068.0
-              4         0        0     1600.0
-              5         0        1     1600.0
-              6         0        2     1600.0
-              7         0        3     1600.0
+              0         0        0     1656.6
+              1         0        0     1792.5
+              2         0        1     1447.4
+              3         0        1     1820.8
+              4         0        2     1746.4
+              5         0        2     1561.7
+              6         0        3     1318.8
+              7         0        3     1798.6
 
 
-Simulating `input.scs' on sam-linux-desktop at 3:39:33 PM, Wed Nov 8, 2017 (process id: 22175).
+Simulating `input.scs' on sam-laptop-linux at 10:47:19 PM, Wed Nov 8, 2017 (process id: 8090).
 Command line:
      \
         /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/spectre/bin/64bit/spectre  \
         input.scs +escchars +log ../psf/spectre.out +inter=mpsc  \
-        +mpssession=spectre0_28384_4 -format sst2 -raw ../psf  \
-        +lqtimeout 900 -maxw 5 -maxn 5
-spectre pid = 22175
+        +mpssession=spectre0_5822_5 -format sst2 -raw ../psf +lqtimeout  \
+        900 -maxw 5 -maxn 5
+spectre pid = 8090
 
 Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
 Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
 Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
 Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
 
-Time for NDB Parsing: CPU = 88 ms, elapsed = 202.73 ms.
-Time accumulated: CPU = 88 ms, elapsed = 202.73 ms.
-Peak resident memory used = 61.8 Mbytes.
+Time for NDB Parsing: CPU = 140 ms, elapsed = 316.674 ms.
+Time accumulated: CPU = 140 ms, elapsed = 316.674 ms.
+Peak resident memory used = 62.5 Mbytes.
 
 
 Warning from spectre in `INVD1':`I70.I5<0>.I3', in `BUFFD1':`I70.I5<0>', in `SAR_logic_top':`I70', during hierarchy flattening.
@@ -50,14 +50,14 @@ Warning from spectre in `INVD1':`I70.I5<0>.I3', in `BUFFD1':`I70.I5<0>', in `SAR
     WARNING (SFE-30): "/afs/ir.stanford.edu/class/ee315/models/ee315_90nm.mod" 47: pmos: `PB' is not a valid parameter for an instance of `bsim4'.  Ignored.
 
 
-Time for Elaboration: CPU = 92 ms, elapsed = 94.0521 ms.
-Time accumulated: CPU = 180 ms, elapsed = 297.043 ms.
-Peak resident memory used = 74.2 Mbytes.
+Time for Elaboration: CPU = 136 ms, elapsed = 138.61 ms.
+Time accumulated: CPU = 276 ms, elapsed = 455.495 ms.
+Peak resident memory used = 74.9 Mbytes.
 
 
-Time for EDB Visiting: CPU = 8 ms, elapsed = 9.60612 ms.
-Time accumulated: CPU = 192 ms, elapsed = 306.883 ms.
-Peak resident memory used = 76.4 Mbytes.
+Time for EDB Visiting: CPU = 12 ms, elapsed = 9.88221 ms.
+Time accumulated: CPU = 288 ms, elapsed = 465.512 ms.
+Peak resident memory used = 77.1 Mbytes.
 
 
 Notice from spectre during topology check.
@@ -78,11 +78,11 @@ Circuit inventory:
             vsource 7     
 
 
-Time for parsing: CPU = 4 ms, elapsed = 104.758 ms.
-Time accumulated: CPU = 196 ms, elapsed = 411.858 ms.
-Peak resident memory used = 77 Mbytes.
+Time for parsing: CPU = 4 ms, elapsed = 30.5741 ms.
+Time accumulated: CPU = 292 ms, elapsed = 496.204 ms.
+Peak resident memory used = 77.7 Mbytes.
 
-Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_28384_4, ).
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_5822_5, ).
 
 *****************************************************
 Transient Analysis `tran': time = (0 s -> 3.19048 us)
@@ -109,87 +109,117 @@ Important parameter values:
     cmin = 0 F
     gmin = 1 pS
 
-    tran: time = 79.76 ns     (2.5 %), step = 4.985 ps     (156 u%)
-    tran: time = 121.3 ns     (3.8 %), step = 1.868 ps    (58.6 u%)
-    tran: time = 166.9 ns    (5.23 %), step = 2.607 ps    (81.7 u%)
-    tran: time = 216.7 ns    (6.79 %), step = 12.63 fs     (396 n%)
-    tran: time = 239.4 ns     (7.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 295.9 ns    (9.28 %), step = 2.665 ps    (83.5 u%)
-    tran: time = 345.5 ns    (10.8 %), step = 1.724 ps      (54 u%)
-    tran: time = 395.3 ns    (12.4 %), step = 1.039 ps    (32.6 u%)
+    tran: time = 77.82 ns    (2.44 %), step = 43.72 fs    (1.37 u%)
+    tran: time = 79.77 ns     (2.5 %), step = 11.34 ps     (356 u%)
+    tran: time = 117.5 ns    (3.68 %), step = 7.153 fs     (224 n%)
+    tran: time = 157.1 ns    (4.92 %), step = 580.9 fs    (18.2 u%)
+    tran: time = 190.8 ns    (5.98 %), step = 4.229 fs     (133 n%)
+    tran: time = 233.5 ns    (7.32 %), step = 100 ps      (3.13 m%)
+    tran: time = 239.3 ns     (7.5 %), step = 100 ps      (3.13 m%)
+    tran: time = 285.9 ns    (8.96 %), step = 566.9 fs    (17.8 u%)
+    tran: time = 331.6 ns    (10.4 %), step = 4.358 ps     (137 u%)
+    tran: time = 375.4 ns    (11.8 %), step = 488.5 fs    (15.3 u%)
     tran: time = 398.9 ns    (12.5 %), step = 50.03 ps    (1.57 m%)
-    tran: time = 448.7 ns    (14.1 %), step = 2.041 ps      (64 u%)
-    tran: time = 498.3 ns    (15.6 %), step = 4.24 ps      (133 u%)
-    tran: time = 544.9 ns    (17.1 %), step = 100 ps      (3.13 m%)
+    tran: time = 442.6 ns    (13.9 %), step = 5.629 ps     (176 u%)
+    tran: time = 484.3 ns    (15.2 %), step = 4.578 ps     (143 u%)
+    tran: time = 524 ns      (16.4 %), step = 637.2 fs      (20 u%)
     tran: time = 558.4 ns    (17.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 609.6 ns    (19.1 %), step = 1.22 fs     (38.2 n%)
-    tran: time = 661 ns      (20.7 %), step = 4.439 ps     (139 u%)
-    tran: time = 712.1 ns    (22.3 %), step = 100 ps      (3.13 m%)
+    tran: time = 603.4 ns    (18.9 %), step = 1.515 ps    (47.5 u%)
+    tran: time = 647 ns      (20.3 %), step = 4.578 ps     (143 u%)
+    tran: time = 692.6 ns    (21.7 %), step = 3.125 ps    (97.9 u%)
     tran: time = 717.9 ns    (22.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 772.2 ns    (24.2 %), step = 1.291 ps    (40.5 u%)
-    tran: time = 823.7 ns    (25.8 %), step = 4.817 ps     (151 u%)
-    tran: time = 873.3 ns    (27.4 %), step = 3.174 ps    (99.5 u%)
-    tran: time = 877.4 ns    (27.5 %), step = 11.34 ps     (356 u%)
-    tran: time = 927 ns      (29.1 %), step = 269.4 fs    (8.44 u%)
-    tran: time = 978.6 ns    (30.7 %), step = 213 fs      (6.68 u%)
-    tran: time = 1.03 us     (32.3 %), step = 16.72 fs     (524 n%)
+    tran: time = 762.1 ns    (23.9 %), step = 3.741 ps     (117 u%)
+    tran: time = 807.9 ns    (25.3 %), step = 1.452 ps    (45.5 u%)
+    tran: time = 851.6 ns    (26.7 %), step = 402.9 fs    (12.6 u%)
+    tran: time = 877.4 ns    (27.5 %), step = 4.985 ps     (156 u%)
+    tran: time = 923 ns      (28.9 %), step = 236.1 fs     (7.4 u%)
+    tran: time = 966.7 ns    (30.3 %), step = 4.781 fs     (150 n%)
+    tran: time = 1.012 us    (31.7 %), step = 1.744 ps    (54.7 u%)
     tran: time = 1.037 us    (32.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 1.087 us    (34.1 %), step = 100 ps      (3.13 m%)
-    tran: time = 1.141 us    (35.8 %), step = 62.71 ps    (1.97 m%)
-    tran: time = 1.191 us    (37.3 %), step = 11.13 fs     (349 n%)
+    tran: time = 1.082 us    (33.9 %), step = 2.921 fs    (91.5 n%)
+    tran: time = 1.125 us    (35.3 %), step = 62.83 fs    (1.97 u%)
+    tran: time = 1.171 us    (36.7 %), step = 2.232 ps      (70 u%)
+
+Warning from spectre at time = 1.19078 us during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I0.net9.
+
     tran: time = 1.196 us    (37.5 %), step = 84.18 ps    (2.64 m%)
-    tran: time = 1.25 us     (39.2 %), step = 2.346 ps    (73.5 u%)
-    tran: time = 1.304 us    (40.9 %), step = 5.332 ps     (167 u%)
-    tran: time = 1.356 us    (42.5 %), step = 630.5 fs    (19.8 u%)
+    tran: time = 1.238 us    (38.8 %), step = 518 fs      (16.2 u%)
+    tran: time = 1.284 us    (40.2 %), step = 1.152 ps    (36.1 u%)
+    tran: time = 1.328 us    (41.6 %), step = 3.021 fs    (94.7 n%)
     tran: time = 1.356 us    (42.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 1.411 us    (44.2 %), step = 5.544 ps     (174 u%)
-    tran: time = 1.463 us    (45.8 %), step = 254.8 fs    (7.99 u%)
-    tran: time = 1.515 us    (47.5 %), step = 100 ps      (3.13 m%)
+
+Warning from spectre at time = 1.39925 us during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I71.I13.net9.
+
+    tran: time = 1.401 us    (43.9 %), step = 1.246 ps    (39.1 u%)
+    tran: time = 1.447 us    (45.3 %), step = 298.8 fs    (9.36 u%)
+
+Warning from spectre at time = 1.44686 us during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I71.I13.net9.
+
+    tran: time = 1.491 us    (46.7 %), step = 3.18 fs     (99.7 n%)
     tran: time = 1.516 us    (47.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 1.568 us    (49.1 %), step = 57.73 ps    (1.81 m%)
-    tran: time = 1.619 us    (50.8 %), step = 14.97 fs     (469 n%)
-    tran: time = 1.675 us    (52.5 %), step = 11.34 ps     (356 u%)
-    tran: time = 1.729 us    (54.2 %), step = 1.254 ps    (39.3 u%)
-    tran: time = 1.78 us     (55.8 %), step = 6.277 fs     (197 n%)
-    tran: time = 1.834 us    (57.5 %), step = 4.023 ps     (126 u%)
+    tran: time = 1.562 us      (49 %), step = 4.24 ps      (133 u%)
+    tran: time = 1.606 us    (50.3 %), step = 509.9 fs      (16 u%)
+    tran: time = 1.651 us    (51.7 %), step = 78.09 ps    (2.45 m%)
+    tran: time = 1.675 us    (52.5 %), step = 4.985 ps     (156 u%)
+    tran: time = 1.715 us    (53.7 %), step = 284.6 fs    (8.92 u%)
+    tran: time = 1.762 us    (55.2 %), step = 679 fs      (21.3 u%)
+    tran: time = 1.808 us    (56.7 %), step = 1.152 ps    (36.1 u%)
     tran: time = 1.835 us    (57.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 1.887 us    (59.2 %), step = 945.8 fs    (29.6 u%)
-    tran: time = 1.939 us    (60.8 %), step = 16.18 fs     (507 n%)
-    tran: time = 1.991 us    (62.4 %), step = 7.743 ps     (243 u%)
+    tran: time = 1.877 us    (58.8 %), step = 623.2 fs    (19.5 u%)
+    tran: time = 1.923 us    (60.3 %), step = 580.9 fs    (18.2 u%)
+    tran: time = 1.967 us    (61.6 %), step = 26.72 fs     (838 n%)
     tran: time = 1.994 us    (62.5 %), step = 50.03 ps    (1.57 m%)
-    tran: time = 2.046 us    (64.1 %), step = 4.131 ps     (129 u%)
-    tran: time = 2.096 us    (65.7 %), step = 1.431 fs    (44.8 n%)
-    tran: time = 2.153 us    (67.5 %), step = 1.876 ps    (58.8 u%)
+
+Warning from spectre at time = 2.00012 us during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I43.I2.net9.
+
+    tran: time = 2.038 us    (63.9 %), step = 2.383 fs    (74.7 n%)
+    tran: time = 2.082 us    (65.3 %), step = 2.629 ps    (82.4 u%)
+    tran: time = 2.125 us    (66.6 %), step = 807.8 fs    (25.3 u%)
     tran: time = 2.154 us    (67.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 2.209 us    (69.2 %), step = 807.8 fs    (25.3 u%)
-    tran: time = 2.26 us     (70.8 %), step = 7.5 fs       (235 n%)
+    tran: time = 2.196 us    (68.8 %), step = 100 ps      (3.13 m%)
+    tran: time = 2.238 us    (70.2 %), step = 1.045 ps    (32.8 u%)
+    tran: time = 2.282 us    (71.5 %), step = 2.941 ps    (92.2 u%)
     tran: time = 2.313 us    (72.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 2.313 us    (72.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 2.367 us    (74.2 %), step = 1.819 ps      (57 u%)
-    tran: time = 2.419 us    (75.8 %), step = 946.7 fs    (29.7 u%)
-    tran: time = 2.472 us    (77.5 %), step = 4.356 ps     (137 u%)
-    tran: time = 2.473 us    (77.5 %), step = 11.34 ps     (356 u%)
-    tran: time = 2.524 us    (79.1 %), step = 45.32 fs    (1.42 u%)
-    tran: time = 2.582 us    (80.9 %), step = 1.462 ps    (45.8 u%)
+    tran: time = 2.36 us       (74 %), step = 3.183 ps    (99.8 u%)
+    tran: time = 2.403 us    (75.3 %), step = 5.67 fs      (178 n%)
+
+Warning from spectre at time = 2.42887 us during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I73.I3.net9.
+        Further occurrences of this warning will be suppressed.
+
+    tran: time = 2.449 us    (76.8 %), step = 11.34 ps     (356 u%)
+    tran: time = 2.473 us    (77.5 %), step = 4.985 ps     (156 u%)
+    tran: time = 2.518 us    (78.9 %), step = 3.17 ps     (99.3 u%)
+    tran: time = 2.562 us    (80.3 %), step = 13.11 fs     (411 n%)
+    tran: time = 2.609 us    (81.8 %), step = 5.629 ps     (176 u%)
     tran: time = 2.632 us    (82.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 2.685 us    (84.2 %), step = 1.106 ps    (34.7 u%)
-    tran: time = 2.737 us    (85.8 %), step = 600.6 fs    (18.8 u%)
-    tran: time = 2.788 us    (87.4 %), step = 9.119 fs     (286 n%)
+    tran: time = 2.677 us    (83.9 %), step = 179.7 fs    (5.63 u%)
+    tran: time = 2.72 us     (85.3 %), step = 3.735 ps     (117 u%)
+    tran: time = 2.762 us    (86.6 %), step = 37 fs       (1.16 u%)
     tran: time = 2.792 us    (87.5 %), step = 50.03 ps    (1.57 m%)
-    tran: time = 2.844 us    (89.1 %), step = 8.976 fs     (281 n%)
-    tran: time = 2.895 us    (90.7 %), step = 411.9 fs    (12.9 u%)
-    tran: time = 2.951 us    (92.5 %), step = 3.9 ps       (122 u%)
+    tran: time = 2.836 us    (88.9 %), step = 1.276 ps      (40 u%)
+    tran: time = 2.879 us    (90.3 %), step = 1.881 ps      (59 u%)
+    tran: time = 2.925 us    (91.7 %), step = 10.11 ps     (317 u%)
     tran: time = 2.951 us    (92.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 3.006 us    (94.2 %), step = 3.219 ps     (101 u%)
-    tran: time = 3.062 us      (96 %), step = 50.03 ps    (1.57 m%)
+    tran: time = 2.994 us    (93.9 %), step = 3.09 fs     (96.8 n%)
+    tran: time = 3.038 us    (95.2 %), step = 1.109 fs    (34.8 n%)
+    tran: time = 3.084 us    (96.7 %), step = 11.65 ps     (365 u%)
     tran: time = 3.111 us    (97.5 %), step = 100 ps      (3.13 m%)
-    tran: time = 3.163 us    (99.1 %), step = 1.515 ps    (47.5 u%)
-Number of accepted tran steps =             240097
-Initial condition solution time: CPU = 12 ms, elapsed = 11.5249 ms.
-Intrinsic tran analysis time:    CPU = 607.792 s, elapsed = 608.124 s.
-Total time required for tran analysis `tran': CPU = 607.812 s (10m  7.8s), elapsed = 608.239 s (10m  8.2s).
-Time accumulated: CPU = 608.02 s (10m  8.0s), elapsed = 608.879 s (10m  8.9s).
-Peak resident memory used = 82.5 Mbytes.
+    tran: time = 3.157 us    (98.9 %), step = 3.265 ps     (102 u%)
+Number of accepted tran steps =             241276
+Initial condition solution time: CPU = 16 ms, elapsed = 14.9491 ms.
+Intrinsic tran analysis time:    CPU = 717.296 s, elapsed = 717.361 s.
+Total time required for tran analysis `tran': CPU = 717.316 s (11m  57.3s), elapsed = 717.407 s (11m  57.4s).
+Time accumulated: CPU = 717.612 s (11m  57.6s), elapsed = 717.961 s (11m  58.0s).
+Peak resident memory used = 83.2 Mbytes.
+
+
+Notice from spectre.
+    1 warning suppressed.
 
 finalTimeOP: writing operating point information to rawfile.
 modelParameter: writing model parameter values to rawfile.

@@ -1,10 +1,10 @@
 HEADER
 "PSFversion" "1.00"
 "Log Generator" "drlLog rev. 1.0"
-"Log Time Stamp" "Wed Nov  8 03:37:53 2017"
+"Log Time Stamp" "Wed Nov  8 23:38:02 2017"
 "simulator" "spectre"
 "version" "10.1.1.260.isr16"
-"date" "3:37:53 AM, Wed Nov 8, 2017"
+"date" "11:38:02 PM, Wed Nov 8, 2017"
 "design" "// Generated for: spectre"
 "signalNameType" "spectre"
 "measdgt" 0
