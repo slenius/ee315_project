@@ -49,6 +49,7 @@
 \date{\today}
 \maketitle
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Inverter Chain}
 We design an inverter chain to buffer the comparator outputs and drive a load capacitance of \SI{50}{\femto\farad}. Using a FO4 approach, we can write the total necessary number of stages as
 \begin{equation}
@@ -142,16 +143,31 @@ and is shown below in Figure \ref{fig:InvChain}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Thermal Noise Voltage - Hand Analysis}
+Prior to analyzing the circuit, we know we must extract the transistor $\gamma$. To do so, we create the test bench as shown in Figure \ref{fig:GammaTest}. Here, we set the gate voltage equal to the $V_{gs}$ extracted from the DC bias point (\SI{425.6}{\milli\volt}) and simulate the noise by creating a current controlled voltage source. The resulting gamma from the simulation is shown in Figure \ref{fig:Gamma}, for which we find $\gamma\approx0.84$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.4\textwidth]{GammaTest.eps}
+\caption{Test bench for extracting $\gamma$ for our technology.}
+\label{fig:GammaTest}
+\end{center}
+\end{figure}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Gamma.eps}
+\caption{Extracting $\gamma$ for our technology.}
+\label{fig:Gamma}
+\end{center}
+\end{figure}
 We can model the circuit using the small signal model. We therefore have a gain of
 \begin{equation}
 A_v=-\frac{g_{m_n}}{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}
 \end{equation}
-The thermal noise sources from the nmos and pmos transistors can be written at the output as
+The total thermal noise from the nmos and pmos transistors can be written at the output as
 \begin{equation}
 \overline{V_{out,tot}^2}=2\cdot\left(\frac{4kT\gamma}{g_{m_p}}+\gamma g_{m_n}\left(r_{o,n}||r_{o,p}\right)\frac{kT}{C_L}\right)
 \end{equation}
-
-We can then refer this to the input using the previously derived gain equation to find
+where we multiply by two to consider the complete differential noise. We can then refer this to the input using the previously derived gain equation to find
 \begin{equation}
 \overline{V^2_{in,tot}}=\frac{\overline{V_{out,tot}^2}}{\left|A_v\right|^2}\left(\gamma\left(g_{m_n}+g_{m_p}\right)\left(r_{o,n}||r_{o,p}\right)\frac{kT}{C_L}\right)\left(\frac{g_{ds_{n}}+g_{ds_{p}}-g_{m_p}}{g_{m_n}}\right)^2
 \end{equation}
@@ -166,7 +182,7 @@ Referring this back to the input using the gain derived from the previous sectio
 \begin{equation}
 \overline{V_{in,tot}}=\SI{0.96}{\mvrms}
 \end{equation}
-
+The output and input referred noise are X\% and Y\% of the hand calculations. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Transient Noise Simulation}
@@ -215,9 +231,12 @@ The SNR can be written as
 \begin{equation}
 SNR=10\log_{10}\left(\frac{P_{sig}}{P_{noise}}\right)
 \end{equation}
-Assuming a full scale signal amplitude of 2V, we find
+Assuming a full scale signal from \SI{-1}{\volt} to \SI{1}{\volt}, we find
 \begin{equation}
-SNR=\SI{ 66.7151}{\decibel}
+SNR=\SI{57.68}{\decibel}
+\end{equation}
+\begin{equation}
+SQNR=10\log_{10}\left(\frac{P_{sig}}{P_{noise,quant}}\right)\SI{61.97}{\decibel}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

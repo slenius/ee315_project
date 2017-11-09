@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 NOV 2017 00:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 NOV 2017 17:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -860,7 +860,7 @@ Package epstopdf Info: Source file: <Inverter_Design/TestBench.eps>
 (epstopdf)                    size: 4971 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/TestBench-
 eps-converted-to.pdf Inverter_Design/TestBench.eps>
-(epstopdf)             \includegraphics on input line 60.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
 <Inverter_Design/TestBench-eps-converted-to.pdf, id=1, 294.09875pt x 166.6225pt
@@ -868,7 +868,7 @@ Package epstopdf Info: Output file is already uptodate.
 File: Inverter_Design/TestBench-eps-converted-to.pdf Graphic file (type pdf)
  <use Inverter_Design/TestBench-eps-converted-to.pdf>
 Package pdftex.def Info: Inverter_Design/TestBench-eps-converted-to.pdf used on
- input line 60.
+ input line 61.
 (pdftex.def)             Requested size: 205.24384pt x 116.28154pt.
 Package epstopdf Info: Source file: <Inverter_Design/Inverter_Chain.eps>
 (epstopdf)                    date: 2017-11-06 20:28:47
@@ -879,7 +879,7 @@ ed-to.pdf>
 (epstopdf)                    size: 4995 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/Inverter_C
 hain-eps-converted-to.pdf Inverter_Design/Inverter_Chain.eps>
-(epstopdf)             \includegraphics on input line 72.
+(epstopdf)             \includegraphics on input line 73.
 Package epstopdf Info: Output file is already uptodate.
 
 <Inverter_Design/Inverter_Chain-eps-converted-to.pdf, id=2, 230.8625pt x 74.277
@@ -888,15 +888,57 @@ File: Inverter_Design/Inverter_Chain-eps-converted-to.pdf Graphic file (type pd
 f)
  <use Inverter_Design/Inverter_Chain-eps-converted-to.pdf>
 Package pdftex.def Info: Inverter_Design/Inverter_Chain-eps-converted-to.pdf us
-ed on input line 72.
+ed on input line 73.
 (pdftex.def)             Requested size: 153.9368pt x 49.52765pt.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 84.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./I
 nverter_Design/TestBench-eps-converted-to.pdf> <./Inverter_Design/Inverter_Chai
-n-eps-converted-to.pdf>] [2]
+n-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <GammaTest.eps>
+(epstopdf)                    date: 2017-11-08 17:13:46
+(epstopdf)                    size: 12981 bytes
+(epstopdf)             Output file: <GammaTest-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-08 17:14:41
+(epstopdf)                    size: 8697 bytes
+(epstopdf)             Command: <repstopdf --outfile=GammaTest-eps-converted-to
+.pdf GammaTest.eps>
+(epstopdf)             \includegraphics on input line 150.
+Package epstopdf Info: Output file is already uptodate.
+ <GammaTest-eps-converted-to.pdf, id=28, 248.93pt x 137.51375pt>
+File: GammaTest-eps-converted-to.pdf Graphic file (type pdf)
+
+<use GammaTest-eps-converted-to.pdf>
+Package pdftex.def Info: GammaTest-eps-converted-to.pdf used on input line 150.
+
+(pdftex.def)             Requested size: 205.24384pt x 113.38309pt.
+Package epstopdf Info: Source file: <Gamma.eps>
+(epstopdf)                    date: 2017-11-08 17:12:14
+(epstopdf)                    size: 168548 bytes
+(epstopdf)             Output file: <Gamma-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-08 17:12:22
+(epstopdf)                    size: 12286 bytes
+(epstopdf)             Command: <repstopdf --outfile=Gamma-eps-converted-to.pdf
+ Gamma.eps>
+(epstopdf)             \includegraphics on input line 157.
+Package epstopdf Info: Output file is already uptodate.
+
+<Gamma-eps-converted-to.pdf, id=29, 562.1pt x 421.575pt>
+File: Gamma-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Gamma-eps-converted-to.pdf>
+Package pdftex.def Info: Gamma-eps-converted-to.pdf used on input line 157.
+(pdftex.def)             Requested size: 359.18063pt x 269.3825pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2] [3 <./GammaTest-eps-converted-to.pdf> <./Gamma-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Part_G.eps>
 (epstopdf)                    date: 2017-11-07 23:21:56
 (epstopdf)                    size: 26997 bytes
@@ -905,22 +947,23 @@ Package epstopdf Info: Source file: <Part_G.eps>
 (epstopdf)                    size: 13821 bytes
 (epstopdf)             Command: <repstopdf --outfile=Part_G-eps-converted-to.pd
 f Part_G.eps>
-(epstopdf)             \includegraphics on input line 181.
+(epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
- <Part_G-eps-converted-to.pdf, id=33, 562.1pt x 421.575pt>
+
+<Part_G-eps-converted-to.pdf, id=71, 562.1pt x 421.575pt>
 File: Part_G-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Part_G-eps-converted-to.pdf>
-Package pdftex.def Info: Part_G-eps-converted-to.pdf used on input line 181.
+Package pdftex.def Info: Part_G-eps-converted-to.pdf used on input line 197.
 (pdftex.def)             Requested size: 307.8736pt x 230.90205pt.
- [3 <./Part_G-eps-converted-to.pdf>]
+ [4 <./Part_G-eps-converted-to.pdf>]
 No file First_Deliverable.bbl.
-[4] (./First_Deliverable.aux) ) 
+[5] (./First_Deliverable.aux) ) 
 Here is how much of TeX's memory you used:
- 15649 strings out of 493089
- 299390 string characters out of 6134842
- 460758 words of memory out of 5000000
- 18930 multiletter control sequences out of 15000+600000
+ 15661 strings out of 493089
+ 299703 string characters out of 6134842
+ 460786 words of memory out of 5000000
+ 18941 multiletter control sequences out of 15000+600000
  14164 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,40p,10411b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -932,18 +975,19 @@ ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm090
-0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.
-pfb>
-Output written on First_Deliverable.pdf (4 pages, 178352 bytes).
+fonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
+b>
+Output written on First_Deliverable.pdf (5 pages, 200643 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 136 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
