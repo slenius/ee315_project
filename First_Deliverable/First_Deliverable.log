@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 NOV 2017 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 NOV 2017 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -852,11 +852,11 @@ File: uesvect.fd
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 Package epstopdf Info: Source file: <Inverter_Design/TestBench.eps>
-(epstopdf)                    date: 2017-11-06 20:28:47
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 11388 bytes
 (epstopdf)             Output file: <Inverter_Design/TestBench-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2017-11-06 20:28:47
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 4971 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/TestBench-
 eps-converted-to.pdf Inverter_Design/TestBench.eps>
@@ -871,11 +871,11 @@ Package pdftex.def Info: Inverter_Design/TestBench-eps-converted-to.pdf used on
  input line 61.
 (pdftex.def)             Requested size: 205.24384pt x 116.28154pt.
 Package epstopdf Info: Source file: <Inverter_Design/Inverter_Chain.eps>
-(epstopdf)                    date: 2017-11-06 20:28:47
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 9645 bytes
 (epstopdf)             Output file: <Inverter_Design/Inverter_Chain-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2017-11-06 20:28:47
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 4995 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/Inverter_C
 hain-eps-converted-to.pdf Inverter_Design/Inverter_Chain.eps>
@@ -898,10 +898,10 @@ File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 nverter_Design/TestBench-eps-converted-to.pdf> <./Inverter_Design/Inverter_Chai
 n-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <GammaTest.eps>
-(epstopdf)                    date: 2017-11-08 17:13:46
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 12981 bytes
 (epstopdf)             Output file: <GammaTest-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-08 17:14:41
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 8697 bytes
 (epstopdf)             Command: <repstopdf --outfile=GammaTest-eps-converted-to
 .pdf GammaTest.eps>
@@ -915,10 +915,10 @@ Package pdftex.def Info: GammaTest-eps-converted-to.pdf used on input line 150.
 
 (pdftex.def)             Requested size: 205.24384pt x 113.38309pt.
 Package epstopdf Info: Source file: <Gamma.eps>
-(epstopdf)                    date: 2017-11-08 18:12:12
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 168525 bytes
 (epstopdf)             Output file: <Gamma-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-08 18:12:20
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 11912 bytes
 (epstopdf)             Command: <repstopdf --outfile=Gamma-eps-converted-to.pdf
  Gamma.eps>
@@ -940,10 +940,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <./GammaTest-eps-converted-to.pdf> <./Gamma-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Part_G.eps>
-(epstopdf)                    date: 2017-11-07 23:21:56
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 26997 bytes
 (epstopdf)             Output file: <Part_G-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-07 23:21:59
+(epstopdf)                    date: 2017-11-09 17:35:46
 (epstopdf)                    size: 13821 bytes
 (epstopdf)             Command: <repstopdf --outfile=Part_G-eps-converted-to.pd
 f Part_G.eps>
@@ -957,37 +957,123 @@ File: Part_G-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Part_G-eps-converted-to.pdf used on input line 202.
 (pdftex.def)             Requested size: 307.8736pt x 230.90205pt.
  [4 <./Part_G-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <noiseless_transient_sig.eps>
+(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    size: 40496 bytes
+(epstopdf)             Output file: <noiseless_transient_sig-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-11-09 17:47:34
+(epstopdf)                    size: 14799 bytes
+(epstopdf)             Command: <repstopdf --outfile=noiseless_transient_sig-ep
+s-converted-to.pdf noiseless_transient_sig.eps>
+(epstopdf)             \includegraphics on input line 254.
+Package epstopdf Info: Output file is already uptodate.
+
+<noiseless_transient_sig-eps-converted-to.pdf, id=85, 421.575pt x 316.18124pt>
+File: noiseless_transient_sig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use noiseless_transient_sig-eps-converted-to.pdf>
+Package pdftex.def Info: noiseless_transient_sig-eps-converted-to.pdf used on i
+nput line 254.
+(pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
+Package epstopdf Info: Source file: <noiseless_transient_fft.eps>
+(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    size: 16452 bytes
+(epstopdf)             Output file: <noiseless_transient_fft-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-11-09 17:49:43
+(epstopdf)                    size: 9195 bytes
+(epstopdf)             Command: <repstopdf --outfile=noiseless_transient_fft-ep
+s-converted-to.pdf noiseless_transient_fft.eps>
+(epstopdf)             \includegraphics on input line 264.
+Package epstopdf Info: Output file is already uptodate.
+
+<noiseless_transient_fft-eps-converted-to.pdf, id=86, 421.575pt x 316.18124pt>
+File: noiseless_transient_fft-eps-converted-to.pdf Graphic file (type pdf)
+
+<use noiseless_transient_fft-eps-converted-to.pdf>
+Package pdftex.def Info: noiseless_transient_fft-eps-converted-to.pdf used on i
+nput line 264.
+(pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <noisy_transient_sig.eps>
+(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    size: 40485 bytes
+(epstopdf)             Output file: <noisy_transient_sig-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-09 17:50:04
+(epstopdf)                    size: 14858 bytes
+(epstopdf)             Command: <repstopdf --outfile=noisy_transient_sig-eps-co
+nverted-to.pdf noisy_transient_sig.eps>
+(epstopdf)             \includegraphics on input line 279.
+Package epstopdf Info: Output file is already uptodate.
+<noisy_transient_sig-eps-converted-to.pdf, id=87, 421.575pt x 316.18124pt>
+File: noisy_transient_sig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use noisy_transient_sig-eps-converted-to.pdf>
+Package pdftex.def Info: noisy_transient_sig-eps-converted-to.pdf used on input
+ line 279.
+(pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+Package epstopdf Info: Source file: <noisy_transient_fft.eps>
+(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    size: 17028 bytes
+(epstopdf)             Output file: <noisy_transient_fft-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-09 17:50:53
+(epstopdf)                    size: 9463 bytes
+(epstopdf)             Command: <repstopdf --outfile=noisy_transient_fft-eps-co
+nverted-to.pdf noisy_transient_fft.eps>
+(epstopdf)             \includegraphics on input line 289.
+Package epstopdf Info: Output file is already uptodate.
+<noisy_transient_fft-eps-converted-to.pdf, id=88, 421.575pt x 316.18124pt>
+File: noisy_transient_fft-eps-converted-to.pdf Graphic file (type pdf)
+
+<use noisy_transient_fft-eps-converted-to.pdf>
+Package pdftex.def Info: noisy_transient_fft-eps-converted-to.pdf used on input
+ line 289.
+(pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 No file First_Deliverable.bbl.
-[5] (./First_Deliverable.aux) ) 
+[5 <./noiseless_transient_sig-eps-converted-to.pdf>] [6 <./noiseless_transient_
+fft-eps-converted-to.pdf> <./noisy_transient_sig-eps-converted-to.pdf>]
+[7 <./noisy_transient_fft-eps-converted-to.pdf>] (./First_Deliverable.aux) ) 
 Here is how much of TeX's memory you used:
- 15661 strings out of 493089
- 299703 string characters out of 6134842
- 460786 words of memory out of 5000000
- 18941 multiletter control sequences out of 15000+600000
+ 15685 strings out of 493089
+ 300645 string characters out of 6134842
+ 460842 words of memory out of 5000000
+ 18961 multiletter control sequences out of 15000+600000
  14164 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,12n,40p,10411b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dv
-ips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
-b>
-Output written on First_Deliverable.pdf (5 pages, 201510 bytes).
+{/u
+sr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on First_Deliverable.pdf (7 pages, 238004 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
+ 181 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

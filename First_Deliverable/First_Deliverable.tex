@@ -200,7 +200,7 @@ where $\tau$ is the regenerative time constant derived in section III. The simul
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.6\textwidth]{Part_G.eps}
-\caption{Results from transient noise simulation at $\SI{-1}{\milli\volt}$,$\SI{-200}{\micro\volt}$,$\SI{-200}{\micro\volt}$, and $\SI{1}{\milli\volt}$}. 
+\caption{Results from transient noise simulation at $\SI{-1}{\milli\volt}$,$\SI{-200}{\micro\volt}$,$\SI{-200}{\micro\volt}$, and $\SI{1}{\milli\volt}$}
 \label{fig:TransientNoise}
 \end{center}
 \end{figure}
@@ -245,6 +245,57 @@ SQNR=10\log_{10}\left(\frac{P_{sig}}{P_{n,quant}}\right)\SI{61.97}{\decibel}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Final Transient Simulations}
+
+We first replace he ideal comparator with our comparator, including the inverter chain designed in Section I. The resulting simulation and associated FFT are shown in Figures \ref{fig:NoiselessTransient} and \ref{fig:NoiselessTransientFFT}.
+%%%%% Noiseless transient simulation figure
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{noiseless_transient_sig.eps}
+\caption{Noiseless transient simulation.}
+\label{fig:NoiselessTransient}
+\end{center}
+\end{figure}
+%%%%%%
+
+%%%%% Noiseless transient simulation FFT figure
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{noiseless_transient_fft.eps}
+\caption{Noiseless transient simulation FFT.}
+\label{fig:NoiselessTransientFFT}
+\end{center}
+\end{figure}
+%%%%%%
+
+Here, we see that the SQNR for our simulation with no noise is \SI{62.42}{\decibel}. This value closely matches the approximate ideal SQNR for a 10 bit ADC $SQNR_{ideal}=\SI{6.02}{\decibel}\cdot B+\SI{1.76}{\decibel}\approx\SI{62}{\decibel}$. 
+
+Finally, we simulate for and extract the SNR. For this, we run a transient noise simulation, the results of which are shown in Figure \ref{fig:NoisyTransient} and \ref{fig:NoisyTransientFFT}. From our simulations, we find $SNR=\SI{60.77}{\decibel}$
+
+
+%%%%% Noisy transient simulation figure
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{noisy_transient_sig.eps}
+\caption{Noisy transient simulation.}
+\label{fig:NoisyTransient}
+\end{center}
+\end{figure}
+%%%%%%
+
+%%%%% Noisy transient simulation FFT figure
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.6\textwidth]{noisy_transient_fft.eps}
+\caption{Noisy transient simulation FFT.}
+\label{fig:NoisyTransientFFT}
+\end{center}
+\end{figure}
+%%%%%%
+
+
+
 
 \end{document}
+
 

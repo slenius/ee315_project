@@ -149,7 +149,6 @@ fprintf('Total noise: %4.2f mVRMS\n',sqrt(total_noise)*1e3)
 V_signal=Vrms;
 SNR=10*log10(V_signal^2/total_noise);
 SQNR=10*log10(V_signal^2/quant_noise);
-fprintf('SNR and SQNR: %4.2fdB and %4.2fdB\n',SNR,SQNR) % this is incorrect! should be closer to 62 dB for SQNR
+fprintf('SNR and SQNR: %4.2fdB and %4.2fdB\n',SNR,SQNR) 
+SQNR_ideal=6.02*10+1.76;
 
-%%
-close all
