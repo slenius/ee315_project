@@ -1,0 +1,5 @@
+pdflatex First_Deliverable.tex
+bibtex First_Deliverable
+pdflatex First_Deliverable.tex
+pdflatex First_Deliverable.tex
+xpdf First_Deliverable.pdf

@@ -138,7 +138,9 @@ and is shown below in Figure \ref{fig:InvChain}.
   \end{equation}
 
   \begin{equation}
-    F_{sample,max} = \frac{1}{T_{sample}} = \SI{21.075}{\mega\siemens\per\second}  % not sure what the call is for unit "sample", but capital S called by \siemens, so should be find for current report. 
+    % not sure what the call is for unit "sample", but capital S called by
+    % \siemens, so should be find for current report.
+    F_{sample,max} = \frac{1}{T_{sample}} = \SI{21.075}{\mega\siemens\per\second}
   \end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -245,53 +247,79 @@ SQNR=10\log_{10}\left(\frac{P_{sig}}{P_{n,quant}}\right)\SI{61.97}{\decibel}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\clearpage
+
 \section{Final Transient Simulations}
 
-We first replace he ideal comparator with our comparator, including the inverter chain designed in Section I. The resulting simulation and associated FFT are shown in Figures \ref{fig:NoiselessTransient} and \ref{fig:NoiselessTransientFFT}.
-%%%%% Noiseless transient simulation figure
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.6\textwidth]{noiseless_transient_sig.eps}
-\caption{Noiseless transient simulation.}
-\label{fig:NoiselessTransient}
-\end{center}
-\end{figure}
-%%%%%%
+  We first replace he ideal comparator with our comparator, including the
+  inverter chain designed in Section I. The resulting simulation and
+  associated FFT are shown in Figures \ref{fig:NoiselessTransient} and
+  \ref{fig:NoiselessTransientFFT}. As our inverter chain solution has an odd
+  count od inverters, we crossed the connection between the comparator and the
+  SAR logic such that the VOP of the comparator through the buffer drives the
+  complement input of the SAR logic, and vice-versa.
 
-%%%%% Noiseless transient simulation FFT figure
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.6\textwidth]{noiseless_transient_fft.eps}
-\caption{Noiseless transient simulation FFT.}
-\label{fig:NoiselessTransientFFT}
-\end{center}
-\end{figure}
-%%%%%%
+  The input signal here is $\frac{3}{64} * F_{sample} = \SI{984}{\kilo\hertz}$
+  with an amplitude of $\SI{2}{\volt} p-p$. The output signal is referenced
+  to $\pm\SI{0.5}{\volt}$, so for the sake of clear plotting for the transient
+  plots, here we have doubled it.
 
-Here, we see that the SQNR for our simulation with no noise is \SI{62.42}{\decibel}. This value closely matches the approximate ideal SQNR for a 10 bit ADC $SQNR_{ideal}=\SI{6.02}{\decibel}\cdot B+\SI{1.76}{\decibel}\approx\SI{62}{\decibel}$. 
+  To compute the signal to noise ratio, we compute a discrete fourier
+  transform. Next we ratio the power of the fundamental tone to the power of
+  the remainder of the transform, subtracting out the DC, along with first,
+  third and fifth harmonics.
 
-Finally, we simulate for and extract the SNR. For this, we run a transient noise simulation, the results of which are shown in Figure \ref{fig:NoisyTransient} and \ref{fig:NoisyTransientFFT}. From our simulations, we find $SNR=\SI{60.77}{\decibel}$
+  %%%%% Noiseless transient simulation figure
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.6\textwidth]{noiseless_transient_sig.eps}
+      \caption{Noiseless transient simulation.}
+      \label{fig:NoiselessTransient}
+    \end{center}
+  \end{figure}
+  %%%%%%
 
+  %%%%% Noiseless transient simulation FFT figure
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.6\textwidth]{noiseless_transient_fft.eps}
+      \caption{Noiseless transient simulation FFT.}
+      \label{fig:NoiselessTransientFFT}
+    \end{center}
+  \end{figure}
+  %%%%%%
 
-%%%%% Noisy transient simulation figure
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.6\textwidth]{noisy_transient_sig.eps}
-\caption{Noisy transient simulation.}
-\label{fig:NoisyTransient}
-\end{center}
-\end{figure}
-%%%%%%
+  \clearpage
 
-%%%%% Noisy transient simulation FFT figure
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=0.6\textwidth]{noisy_transient_fft.eps}
-\caption{Noisy transient simulation FFT.}
-\label{fig:NoisyTransientFFT}
-\end{center}
-\end{figure}
-%%%%%%
+  Here, we see that the SQNR for our simulation with no noise is
+  \SI{62.42}{\decibel}. This value closely matches the approximate ideal SQNR
+  for a 10 bit ADC
+  $SQNR_{ideal}=\SI{6.02}{\decibel}\cdot B+\SI{1.76}{\decibel}\approx\SI{62}{\decibel}$.
+
+  Finally, we simulate for and extract the SNR. For this, we run a transient
+  noise simulation, the results of which are shown in Figure
+  \ref{fig:NoisyTransient} and \ref{fig:NoisyTransientFFT}. From our
+  simulations, we find $SNR=\SI{60.77}{\decibel}$.
+
+  %%%%% Noisy transient simulation figure
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.6\textwidth]{noisy_transient_sig.eps}
+      \caption{Noisy transient simulation.}
+      \label{fig:NoisyTransient}
+    \end{center}
+  \end{figure}
+  %%%%%%
+
+  %%%%% Noisy transient simulation FFT figure
+  \begin{figure}[h]
+    \begin{center}
+      \includegraphics[width=0.6\textwidth]{noisy_transient_fft.eps}
+      \caption{Noisy transient simulation FFT.}
+      \label{fig:NoisyTransientFFT}
+    \end{center}
+  \end{figure}
+  %%%%%%
 
 
 

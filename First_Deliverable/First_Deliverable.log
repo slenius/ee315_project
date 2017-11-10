@@ -1,13 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 NOV 2017 17:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.9.21)  9 NOV 2017 22:03
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **First_Deliverable.tex
 (./First_Deliverable.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/revtex/revtex4-1.cls
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 2 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/revtex4-1.cls
 Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revt
 ex4/ for documentation)
  Copyright (c) 2009 The American Physical Society.
@@ -69,7 +68,7 @@ Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
 
 Class revtex4-1 Warning: No Society specified, using default society aps.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/revtex/aps4-1.rtx
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/aps4-1.rtx
 File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for docu
 mentation)
 Class revtex4-1 Info: RevTeX society APS selected on input line 31.
@@ -81,19 +80,19 @@ Class revtex4-1 Info: APS journal PRA selected on input line 7545.
 
 Class revtex4-1 Warning: No type size specified, using default 10.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
 File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for 
 documentation)
 Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/textcase/textcase.sty
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip44
 \bibsep=\skip45
@@ -102,13 +101,13 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/revtex/revsymb4-1.sty
 Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ f
 or documentation)
 LaTeX Info: Redefining \REV@mathfrak on input line 119.
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip46
 \LTright=\skip47
 \LTpre=\skip48
@@ -125,31 +124,31 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count99
 \LT@p@ftn=\toks16
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
@@ -157,11 +156,11 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/sidecap/sidecap.sty
+(/usr/share/texlive/texmf-dist/tex/latex/sidecap/sidecap.sty
 Package: sidecap 2003/06/06 v1.6f SideCap Package (RN/HjG)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \SC@BOXWD=\dimen105
 \SC@CAPWD=\dimen106
@@ -170,30 +169,30 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \c@SC@C=\count101
 \SC@BOX=\box45
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/preprint/balance.sty
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/balance.sty
 Package: balance 1999/02/23 4.3 (PWD)
 \oldvsize=\dimen109
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen110
 )
 LaTeX Info: Redefining \text on input line 39.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen111
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count102
@@ -234,10 +233,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -246,39 +245,69 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Info: Redefining \frak on input line 111.
 LaTeX Info: Redefining \Bbb on input line 113.
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/siunitx/siunitx.sty
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2015/03/01 v5547 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3names.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
+Package: l3bootstrap 2014/01/04 v4640 L3 Experimental bootstrap code
+)
+Package: l3names 2014/01/04 v4640 L3 Namespace for primitives
+)
+(/usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
+\et@xins=\count114
+)
+Package: expl3 2014/01/07 v4646 L3 Experimental code bundle wrapper
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2015/03/01 v5547 L3 programming layer (code) 
-L3 Module: l3bootstrap 2015/02/28 v5542 L3 Bootstrap code
-L3 Module: l3names 2015/02/24 v5535 L3 Namespace for primitives
-L3 Module: l3basics 2015/01/27 v5500 L3 Basic definitions
-L3 Module: l3expan 2014/11/27 v5472 L3 Argument expansion
-L3 Module: l3tl 2015/01/27 v5500 L3 Token lists
-L3 Module: l3str 2015/03/01 v5545 L3 Strings
-L3 Module: l3seq 2014/08/23 v5354 L3 Sequences and stacks
-L3 Module: l3int 2015/02/21 v5529 L3 Integers
-\c_max_int=\count114
-\l_tmpa_int=\count115
-\l_tmpb_int=\count116
-\g_tmpa_int=\count117
-\g_tmpb_int=\count118
-L3 Module: l3quark 2014/08/23 v5354 L3 Quarks
-L3 Module: l3prg 2014/08/23 v5354 L3 Control structures
-\g__prg_map_int=\count119
-L3 Module: l3clist 2014/08/23 v5354 L3 Comma separated lists
-L3 Module: l3token 2014/09/15 v5422 L3 Experimental token manipulation
-L3 Module: l3prop 2014/08/23 v5354 L3 Property lists
-L3 Module: l3msg 2015/02/26 v5537 L3 Messages
-L3 Module: l3file 2014/08/24 v5369 L3 File and I/O operations
-\l_iow_line_count_int=\count120
-\l__iow_target_count_int=\count121
-\l__iow_current_line_int=\count122
-\l__iow_current_word_int=\count123
-\l__iow_current_indentation_int=\count124
-L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3basics.sty
+Package: l3basics 2014/01/04 v4642 L3 Basic definitions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3expan.sty
+Package: l3expan 2014/01/04 v4642 L3 Argument expansion
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3tl.sty
+Package: l3tl 2013/12/27 v4625 L3 Token lists
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3seq.sty
+Package: l3seq 2013/12/14 v4623 L3 Sequences and stacks
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3int.sty
+Package: l3int 2013/08/02 v4583 L3 Integers
+\c_max_int=\count115
+\l_tmpa_int=\count116
+\l_tmpb_int=\count117
+\g_tmpa_int=\count118
+\g_tmpb_int=\count119
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3quark.sty
+Package: l3quark 2013/12/14 v4623 L3 Quarks
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3prg.sty
+Package: l3prg 2014/01/04 v4642 L3 Control structures
+\g__prg_map_int=\count120
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3clist.sty
+Package: l3clist 2013/07/28 v4581 L3 Comma separated lists
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3token.sty
+Package: l3token 2013/08/25 v4587 L3 Experimental token manipulation
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3prop.sty
+Package: l3prop 2013/12/14 v4623 L3 Property lists
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3msg.sty
+Package: l3msg 2013/07/28 v4581 L3 Messages
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3file.sty
+Package: l3file 2013/10/13 v4596 L3 File and I/O operations
+\l_iow_line_count_int=\count121
+\l__iow_target_count_int=\count122
+\l__iow_current_line_int=\count123
+\l__iow_current_word_int=\count124
+\l__iow_current_indentation_int=\count125
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3skip.sty
+Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
 \c_zero_dim=\dimen119
 \c_max_dim=\dimen120
 \l_tmpa_dim=\dimen121
@@ -297,26 +326,34 @@ L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \l_tmpb_muskip=\muskip15
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
-L3 Module: l3keys 2015/01/27 v5500 L3 Key-value interfaces
-\g__keyval_level_int=\count125
-\l_keys_choice_int=\count126
-L3 Module: l3fp 2014/08/22 v5336 L3 Floating points
-\c__fp_leading_shift_int=\count127
-\c__fp_middle_shift_int=\count128
-\c__fp_trailing_shift_int=\count129
-\c__fp_big_leading_shift_int=\count130
-\c__fp_big_middle_shift_int=\count131
-\c__fp_big_trailing_shift_int=\count132
-\c__fp_Bigg_leading_shift_int=\count133
-\c__fp_Bigg_middle_shift_int=\count134
-\c__fp_Bigg_trailing_shift_int=\count135
-L3 Module: l3box 2014/08/23 v5354 L3 Experimental boxes
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3keys.sty
+Package: l3keys 2013/12/08 v4614 L3 Experimental key-value interfaces
+\g__keyval_level_int=\count126
+\l_keys_choice_int=\count127
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3fp.sty
+Package: l3fp 2014/01/04 v4642 L3 Floating points
+\c__fp_leading_shift_int=\count128
+\c__fp_middle_shift_int=\count129
+\c__fp_trailing_shift_int=\count130
+\c__fp_big_leading_shift_int=\count131
+\c__fp_big_middle_shift_int=\count132
+\c__fp_big_trailing_shift_int=\count133
+\c__fp_Bigg_leading_shift_int=\count134
+\c__fp_Bigg_middle_shift_int=\count135
+\c__fp_Bigg_trailing_shift_int=\count136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3box.sty
+Package: l3box 2013/07/28 v4581 L3 Experimental boxes
 \c_empty_box=\box48
 \l_tmpa_box=\box49
 \l_tmpb_box=\box50
 \g_tmpa_box=\box51
 \g_tmpb_box=\box52
-L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3coffins.sty
+Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
 \l__coffin_internal_box=\box53
 \l__coffin_internal_dim=\dimen125
 \l__coffin_offset_x_dim=\dimen126
@@ -336,8 +373,17 @@ L3 Module: l3coffins 2014/08/23 v5354 L3 Coffin code layer
 \l__coffin_display_offset_dim=\dimen132
 \l__coffin_display_x_dim=\dimen133
 \l__coffin_display_y_dim=\dimen134
-L3 Module: l3color 2014/08/23 v5354 L3 Experimental color support
-L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3color.sty
+Package: l3color 2012/08/29 v4156 L3 Experimental color support
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3luatex.sty
+Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
+\g__cctab_allocate_int=\count137
+\g__cctab_stack_int=\count138
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3candidates.sty
+Package: l3candidates 2014/01/06 v4643 L3 Experimental additions to l3kernel
 \l__box_top_dim=\dimen135
 \l__box_bottom_dim=\dimen136
 \l__box_left_dim=\dimen137
@@ -355,61 +401,58 @@ L3 Module: l3candidates 2015/03/01 v5544 L3 Experimental additions to l3kernel
 \l__coffin_scaled_total_height_dim=\dimen148
 \l__coffin_scaled_width_dim=\dimen149
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-File: l3unicode-data.def 2015/03/01 v5544 L3 Unicode data
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
-File: l3pdfmode.def 2015/03/01 v5544 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count136
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2014/11/25 v5471 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count137
-\l__xparse_m_args_int=\count138
-\l__xparse_mandatory_args_int=\count139
-\l__xparse_processor_int=\count140
-\l__xparse_v_nesting_int=\count141
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count139
+\l__xparse_m_args_int=\count140
+\l__xparse_mandatory_args_int=\count141
+\l__xparse_processor_int=\count142
+\l__xparse_v_nesting_int=\count143
 )
-Package: siunitx 2015/01/21 v2.6e A comprehensive (SI) units package
+Package: siunitx 2013/07/31 v2.5s A comprehensive (SI) units package
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen150
 \extrarowheight=\dimen151
 \NC@list=\toks23
 \extratabsurround=\skip59
 \backup@length=\skip60
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2014/11/25 v5471 LaTeX2e option processing using LaTeX3 keys
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2013/12/31 v4634 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
 \l__siunitx_tmp_box=\box63
 \l__siunitx_tmp_dim=\dimen152
-\l__siunitx_tmp_int=\count142
-Variant \prop_get:NVNT already defined; not changing it on line 380
-Variant \prop_get:NVNF already defined; not changing it on line 381
-Variant \prop_get:NVNTF already defined; not changing it on line 382
-\l__siunitx_number_mantissa_length_int=\count143
-\l__siunitx_number_uncert_length_int=\count144
-\l__siunitx_round_int=\count145
-\l__siunitx_process_decimal_int=\count146
-\l__siunitx_process_uncertainty_int=\count147
-\l__siunitx_process_fixed_int=\count148
-\l__siunitx_process_integer_min_int=\count149
-\l__siunitx_process_precision_int=\count150
-\l__siunitx_group_min_int=\count151
+\l__siunitx_tmp_int=\count144
+Variant \prop_get:NVNT already defined; not changing it on line 371
+Variant \prop_get:NVNF already defined; not changing it on line 372
+Variant \prop_get:NVNTF already defined; not changing it on line 373
+\l__siunitx_number_mantissa_length_int=\count145
+\l__siunitx_number_uncert_length_int=\count146
+\l__siunitx_round_int=\count147
+\l__siunitx_process_decimal_int=\count148
+\l__siunitx_process_uncertainty_int=\count149
+\l__siunitx_process_fixed_int=\count150
+\l__siunitx_process_integer_min_int=\count151
+\l__siunitx_process_precision_int=\count152
+\l__siunitx_group_min_int=\count153
 \l__siunitx_angle_marker_box=\box64
 \l__siunitx_angle_unit_box=\box65
 \l__siunitx_angle_marker_dim=\dimen153
 \l__siunitx_angle_unit_dim=\dimen154
-\l__siunitx_unit_int=\count152
-\l__siunitx_unit_denominator_int=\count153
-\l__siunitx_unit_numerator_int=\count154
-\l__siunitx_unit_prefix_int=\count155
-\l__siunitx_unit_prefix_base_int=\count156
-\l__siunitx_unit_prefix_gram_int=\count157
-\l__siunitx_number_product_int=\count158
+\l__siunitx_unit_int=\count154
+\l__siunitx_unit_denominator_int=\count155
+\l__siunitx_unit_numerator_int=\count156
+\l__siunitx_unit_prefix_int=\count157
+\l__siunitx_unit_prefix_base_int=\count158
+\l__siunitx_unit_prefix_gram_int=\count159
+\l__siunitx_number_product_int=\count160
 \c__siunitx_one_fill_skip=\skip61
 \l__siunitx_table_unit_align_skip=\skip62
 \l__siunitx_table_exponent_dim=\dimen155
@@ -430,148 +473,158 @@ Variant \prop_get:NVNTF already defined; not changing it on line 382
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7176.
+. Defining document command \DeclareBinaryPrefix with arg. spec. 'mmm' on line
+. 7101.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPostPower with sig. 'mm' on line 7179.
+. Defining document command \DeclareSIPostPower with arg. spec. 'mm' on line
+. 7104.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7182.
+. Defining document command \DeclareSIPrefix with arg. spec. 'mmm' on line
+. 7107.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIPrePower with sig. 'mm' on line 7185.
+. Defining document command \DeclareSIPrePower with arg. spec. 'mm' on line
+. 7110.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIQualifier with sig. 'mm' on line 7188.
+. Defining document command \DeclareSIQualifier with arg. spec. 'mm' on line
+. 7113.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7191.
+. Defining document command \DeclareSIUnit with arg. spec. 'O{}mm' on line
+. 7116.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7194.
+. Defining document command \DeclareSIUnitWithOptions with arg. spec. 'mmm' on
+. line 7119.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7209.
+. Defining document command \ang with arg. spec. 'o>{\SplitArgument {2}{;}}m'
+. on line 7134.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \num with sig. 'om' on line 7217.
+. Defining document command \num with arg. spec. 'om' on line 7142.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7225.
+. Defining document command \numlist with arg. spec. 'o>{\SplitList {;}}m' on
+. line 7150.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \numrange with sig. 'omm' on line 7233.
+. Defining document command \numrange with arg. spec. 'omm' on line 7158.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7244.
+. Defining document command \SIlist with arg. spec. 'o>{\SplitList {;}}mm' on
+. line 7169.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SIrange with sig. 'ommm' on line 7255.
+. Defining document command \SIrange with arg. spec. 'ommm' on line 7180.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \SI with sig. 'omom' on line 7266.
+. Defining document command \SI with arg. spec. 'omom' on line 7191.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \sisetup with sig. 'm' on line 7269.
+. Defining document command \sisetup with arg. spec. 'm' on line 7194.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \tablenum with sig. 'om' on line 7281.
+. Defining document command \tablenum with arg. spec. 'om' on line 7206.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \si with sig. 'om' on line 7292.
+. Defining document command \si with arg. spec. 'om' on line 7217.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_num:w with sig. 'om' on line 7339.
+. Defining document command \__siunitx_bookmark_num:w with arg. spec. 'om' on
+. line 7262.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_numrange:w with sig. 'omm' on line
-. 7341.
+. Defining document command \__siunitx_bookmark_numrange:w with arg. spec.
+. 'omm' on line 7264.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SI:w with sig. 'omom' on line 7343.
+. Defining document command \__siunitx_bookmark_SI:w with arg. spec. 'omom' on
+. line 7266.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SIlist:w with sig. 'omm' on line 7345.
+. Defining document command \__siunitx_bookmark_SIlist:w with arg. spec. 'omm'
+. on line 7268.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_SIrange:w with sig. 'ommm' on line
-. 7347.
+. Defining document command \__siunitx_bookmark_SIrange:w with arg. spec.
+. 'ommm' on line 7270.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__siunitx_bookmark_si:w with sig. 'om' on line 7348.
+. Defining document command \__siunitx_bookmark_si:w with arg. spec. 'om' on
+. line 7271.
 .................................................
 \g__file_internal_ior=\read1
-(/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/translator.sty
+
+(/usr/share/texmf/tex/latex/beamer/base/translator/translator.sty
 Package: translator 2010/06/12 ver 1.10
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/translator-lang
-uage-mappings.tex)))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+(/usr/share/texmf/tex/latex/beamer/base/translator/translator-language-mappings
+.tex))) (/usr/share/texlive/texmf-dist/tex/latex/hyphenat/hyphenat.sty
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
-\langwohyphens=\language80
+\langwohyphens=\language3
 LaTeX Info: Redefining \_ on input line 43.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count159
-\Gm@cntv=\count160
-\c@Gm@tempcnt=\count161
+\Gm@cnth=\count161
+\Gm@cntv=\count162
+\c@Gm@tempcnt=\count163
 \Gm@bindingoffset=\dimen164
 \Gm@wd@mp=\dimen165
 \Gm@odd@mp=\dimen166
@@ -582,58 +635,58 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen171
 \Gm@dimlist=\toks24
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/esvect/esvect.sty
+(/usr/share/texlive/texmf-dist/tex/latex/esvect/esvect.sty
 Package: esvect 
 \symesvector=\mathgroup6
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/braket/braket.sty)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count162
+(/usr/share/texlive/texmf-dist/tex/latex/braket/braket.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count164
 \lst@gtempboxa=\box70
 \lst@token=\toks25
-\lst@length=\count163
+\lst@length=\count165
 \lst@currlwidth=\dimen172
-\lst@column=\count164
-\lst@pos=\count165
+\lst@column=\count166
+\lst@pos=\count167
 \lst@lostspace=\dimen173
 \lst@width=\dimen174
-\lst@newlines=\count166
-\lst@lineno=\count167
+\lst@newlines=\count168
+\lst@lineno=\count169
 \lst@maxwidth=\dimen175
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count168
-\lst@skipnumbers=\count169
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+\c@lstnumber=\count170
+\lst@skipnumbers=\count171
 \lst@framebox=\box71
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/09/06 1.5e listings configuration
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -642,7 +695,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -655,11 +708,11 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 )))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip65
 \subfigcapskip=\skip66
@@ -667,63 +720,63 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigbottomskip=\skip67
 \subfigcapmargin=\dimen177
 \subfiglabelskip=\skip68
-\c@subfigure=\count170
-\c@lofdepth=\count171
-\c@subtable=\count172
-\c@lotdepth=\count173
+\c@subfigure=\count172
+\c@lofdepth=\count173
+\c@subtable=\count174
+\c@lotdepth=\count175
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip69
 \subfig@bottom=\skip70
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks26
 \verbatim@line=\toks27
 \verbatim@in@stream=\read2
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/mwe/mwe.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mwe/mwe.sty
 Package: mwe 2012/05/15 v0.3 Package to support minimal working examples (MWE)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count174
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count176
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/blindtext/blindtext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count175
-\c@Blindtext=\count176
-\c@blind@countparstart=\count177
-\blind@countxx=\count178
-\blindtext@numBlindtext=\count179
-\blind@countyy=\count180
-\c@blindlist=\count181
-\c@blindlistlevel=\count182
-\c@blindlist@level=\count183
-\blind@listitem=\count184
-\c@blind@listcount=\count185
-\c@blind@levelcount=\count186
-\blind@mathformula=\count187
-\blind@Mathformula=\count188
-\c@blind@randomcount=\count189
-\c@blind@randommax=\count190
-\c@blind@pangramcount=\count191
-\c@blind@pangrammax=\count192
+\c@blindtext=\count177
+\c@Blindtext=\count178
+\c@blind@countparstart=\count179
+\blind@countxx=\count180
+\blindtext@numBlindtext=\count181
+\blind@countyy=\count182
+\c@blindlist=\count183
+\c@blindlistlevel=\count184
+\c@blindlist@level=\count185
+\blind@listitem=\count186
+\c@blind@listcount=\count187
+\c@blind@levelcount=\count188
+\blind@mathformula=\count189
+\blind@Mathformula=\count190
+\c@blind@randomcount=\count191
+\c@blind@randommax=\count192
+\c@blind@pangramcount=\count193
+\c@blind@pangrammax=\count194
 ))
 Class revtex4-1 Info: Patching array package. on input line 28.
 Class revtex4-1 Info: Patching longtable package on input line 28.
@@ -749,23 +802,23 @@ LaTeX Font Info:    ... okay on input line 28.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
 
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count193
+\scratchcounter=\count195
 \scratchdimen=\dimen178
 \scratchbox=\box72
-\nofMPsegments=\count194
-\nofMParguments=\count195
+\nofMPsegments=\count196
+\nofMParguments=\count197
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count196
+\MPscratchCnt=\count198
 \MPscratchDim=\dimen179
-\MPnumerator=\count197
-\makeMPintoPDFobject=\count198
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count200
 \everyMPtoPDFconversion=\toks29
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/ms/ragged2e.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/ms/everysel.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 
 ABD: EverySelectfont initializing macros
@@ -786,12 +839,13 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \RaggedRightParindent=\skip83
 \JustifyingParindent=\skip84
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/beamer/translator/dicts/translato
-r-basic-dictionary/translator-basic-dictionary-English.dict
+(/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
+onary/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
-File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/config/siunitx-abbreviations.c
+fg
+File: siunitx-abbreviations.cfg 2013/07/31 v2.5s siunitx: Abbreviated units
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -827,36 +881,37 @@ File: siunitx-abbreviations.cfg 2015/01/21 v2.6e siunitx: Abbreviated units
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count199
+\c@lstlisting=\count201
 \openout3 = `First_DeliverableNotes.bib'.
 
-\c__siunitx_mathsf_int=\count200
+Normal \count register pool exhausted, switching to extended pool.
+\c__siunitx_mathsf_int=\count277
 LaTeX Font Info:    Try loading font information for U+msa on input line 28.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 28.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+esvect on input line 28.
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/esvect/uesvect.fd
+(/usr/share/texlive/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-\c__siunitx_mathtt_int=\count201
+\c__siunitx_mathtt_int=\count278
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 Package epstopdf Info: Source file: <Inverter_Design/TestBench.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-06 20:32:14
 (epstopdf)                    size: 11388 bytes
 (epstopdf)             Output file: <Inverter_Design/TestBench-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-06 20:32:14
 (epstopdf)                    size: 4971 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/TestBench-
 eps-converted-to.pdf Inverter_Design/TestBench.eps>
@@ -871,11 +926,11 @@ Package pdftex.def Info: Inverter_Design/TestBench-eps-converted-to.pdf used on
  input line 61.
 (pdftex.def)             Requested size: 205.24384pt x 116.28154pt.
 Package epstopdf Info: Source file: <Inverter_Design/Inverter_Chain.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-06 20:32:14
 (epstopdf)                    size: 9645 bytes
 (epstopdf)             Output file: <Inverter_Design/Inverter_Chain-eps-convert
 ed-to.pdf>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-06 20:32:14
 (epstopdf)                    size: 4995 bytes
 (epstopdf)             Command: <repstopdf --outfile=Inverter_Design/Inverter_C
 hain-eps-converted-to.pdf Inverter_Design/Inverter_Chain.eps>
@@ -892,44 +947,45 @@ ed on input line 73.
 (pdftex.def)             Requested size: 153.9368pt x 49.52765pt.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 85.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./I
-nverter_Design/TestBench-eps-converted-to.pdf> <./Inverter_Design/Inverter_Chai
-n-eps-converted-to.pdf>]
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Inverter_Design/Test
+Bench-eps-converted-to.pdf> <./Inverter_Design/Inverter_Chain-eps-converted-to.
+pdf>]
 Package epstopdf Info: Source file: <GammaTest.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 12981 bytes
 (epstopdf)             Output file: <GammaTest-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 8697 bytes
 (epstopdf)             Command: <repstopdf --outfile=GammaTest-eps-converted-to
 .pdf GammaTest.eps>
-(epstopdf)             \includegraphics on input line 150.
+(epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
- <GammaTest-eps-converted-to.pdf, id=28, 248.93pt x 137.51375pt>
+
+<GammaTest-eps-converted-to.pdf, id=28, 248.93pt x 137.51375pt>
 File: GammaTest-eps-converted-to.pdf Graphic file (type pdf)
 
 <use GammaTest-eps-converted-to.pdf>
-Package pdftex.def Info: GammaTest-eps-converted-to.pdf used on input line 150.
+Package pdftex.def Info: GammaTest-eps-converted-to.pdf used on input line 152.
 
 (pdftex.def)             Requested size: 205.24384pt x 113.38309pt.
 Package epstopdf Info: Source file: <Gamma.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 168525 bytes
 (epstopdf)             Output file: <Gamma-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 11912 bytes
 (epstopdf)             Command: <repstopdf --outfile=Gamma-eps-converted-to.pdf
  Gamma.eps>
-(epstopdf)             \includegraphics on input line 157.
+(epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
 
 <Gamma-eps-converted-to.pdf, id=29, 562.1pt x 421.575pt>
 File: Gamma-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Gamma-eps-converted-to.pdf>
-Package pdftex.def Info: Gamma-eps-converted-to.pdf used on input line 157.
+Package pdftex.def Info: Gamma-eps-converted-to.pdf used on input line 159.
 (pdftex.def)             Requested size: 359.18063pt x 269.3825pt.
 
 
@@ -940,140 +996,129 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2] [3 <./GammaTest-eps-converted-to.pdf> <./Gamma-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Part_G.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 26997 bytes
 (epstopdf)             Output file: <Part_G-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 13821 bytes
 (epstopdf)             Command: <repstopdf --outfile=Part_G-eps-converted-to.pd
 f Part_G.eps>
-(epstopdf)             \includegraphics on input line 202.
+(epstopdf)             \includegraphics on input line 204.
 Package epstopdf Info: Output file is already uptodate.
 
 <Part_G-eps-converted-to.pdf, id=71, 562.1pt x 421.575pt>
 File: Part_G-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Part_G-eps-converted-to.pdf>
-Package pdftex.def Info: Part_G-eps-converted-to.pdf used on input line 202.
+Package pdftex.def Info: Part_G-eps-converted-to.pdf used on input line 204.
 (pdftex.def)             Requested size: 307.8736pt x 230.90205pt.
- [4 <./Part_G-eps-converted-to.pdf>]
+ [4 <./Part_G-eps-converted-to.pdf>] [5]
 Package epstopdf Info: Source file: <noiseless_transient_sig.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 40496 bytes
 (epstopdf)             Output file: <noiseless_transient_sig-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-11-09 17:47:34
-(epstopdf)                    size: 14799 bytes
+(epstopdf)                    date: 2017-11-09 20:59:55
+(epstopdf)                    size: 14950 bytes
 (epstopdf)             Command: <repstopdf --outfile=noiseless_transient_sig-ep
 s-converted-to.pdf noiseless_transient_sig.eps>
-(epstopdf)             \includegraphics on input line 254.
+(epstopdf)             \includegraphics on input line 275.
 Package epstopdf Info: Output file is already uptodate.
 
-<noiseless_transient_sig-eps-converted-to.pdf, id=85, 421.575pt x 316.18124pt>
+<noiseless_transient_sig-eps-converted-to.pdf, id=88, 421.575pt x 316.18124pt>
 File: noiseless_transient_sig-eps-converted-to.pdf Graphic file (type pdf)
 
 <use noiseless_transient_sig-eps-converted-to.pdf>
 Package pdftex.def Info: noiseless_transient_sig-eps-converted-to.pdf used on i
-nput line 254.
+nput line 275.
 (pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
 Package epstopdf Info: Source file: <noiseless_transient_fft.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 16452 bytes
 (epstopdf)             Output file: <noiseless_transient_fft-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-11-09 17:49:43
-(epstopdf)                    size: 9195 bytes
+(epstopdf)                    date: 2017-11-09 20:59:56
+(epstopdf)                    size: 9391 bytes
 (epstopdf)             Command: <repstopdf --outfile=noiseless_transient_fft-ep
 s-converted-to.pdf noiseless_transient_fft.eps>
-(epstopdf)             \includegraphics on input line 264.
+(epstopdf)             \includegraphics on input line 285.
 Package epstopdf Info: Output file is already uptodate.
 
-<noiseless_transient_fft-eps-converted-to.pdf, id=86, 421.575pt x 316.18124pt>
+<noiseless_transient_fft-eps-converted-to.pdf, id=89, 421.575pt x 316.18124pt>
 File: noiseless_transient_fft-eps-converted-to.pdf Graphic file (type pdf)
 
 <use noiseless_transient_fft-eps-converted-to.pdf>
 Package pdftex.def Info: noiseless_transient_fft-eps-converted-to.pdf used on i
-nput line 264.
+nput line 285.
 (pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+ [6 <./noiseless_transient_sig-eps-converted-to.pdf> <./noiseless_transient_fft
+-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <noisy_transient_sig.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 40485 bytes
 (epstopdf)             Output file: <noisy_transient_sig-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-09 17:50:04
-(epstopdf)                    size: 14858 bytes
+(epstopdf)                    date: 2017-11-09 20:59:57
+(epstopdf)                    size: 15012 bytes
 (epstopdf)             Command: <repstopdf --outfile=noisy_transient_sig-eps-co
 nverted-to.pdf noisy_transient_sig.eps>
-(epstopdf)             \includegraphics on input line 279.
+(epstopdf)             \includegraphics on input line 307.
 Package epstopdf Info: Output file is already uptodate.
-<noisy_transient_sig-eps-converted-to.pdf, id=87, 421.575pt x 316.18124pt>
+
+<noisy_transient_sig-eps-converted-to.pdf, id=109, 421.575pt x 316.18124pt>
 File: noisy_transient_sig-eps-converted-to.pdf Graphic file (type pdf)
 
 <use noisy_transient_sig-eps-converted-to.pdf>
 Package pdftex.def Info: noisy_transient_sig-eps-converted-to.pdf used on input
- line 279.
+ line 307.
 (pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 Package epstopdf Info: Source file: <noisy_transient_fft.eps>
-(epstopdf)                    date: 2017-11-09 17:35:46
+(epstopdf)                    date: 2017-11-09 20:51:19
 (epstopdf)                    size: 17028 bytes
 (epstopdf)             Output file: <noisy_transient_fft-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-09 17:50:53
-(epstopdf)                    size: 9463 bytes
+(epstopdf)                    date: 2017-11-09 20:59:58
+(epstopdf)                    size: 9664 bytes
 (epstopdf)             Command: <repstopdf --outfile=noisy_transient_fft-eps-co
 nverted-to.pdf noisy_transient_fft.eps>
-(epstopdf)             \includegraphics on input line 289.
+(epstopdf)             \includegraphics on input line 317.
 Package epstopdf Info: Output file is already uptodate.
-<noisy_transient_fft-eps-converted-to.pdf, id=88, 421.575pt x 316.18124pt>
+
+<noisy_transient_fft-eps-converted-to.pdf, id=110, 421.575pt x 316.18124pt>
 File: noisy_transient_fft-eps-converted-to.pdf Graphic file (type pdf)
 
 <use noisy_transient_fft-eps-converted-to.pdf>
 Package pdftex.def Info: noisy_transient_fft-eps-converted-to.pdf used on input
- line 289.
+ line 317.
 (pdftex.def)             Requested size: 307.8736pt x 230.90688pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-No file First_Deliverable.bbl.
-[5 <./noiseless_transient_sig-eps-converted-to.pdf>] [6 <./noiseless_transient_
-fft-eps-converted-to.pdf> <./noisy_transient_sig-eps-converted-to.pdf>]
-[7 <./noisy_transient_fft-eps-converted-to.pdf>] (./First_Deliverable.aux) ) 
+ (./First_Deliverable.bbl)
+[7 <./noisy_transient_sig-eps-converted-to.pdf> <./noisy_transient_fft-eps-conv
+erted-to.pdf>] (./First_Deliverable.aux) ) 
 Here is how much of TeX's memory you used:
- 15685 strings out of 493089
- 300645 string characters out of 6134842
- 460842 words of memory out of 5000000
- 18961 multiletter control sequences out of 15000+600000
+ 15086 strings out of 495028
+ 289620 string characters out of 6181497
+ 441048 words of memory out of 5000000
+ 18023 multiletter control sequences out of 15000+600000
  14164 words of font info for 58 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 42i,12n,40p,10411b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/u
-sr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on First_Deliverable.pdf (7 pages, 238004 bytes).
+ 14 hyphenation exceptions out of 8191
+ 42i,12n,40p,10436b,1066s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </afs/.ir/users/l/e/lenius/.texmf-va
+r/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </afs/.ir/users/l/e/lenius/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on First_Deliverable.pdf (7 pages, 222272 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 182 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
