@@ -57,7 +57,8 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
   @(cross(V(phiS)-vth, -1)) begin
     if(state == SAMPLE) begin
       state = READY;
-      clk_out = 0;
+      // turn on the comparator
+      clk_out = 1;
     end
   end
 
@@ -76,18 +77,19 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
       end
       index = index-1;
       // reset the comparator
-      clk_out = 1;
+      clk_out = 0;
       state = RESET_COMP;
     end
-
   end
 
   // negedge on ready - ready to start next bit
   @(cross(V(ready)-vth, -1)) begin
     if (index >= 0 && state == RESET_COMP) begin
-      clk_out = 0;
+      // ready to start another comparison cycle - enable the comp
+      clk_out = 1;
       state = READY;
     end else begin
+      // if we're done, keep the comparator off to save power
       clk_out = 0;
       state = DONE;
     end
