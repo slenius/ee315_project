@@ -1,0 +1,7 @@
+digraph {
+    sample -> ready [label="phiS negedge"];
+    ready -> reset_comp [label="ready posedge"];
+    reset_comp -> ready [label="ready negedge"];
+    reset_comp -> done [label="done posedge"];
+    done -> sample [label="phiS posedge"];
+}
