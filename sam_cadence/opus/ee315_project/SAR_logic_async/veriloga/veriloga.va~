@@ -87,7 +87,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
     if (index >= 0 && state == RESET_COMP) begin
       clk_out = 0;
       state = READY;
-    else begin
+    end else begin
       clk_out = 0;
       state = DONE;
     end
