@@ -1,0 +1,57 @@
+\documentclass[letterpaper, 12pt, notitlepage]{revtex4-1}
+\usepackage{longtable}
+\usepackage{graphicx} 
+\usepackage{sidecap}
+\usepackage{balance}
+\usepackage{siunitx}
+\usepackage[none]{hyphenat}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{esvect}
+\usepackage{braket}
+\begin{document}
+\title{ Optimizing SAR ADC}
+\author{Thomas Flores}
+\affiliation{}
+\date{\today}
+\maketitle
+
+\section{Determining time constant}
+We will begin our design targeting a sample speed of $\SI{100}{\mega\siemens\per\second}$. We will be using a 10-bit asynchronous approach, and so we need to figure out what the best and worst case settling times will be. 
+We start from PAPER and use equations
+\begin{equation}
+T_{async}=\sum_{i=0}^{N-1}K\cdot\log\frac{V_{FS}}{V+{res}[i]}
+\end{equation}
+We see that 
+\begin{equation}
+\frac{T_{async}}{T_{sync}}_{min}\approx\frac{1}{2}
+\end{equation}
+So we design a synchronous SAR ADC with half the speed of our target asynchronous design and assume it will be twice as fast after asynchronous implementation. Therefore, our new target design is \SI{50}{\mega\siemens\per\second}.  Given our metastability rate $P=10^{-7}$, we find that we need
+\begin{equation}
+N_{\tau}=\log\left(\frac{N_{codes}}{P_{meta}}\right)\approx20
+\end{equation}
+Therefore, 
+\begin{equation}
+\tau=\frac{1}{2F_sN_{\tau}N_{ck,conf}}
+\end{equation}
+This means $\tau=\SI{41.67}{\pico\second}$
+
+We then see how we must size the input pair to provide the necessary gain for our minimum signal. We use the relationship for the exponential gain
+\begin{equation}
+v_{od}(t)=v_{id}(t)A_{v0}e^{\frac{1}{2\tau f_{cmax}}}
+\end{equation}
+where here we have $v_{id}(t)=\SI{997}{\pico\volt}$, and $v_{od}(t)=V_{DD}-V_{th,n}\approx \SI{950}{\milli\volt}$. We solve for the only unknown, giving
+\begin{equation}
+A_{v0}=\frac{v_{od}(t)}{v_{id}(t)}e^{-\frac{1}{2\tau f_{cmax}}}=
+\end{equation}
+
+
+
+We begin our design using a comparator design with reasonable values. We will extract the regeneration time for this design, and sweep over some transistor widths to find times that are within the required $\tau$ spec calculated above. Values closest to this $\tau$ will be assumed maximum due to minimal power consumption to meet spec (faster $\tau$ = higher power consumption).  
+\begin{itemize}
+\item Simulate using the "hw\_comparator\_testbench"
+\item Reasonable starting values: $W_{input}=\SI{1}{\micro\metre}$, $W_{current}=\SI{3}{\micro\metre}$, $W_{latch,n}=\SI{1.5}{\micro\metre}$, $W_{latch,p}=2W_{latch,n}\SI{3}{\micro\metre}$, $W_{reset}=\SI{3}{\micro\metre}$
+\end{itemize}
+
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}
