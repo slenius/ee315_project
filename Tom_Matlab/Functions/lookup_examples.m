@@ -72,8 +72,5 @@ vgs2 = lookupVGS(dev, 'GM_ID', 10)
 
 %%
 clc
-CDD_W=lookup(nch,'CDD_W','GM_ID',10);
-W=50e-6;
-CGG=lookup(nch,'CGG_W','GM_ID',10)*W
-CDD=CDD_W*W
+
 

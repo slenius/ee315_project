@@ -19,6 +19,13 @@
 \usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
 \usepackage{verbatim}
 \usepackage{mwe}
+\usepackage{array}
+\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
+\usepackage{hhline}
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
 \graphicspath{{Figures/}}
@@ -99,14 +106,20 @@ C_{P,Q}\geq\frac{8\gamma}{A_v}\frac{kT}{\sigma_{n,in}^2}\rightarrow C_{P,Q}\geq\
 To begin our design, we create a unit comparator constructed from some reasonable design choices. To maximize speed in the cross coupled inverters, we assume that pmos elements M5,6 should be twice the width of the nmos elements M3,4. To size M3,4, we must limit the widths so they do not signficantly contribute to the mismatch at the input. For our design with $A_v\approx3.5$, this means that $W3,4\geq\frac{1}{3.5}W1,2$ due to the offset referral to the input. 
 
 \begin{table}[h]
-\caption{default}
+\caption{Widths for comparators. All lengths minimum length $L=\SI{90}{\nano\metre}$}
 \begin{center}
-\begin{tabular}{|c|c|}
-test & test
+\begin{tabular}{c|c|c|c}
+\hline \rowstyle{\bfseries} Transistor & \rowstyle{\bfseries} Unit & \rowstyle{\bfseries} First Order Design & \rowstyle{\bfseries} Optimized \\ \hline
+M1,2 & \SI{1}{\micro\metre} & ? & ? \\ \hline
+M3,4 & $\alpha W_{M1,2}$ & ? & ? \\ \hline
+M5,6 & $2W_{M3,4}$ & ? & ? \\ \hline
+M7 & ? & ? & ? \\ \hline
+S1,2 & ? & ? & ? \\ \hline
+S3,4 & ? & ? & ? \\ \hline
 \end{tabular}
 \end{center}
-\label{default}
-\end{table}%
+\label{tbl:ComparatorDesign}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
