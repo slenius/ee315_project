@@ -2,4 +2,5 @@
 DEFINE basic $CDS_INST_DIR/tools/dfII/etc/cdslib/basic
 DEFINE ee315 $EE315_HOME/opus/ee315
 DEFINE ee315_project ~/ee315_project/sam_cadence/opus/ee315_project
+DEFINE ProjectToShare ~/ee315_project/tom_cadence/ProjectToShare
 DEFINE Project_Lib2 $EE315_HOME/opus/Project_Lib2

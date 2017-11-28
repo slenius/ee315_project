@@ -375,12 +375,11 @@ hnlPrintTopCellHeader hnlPrintTopCellFooter hnlPrintPorts hnlPrintDeviceHeader
 hnlPrintDeviceFooter hnlPrintInst) .
 Loading the file
 '/afs/ir.stanford.edu/class/ee/cadence/IC614/tools.lnx86/dfII/etc/skill/hnl/spectre.ile'.Loading the file
-'/afs/ir.stanford.edu/class/ee/cadence/IC614/tools.lnx86/dfII/etc/skill/hnl/driver.ile'.Begin Incremental Netlisting Nov  8 02:13:09 2017
-ERROR (OSSHNL-109): The cell view,
-'ee315_project/hw_comparator_testbench/schematic', has been modified since the
-last extraction.
-Re-extract the design (File->Check and Save menu option) for
-schematic cell
-views to correct this error.
-
-End netlisting Nov  8 02:13:09 2017
+'/afs/ir.stanford.edu/class/ee/cadence/IC614/tools.lnx86/dfII/etc/skill/hnl/driver.ile'.Begin Incremental Netlisting Nov 20 21:19:12 2017
+End netlisting Nov 20 21:19:12 2017
+Begin Incremental Netlisting Nov 20 21:19:35 2017
+End netlisting Nov 20 21:19:35 2017
+Begin Incremental Netlisting Nov 20 21:19:44 2017
+End netlisting Nov 20 21:19:44 2017
+Begin Incremental Netlisting Nov 20 21:23:13 2017
+End netlisting Nov 20 21:23:13 2017

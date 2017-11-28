@@ -1,0 +1,26 @@
+// VerilogA for ee315_project, NAND2_verilog, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module NAND2_verilog(out, in_a, in_b);
+output out;
+electrical out;
+input in_a;
+electrical in_a;
+input in_b;
+electrical in_b;
+
+parameter real vh = 1.2;                // output voltage in high state
+parameter real vl = 0;                  // output voltage in low state
+parameter real vth = (vh + vl)/2;       // threshold voltage at inputs
+parameter real td = 100p from [0:inf);  // delay to start of output transition
+parameter real tt = 100p from [0:inf);  // transition time of output signals
+
+
+analog begin
+  @(cross(V(in_a) - vth) or cross(V(in_b) - vth))
+  V(out) <+ transition(((V(in_a) < vth) && (V(in_b) < vth)) ? vh : vl, td, tt);
+end
+
+endmodule

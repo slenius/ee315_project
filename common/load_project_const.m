@@ -23,4 +23,7 @@ function c = load_project_const()
   
   c.n_codes = 2 ^ c.bits;
   
+  c.fs = 2.0;
+  c.lsb = c.fs / c.n_codes;
+  
 end
