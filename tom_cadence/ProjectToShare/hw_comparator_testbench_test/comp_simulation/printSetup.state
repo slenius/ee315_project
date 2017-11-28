@@ -1,0 +1,331 @@
+'(nil version 1.0 bBox ((591 100) (1141 708)))
+(unless printInfoDpl
+printInfoDpl = (ncons nil)
+)
+(unless printInfoDpl->expTable
+printInfoDpl->expTable = (ncons nil)
+)
+printInfoDpl->expTable->waves = (let
+(tmp1)
+tmp1 = nil
+list(tmp1)
+)
+printInfoDpl->expTable->origWaves = (let
+(tmp1)
+tmp1 = nil
+list(tmp1)
+)
+printInfoDpl->expTable->expressions = (let
+(tmp1)
+tmp1 = "OP(\"/Comparator/StrongArmLatch/M1\" \"??\")"
+list(tmp1)
+)
+printInfoDpl->expTable->aliases = (let
+(tmp1)
+tmp1 = "OP(\"/Comparator/StrongArmLatch/M1\" \"??\")"
+list(tmp1)
+)
+(unless printInfoDpl->optionDpl
+printInfoDpl->optionDpl = (ncons nil)
+)
+printInfoDpl->optionDpl->format = 'suffix
+printInfoDpl->optionDpl->numSigDigits = 4
+printInfoDpl->optionDpl->linLog = "Linear"
+printInfoDpl->optionDpl->from = nil
+printInfoDpl->optionDpl->to = nil
+printInfoDpl->optionDpl->step = nil
+(unless printInfoDpl->printOptions
+printInfoDpl->printOptions = (ncons nil)
+)
+printInfoDpl->printType = "simple wave"
+printInfoDpl->origStrList = (let
+(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16 tmp17 tmp18 tmp19 tmp20 tmp21 tmp22 tmp23 tmp24 tmp25 tmp26 tmp27 tmp28 tmp29 tmp30 tmp31 tmp32 tmp33 tmp34 tmp35 tmp36 tmp37 tmp38 tmp39 tmp40 tmp41 tmp42 tmp43 tmp44 tmp45 tmp46 tmp47 tmp48 tmp49 tmp50 tmp51 tmp52 tmp53 tmp54 tmp55 tmp56 tmp57 tmp58 tmp59 tmp60 tmp61 tmp62 tmp63 tmp64 tmp65 tmp66)
+tmp1 = "signal            OP(\"/Comparator/StrongArmLatch/M1\" \"??\")"
+tmp2 = "betaeff               3.15m         "
+tmp3 = "cbb                 199.8a          "
+tmp4 = "cbd                 -58.81a         "
+tmp5 = "cbdbo               -58.81a         "
+tmp6 = "cbg                -223.9a          "
+tmp7 = "cbgbo              -223.9a          "
+tmp8 = "cbs                  82.92a         "
+tmp9 = "cbsbo                82.92a         "
+tmp10 = "cdb                 -60.72a         "
+tmp11 = "cdd                  92.35a         "
+tmp12 = "cddbo                41.36a         "
+tmp13 = "cdg                -435.3a          "
+tmp14 = "cdgbo              -384.3a          "
+tmp15 = "cds                 403.7a          "
+tmp16 = "cdsbo               403.7a          "
+tmp17 = "cgb                 -78.33a         "
+tmp18 = "cgd                 -74.89a         "
+tmp19 = "cgdbo               -23.9a          "
+tmp20 = "cgg                   1.095f        "
+tmp21 = "cggbo               992.6a          "
+tmp22 = "cgs                -941.3a          "
+tmp23 = "cgsbo              -890.3a          "
+tmp24 = "cjd                 175a            "
+tmp25 = "cjs                 188.6a          "
+tmp26 = "covlgb                0             "
+tmp27 = "covlgd               50.99a         "
+tmp28 = "covlgs               50.99a         "
+tmp29 = "csb                 -60.72a         "
+tmp30 = "csd                  41.36a         "
+tmp31 = "csg                -435.3a          "
+tmp32 = "css                 454.7a          "
+tmp33 = "gbd                   1p            "
+tmp34 = "gbs                   1p            "
+tmp35 = "gds                  30.73u         "
+tmp36 = "gm                  341.1u          "
+tmp37 = "gmbs                 70.09u         "
+tmp38 = "gmoverid             12.25          "
+tmp39 = "ibulk                -0             "
+tmp40 = "id                   27.85u         "
+tmp41 = "ids                  27.85u         "
+tmp42 = "igb                   0             "
+tmp43 = "igbacc                0             "
+tmp44 = "igbinv                0             "
+tmp45 = "igcd                  0             "
+tmp46 = "igcs                  0             "
+tmp47 = "igd                   0             "
+tmp48 = "igdt                  0             "
+tmp49 = "igidl                 0             "
+tmp50 = "igisl                 0             "
+tmp51 = "igs                   0             "
+tmp52 = "pwr                   4.527u        "
+tmp53 = "rdeff                 0             "
+tmp54 = "region                2             "
+tmp55 = "reversed              0             "
+tmp56 = "rgbd                  0             "
+tmp57 = "ron                   5.838K        "
+tmp58 = "rseff                 0             "
+tmp59 = "vbs                  -9.981m        "
+tmp60 = "vdb                 172.6m          "
+tmp61 = "vds                 162.6m          "
+tmp62 = "vdsat               131.1m          "
+tmp63 = "vgb                 600m            "
+tmp64 = "vgd                 427.4m          "
+tmp65 = "vgs                 590m            "
+tmp66 = "vth                 253.5m          "
+list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16 tmp17 tmp18 tmp19 tmp20 tmp21 tmp22 tmp23 tmp24 tmp25 tmp26 tmp27 tmp28 tmp29 tmp30 tmp31 tmp32 tmp33 tmp34 tmp35 tmp36 tmp37 tmp38 tmp39 tmp40 tmp41 tmp42 tmp43 tmp44 tmp45 tmp46 tmp47 tmp48 tmp49 tmp50 tmp51 tmp52 tmp53 tmp54 tmp55 tmp56 tmp57 tmp58 tmp59 tmp60 tmp61 tmp62 tmp63 tmp64 tmp65 tmp66)
+)
+printInfoDpl->title = nil
+printInfoDpl->xCol = nil
+printInfoDpl->width = 14
+printInfoDpl->numSpaces = 4
+printInfoDpl->noMerge = nil
+printInfoDpl->resultsDir = nil
+printInfoDpl->resultName = nil
+printInfoDpl->unitList = (let
+(tmp1 tmp2)
+list(tmp1 tmp2)
+)
+printInfoDpl->waveNameList = (let
+(tmp1 tmp2)
+tmp1 = "signal"
+tmp2 = "OP(\"/Comparator/StrongArmLatch/M1\" \"??\")"
+list(tmp1 tmp2)
+)
+(unless printInfoDpl->context
+printInfoDpl->context = (ncons nil)
+)
+printInfoDpl->context->runObjFile = "runObjFile"
+printInfoDpl->context->netlistDir = "/afs/.ir.stanford.edu/users/t/o/tomflo/ee315/simulation/hw_comparator_testbench_test/spectre/schematic/netlist"
+printInfoDpl->context->relativeDir = "/afs/.ir.stanford.edu/users/t/o/tomflo/ee315/simulation/hw_comparator_testbench_test/spectre"
+printInfoDpl->context->dataDir = "/afs/.ir.stanford.edu/users/t/o/tomflo/ee315/simulation/hw_comparator_testbench_test/spectre/schematic"
+(unless printInfoDpl->context->cache
+printInfoDpl->context->cache = (ncons nil)
+)
+printInfoDpl->context->cache->OP = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2 tmp3)
+tmp1 = "/Comparator/StrongArmLatch/M1"
+tmp2 = "??"
+tmp3 = "/afs/.ir.stanford.edu/users/t/o/tomflo/ee315/simulation/hw_comparator_testbench_test/spectre/schematic"
+list(tmp1 tmp2 tmp3)
+)
+tmp2 = nil
+list(tmp1 tmp2)
+)
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = 'time
+tmp2 = 1510890025
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+printInfoDpl->context->cache->opPointDevices = (let
+(tmp1 tmp2 tmp3)
+tmp1 = (let
+(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16 tmp17 tmp18 tmp19 tmp20 tmp21 tmp22 tmp23 tmp24 tmp25 tmp26 tmp27 tmp28 tmp29 tmp30 tmp31 tmp32 tmp33 tmp34 tmp35 tmp36 tmp37 tmp38 tmp39 tmp40 tmp41 tmp42 tmp43 tmp44 tmp45 tmp46)
+tmp1 = "C0"
+tmp2 = "C1"
+tmp3 = "C2"
+tmp4 = "C3"
+tmp5 = "Comparator.RSLatch.M0"
+tmp6 = "Comparator.RSLatch.M1"
+tmp7 = "Comparator.RSLatch.M2"
+tmp8 = "Comparator.RSLatch.M3"
+tmp9 = "Comparator.RSLatch.M4"
+tmp10 = "Comparator.RSLatch.M5"
+tmp11 = "Comparator.RSLatch.M6"
+tmp12 = "Comparator.RSLatch.M7"
+tmp13 = "Comparator.RSLatch.M8"
+tmp14 = "Comparator.RSLatch.M9"
+tmp15 = "Comparator.StrongArmLatch.M1"
+tmp16 = "Comparator.StrongArmLatch.M2"
+tmp17 = "Comparator.StrongArmLatch.M3"
+tmp18 = "Comparator.StrongArmLatch.M4"
+tmp19 = "Comparator.StrongArmLatch.M5"
+tmp20 = "Comparator.StrongArmLatch.M6"
+tmp21 = "Comparator.StrongArmLatch.M7"
+tmp22 = "Comparator.StrongArmLatch.S1"
+tmp23 = "Comparator.StrongArmLatch.S2"
+tmp24 = "Comparator.StrongArmLatch.S3"
+tmp25 = "Comparator.StrongArmLatch.S4"
+tmp26 = "Inverter_Chain.M0"
+tmp27 = "Inverter_Chain.M1"
+tmp28 = "Inverter_Chain.M10"
+tmp29 = "Inverter_Chain.M11"
+tmp30 = "Inverter_Chain.M12"
+tmp31 = "Inverter_Chain.M13"
+tmp32 = "Inverter_Chain.M2"
+tmp33 = "Inverter_Chain.M4"
+tmp34 = "Inverter_Chain.M5"
+tmp35 = "Inverter_Chain.M6"
+tmp36 = "Inverter_Chain.M8"
+tmp37 = "Inverter_Chain.M9"
+tmp38 = "R0"
+tmp39 = "R1"
+tmp40 = "R4"
+tmp41 = "R5"
+tmp42 = "V0"
+tmp43 = "V1"
+tmp44 = "V2"
+tmp45 = "V3"
+tmp46 = "V4"
+list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16 tmp17 tmp18 tmp19 tmp20 tmp21 tmp22 tmp23 tmp24 tmp25 tmp26 tmp27 tmp28 tmp29 tmp30 tmp31 tmp32 tmp33 tmp34 tmp35 tmp36 tmp37 tmp38 tmp39 tmp40 tmp41 tmp42 tmp43 tmp44 tmp45 tmp46)
+)
+tmp2 = 1510890025
+tmp3 = 'OP
+list(tmp1 tmp2 tmp3)
+)
+(unless printInfoDpl->context->simData
+printInfoDpl->context->simData = (ncons nil)
+)
+printInfoDpl->context->simData->drl = nil
+(unless printInfoDpl->context->simData->instData
+printInfoDpl->context->simData->instData = (ncons nil)
+)
+printInfoDpl->context->simData->dataDir = "/afs/.ir.stanford.edu/users/t/o/tomflo/ee315/simulation/hw_comparator_testbench_test/spectre/schematic"
+printInfoDpl->context->simData->simulator = "spectre"
+printInfoDpl->context->simData->aliasList = (let
+(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'captab
+list(tmp1)
+)
+tmp2 = "capInfo_dc-info.captab"
+list(tmp1 tmp2)
+)
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'primitives
+list(tmp1)
+)
+tmp2 = "primitives-info.primitives"
+list(tmp1 tmp2)
+)
+tmp3 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'dcOpInfo
+list(tmp1)
+)
+tmp2 = "dcOpInfo-info"
+list(tmp1 tmp2)
+)
+tmp4 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'model
+list(tmp1)
+)
+tmp2 = "modelParameter-info"
+list(tmp1 tmp2)
+)
+tmp5 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'dcOp
+list(tmp1)
+)
+tmp2 = "dcOp-dc"
+list(tmp1 tmp2)
+)
+tmp6 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'subckts
+list(tmp1)
+)
+tmp2 = "subckts-info.subckts"
+list(tmp1 tmp2)
+)
+tmp7 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'instance
+list(tmp1)
+)
+tmp2 = "element-info"
+list(tmp1 tmp2)
+)
+tmp8 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'output
+list(tmp1)
+)
+tmp2 = "outputParameter-info"
+list(tmp1 tmp2)
+)
+tmp9 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'designParamVals
+list(tmp1)
+)
+tmp2 = "designParamVals-info"
+list(tmp1 tmp2)
+)
+tmp10 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1)
+tmp1 = 'variables
+list(tmp1)
+)
+tmp2 = "variables"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10)
+)
+printInfoDpl->context->simulator = nil
+printInfoDpl->realExpList = nil
+printInfoDpl->saveLoadFile = "/afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/Project/hw_comparator_testbench_test/comp_simulation/printSetup.state"

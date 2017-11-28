@@ -232,7 +232,7 @@ fprintf('Regeneration time: %4.2f ps\n',reg_time*1e12)
 fprintf('Recharge time: %4.2f ps\n',recharge_time*1e12)
 if reg_time>recharge_time
     fprintf('Regeneration time is %4.2f ps slower than recharge time\n',(reg_time-recharge_time)*1e12)
-else
+else 
     fprintf('Regeneration time is %4.2f ps faster than recharge time\n',(-reg_time+recharge_time)*1e12)
 
 end

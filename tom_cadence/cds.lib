@@ -1,0 +1,12 @@
+# EE315 cds.lib
+DEFINE basic $CDS_INST_DIR/tools/dfII/etc/cdslib/basic
+DEFINE ee315 $EE315_HOME/opus/ee315
+
+# DEFINE example_project /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/example_project
+#Removed by ddDeleteObj: DEFINE EE315_HW3 /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/EE315_HW3
+# DEFINE HW6 /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/HW6
+# DEFINE HW4 /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/HW4
+# DEFINE HW5 /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/HW5
+DEFINE Project /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/Project
+DEFINE Project_Lib2 $EE315_HOME/opus/Project_Lib2
+DEFINE ProjectToShare /afs/.ir.stanford.edu/users/t/o/tomflo/ee315/opus/ProjectToShare
