@@ -11,10 +11,10 @@ analysis(tran options actimes) nil
 analysis(tran options infotimes) nil
 analysis(tran options finalTimeOp) t
 analysis(tran options strobedelay) ""
-analysis(tran options strobeperiod) "1/fs"
+analysis(tran options strobeperiod) ""
 analysis(tran options skipcount) ""
 analysis(tran options skipstop) ""
-analysis(tran options skipstart) "VAR(\"Tskip\")"
+analysis(tran options skipstart) ""
 analysis(tran options oppoint) ""
 analysis(tran options flushofftime) ""
 analysis(tran options flushtime) ""
@@ -42,8 +42,8 @@ analysis(tran options maxstep) "100p"
 analysis(tran options step) ""
 analysis(tran options outputstart) "VAR(\"Tskip\")"
 analysis(tran fields enable) (t)
-analysis(tran fields stop) "VAR(\"Tstop\")"
-analysis(tran fields errpreset) "conservative"
+analysis(tran fields stop) "300n"
+analysis(tran fields errpreset) "moderate"
 analysis(tran fields tranNoise) "Transient Noise"
 analysis(tran fields noisefmax) "VAR(\"FMAX\")"
 analysis(tran fields noisefmin) ""

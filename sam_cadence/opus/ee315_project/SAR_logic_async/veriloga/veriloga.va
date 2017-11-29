@@ -4,19 +4,20 @@
 `include "constants.vams"
 `include "disciplines.vams"
 
-module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
+module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_clk_async_n) ;
 
   output [0:9] Dout;
   output [0:9] conP;
   output [0:9] conM;
   output sar_clk_async;
+  output sar_clk_async_n;
 
   input ready, phiS, outp, outm;
 
   electrical [0:9] Dout;
   electrical [0:9] conP;
   electrical [0:9] conM;
-  electrical ready, phiS, outp, outm, sar_clk_async;
+  electrical ready, phiS, outp, outm, sar_clk_async, sar_clk_async_n;
 
   parameter integer bits = 10;
   parameter real tL = 80p from [0:inf); //models the logic delay, do not change
@@ -31,6 +32,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
   integer i, index;
 
   integer clk_out;
+  integer clk_out_n;
 
   // states of the FSM
   parameter SAMPLE = 0;
@@ -51,6 +53,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
       adc_out[i] = vl;
     end
     clk_out = 0;
+    clk_out_n = 1;
   end
 
   // negedge on phiS
@@ -59,6 +62,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
       state = READY;
       // turn on the comparator
       clk_out = 1;
+      clk_out_n = 0;
     end
   end
 
@@ -78,6 +82,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
       index = index-1;
       // reset the comparator
       clk_out = 0;
+      clk_out_n = 1;
       state = RESET_COMP;
     end
   end
@@ -87,10 +92,12 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
     if (index >= 0 && state == RESET_COMP) begin
       // ready to start another comparison cycle - enable the comp
       clk_out = 1;
+      clk_out_n = 0;
       state = READY;
     end else begin
       // if we're done, keep the comparator off to save power
       clk_out = 0;
+      clk_out_n = 1;
       state = DONE;
     end
   end
@@ -130,6 +137,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async) ;
   V(Dout[0]) <+ transition(adc_out[0],tL,tt);
 
   V(sar_clk_async) <+ transition(clk_out,tL,tt);
+  V(sar_clk_async_n) <+ transition(clk_out_n,tL,tt);
 
 
 end

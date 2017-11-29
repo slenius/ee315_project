@@ -137,6 +137,92 @@ S3,4 & ? & ? & ? \\ \hline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+%%%%%%% DAC DESIGN %%%%%%%%%%%%
+\section{9 Bit Capacitive DAC}
+
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{dac_optimization.eps}
+\caption{Optimization of settling time vs device unit width.}
+\label{fig:DacOptimization}
+\end{center}
+\end{figure}
+
+% TODO(sam) reference
+Here we implement a 9 bit capacitive constant common mode top plate sampling DAC as in [2013 Tripathi].
+
+Each bit of the DAC is binary weighted with a single dummy value in the
+sequence 1, 1, 2, 4, 8, 16, 32, 64, 128.
+For each bit there is both the top plate sampled capacitor and the corresponding inverter cell.
+
+In order to have equal time constants between capacitors and inverter cells, equal scaling parameters are applied to each, hence the device widths of the cells follow the same sequence as the capacitors.
+
+One complication of this approach is that the electrical effort to drive the inverters scales with this same sequence. 
+Hence as the driver inverters scale up, the sequence of gate drive buffers must as well for optimal delay and power consumption.
+This leads to each DAC inverter cell being designed individually for the expected range of electrical effort of that cell across optimization.
+
+% TODO(sam) put a real circuit here
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{dac_optimization.eps}
+\caption{DAC inverter unit cells.}
+\label{fig:DACUnitInverterSch}
+\end{center}
+\end{figure}
+
+% TODO(sam) reference
+Our initial implementation of the inverter cell followed [2013 Tripathi] however we found that by using an inverter and a pair of N-channel devices we were able to achieve lower total delay and settling time. 
+
+The specific issue with a standard inverter cell was that as the DAC switched it's MSB or MSB-1 bits, the dV/dT induced currents through the P-channel devices of the MSB-1 and MSB-2 cells caused a disturbance that reduced the gate overvoltage, hence increasing channel resistance and lengthening the duration of the glitch. 
+
+By using a pair of N-channel devices we have applied a much higher gate overvoltage, and additionally the switching glitches now increase the gate overvoltage, improving the recovery time for glitches.
+The use of two N channel devices here reduces the total gate capacitance to drive by a factor of two while reducing the output node parasitic capacitance, hence reducing DAC power overall.
+
+Using a criterion of settling to within 1/2 LSB our optimized design has a delay of 370ps.
+Accounting for the 1\% parasitic capacitance to ground on the top plate of the DAC capciators, our DAC reference voltage is 606mV in this design. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%% LOGIC DESIGN %%%%%%%%%%%%
+\section{Asynchronous Reset Logic}
+
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{async.pdf}
+\caption{State transition diagram for asynchronous reset logic.}
+\label{fig:AsyncStateMachine}
+\end{center}
+\end{figure}
+
+% TODO(sam) timing diagram
+
+% TODO(sam) reference
+In this ADC we implement asynchronous reset logic as in [2006 Chen]. The state machine that our asynchronous logic implements is as follows.
+
+First the sampling clock edge rises, this opens the sampling gates and resets the internal state of the logic.
+
+Second, the sampling clock drops and the asynchronous clock rises, enabling the dynamic comparator.
+
+Third, the comparator makes a decision an one of it's two output lines drops. 
+The outputs of the comparator are tied to the inputs of NAND gate as well as a buffer chain to drive the logic.
+The reset state of the comparator has both lines high, hence the output of the NAND is low.
+Once the comparator has made a decision, the output of the NAND is high, we call this signal 'Ready'. When Ready rises, we sample and shift one bit, and drop the asynchronous clock.
+
+Fourth, after the bit is sampled, we reset the comparator. Here again we use the Ready signal to indicate that this step is finished. Once both of the comparator's output lines rise, the NAND's output will go to zero and we're prepared to convert the next bit. The Ready signal dropping will cause the clock to rise again, reenabling the comparator.
+
+Fifth, once all 10 bits are shiftd out, we assert the done signal internally to the logic and the comparator is held in low power reset, ready for when the next sample comes in.
+
+% TODO(sam) reference
+[2006 Chen] gives us a speedup achievable for using asynchronous logic in equation 3 of that paper. Here Chen shows that as the number of bits in a converter increases that asynchronous processing will yield a speedup of up to a factor of two.
+This means that for no additional energy per bit, that a converter using asynchronous logic can run twice as fast as it's synchronous counterpart. The decision to use asynchronous logic here is obvious.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \bibliographystyle{IEEEtran}
 \bibliography{IEEEabrv,References}
 \end{document}
