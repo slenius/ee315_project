@@ -69,6 +69,13 @@
 
 %%%%%%% INTRODUCTION %%%%%%%%%%
 \section{Introduction}
+\begin{figure}[b]
+\begin{center}
+\includegraphics[width=1\columnwidth]{TopLevel.pdf}
+\caption{Top level design for a fully differential asynchronous SAR ADC.}
+\label{fig:TopLevel}
+\end{center}
+\end{figure}
 \lipsum[1-3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -171,6 +178,13 @@ For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \
 \label{fig:DacOptimization}
 \end{center}
 \end{figure}
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{CapDacV2.pdf}
+\caption{Capacitive DAC with top-plate sampling.}
+\label{fig:CapDac}
+\end{center}
+\end{figure}
 
 % TODO(sam) reference
 Here we implement a 9 bit capacitive constant common mode top plate sampling DAC as in [2013 Tripathi].
@@ -188,11 +202,12 @@ This leads to each DAC inverter cell being designed individually for the expecte
 % TODO(sam) put a real circuit here
 \begin{figure}[tbph]
 \begin{center}
-\includegraphics[width=1\columnwidth]{dac_optimization.eps}
+\includegraphics[width=0.5\columnwidth]{DAC_Switch.pdf}
 \caption{DAC inverter unit cells.}
 \label{fig:DACUnitInverterSch}
 \end{center}
 \end{figure}
+
 
 % TODO(sam) reference
 Our initial implementation of the inverter cell followed [2013 Tripathi] however we found that by using an inverter and a pair of N-channel devices we were able to achieve lower total delay and settling time. 
