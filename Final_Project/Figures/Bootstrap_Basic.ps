@@ -1,10 +1,10 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Title: BootstrappedSwitch.ps
+%%Title: Bootstrap_Basic.ps
 %%Creator: XCircuit v3.8 rev78
-%%CreationDate: Wed Nov 29 09:41:29 2017
+%%CreationDate: Wed Nov 29 09:52:33 2017
 %%Pages: 1
-%%BoundingBox: 68 68 475 332
-%%DocumentNeededResources: font Times-Roman Symbol 
+%%BoundingBox: 68 68 228 218
+%%DocumentNeededResources: font Helvetica Times-Roman Symbol 
 %%EndComments
 %%BeginProlog
 %
@@ -192,6 +192,17 @@ infolabel
 endgate
 } def
 
+/generic::circle {
+% trivial
+begingate
+1 1.000 16 0 6 0.000 360.000 xcarc
+1 1.000 0 0 10 0 2 polygon
+1.000 0.000 0.000 scb
+(out) {/Times-Roman cf} 2 4 0 1.000 16 0 pinlabel
+(out) {/Times-Roman cf} 2 7 0 1.000 0 0 pinlabel
+endgate
+} def
+
 /generic::arrowhead {
 % nonetwork
 begingate
@@ -204,46 +215,17 @@ begingate
 endgate
 } def
 
-/analog::nmos2 {
-begingate
-1.000 0 0 0 analog::nmos
-1.000 90 0 -28 generic::arrowhead
-1.000 0.000 0.000 scb
-(G) {/Times-Roman cf} 2 7 0 1.000 -64 0 pinlabel
-(S) {/Times-Roman cf} 2 13 0 1.000 0 -64 pinlabel
-(D) {/Times-Roman cf} 2 9 0 1.000 0 64 pinlabel
-endgate
-} def
-
-/analog::pmos2 {
-begingate
-1.000 0 0 0 analog::nmos
-1.000 270 -32 28 generic::arrowhead
-1.000 0.000 0.000 scb
-(G) {/Times-Roman cf} 2 7 0 1.000 -64 0 pinlabel
-(S) {/Times-Roman cf} 2 9 0 1.000 0 64 pinlabel
-(D) {/Times-Roman cf} 2 13 0 1.000 0 -64 pinlabel
-endgate
-} def
-
-/analog::vdd {
+/analog::switch {
 % trivial
 begingate
-1 1.000 0 0 0 32 2 polygon
-1 1.000 -32 32 32 32 2 polygon
-0.933 0.604 0.000 scb
-(Vdd) {/Times-Roman cf} 2 13 0 1.000 0 0 pinglobal
-endgate
-} def
-
-/generic::circle {
-% trivial
-begingate
-1 1.000 16 0 6 0.000 360.000 xcarc
-1 1.000 0 0 10 0 2 polygon
+1 1.300 32 32 2 -43 2 polygon
+1 0.600 0 -48 57 49.000 90.000 xcarc
+-1.000 /sv 90 0 -64 generic::circle
+0.600 /sv 270 -12 8 generic::arrowhead
+1.000 90 0 48 generic::circle
 1.000 0.000 0.000 scb
-(out) {/Times-Roman cf} 2 4 0 1.000 16 0 pinlabel
-(out) {/Times-Roman cf} 2 7 0 1.000 0 0 pinlabel
+(sw.1) {/Times-Roman cf} 2 9 0 1.000 0 48 pinlabel
+(sw.2) {/Times-Roman cf} 2 13 0 1.000 0 -64 pinlabel
 endgate
 } def
 
@@ -262,12 +244,13 @@ begingate
 endgate
 } def
 
-/generic::dot {
+/analog::vdd {
 % trivial
 begingate
-248 1.000 0 0 6 0.000 360.000 xcarc
-1.000 0.000 0.000 scb
-(x) {/Times-Roman cf} 2 29 0 1.000 0 0 pinlabel
+1 1.000 0 0 0 32 2 polygon
+1 1.000 -32 32 32 32 2 polygon
+0.933 0.604 0.000 scb
+(Vdd) {/Times-Roman cf} 2 13 0 1.000 0 0 pinglobal
 endgate
 } def
 
@@ -283,126 +266,38 @@ begingate
 endgate
 } def
 
-/digital::invert {
-% trivial
-begingate
-0 1.000 -32 -40 -32 40 40 0 3 polygon
-1 1.000 48 0 8 0.000 360.000 xcarc
-1 1.000 -32 0 -48 0 2 polygon
-1 1.000 56 0 64 0 2 polygon
-1.000 0.000 0.000 scb
-(Out) {/Times-Roman cf} 2 4 0 1.000 64 0 pinlabel
-(In) {/Times-Roman cf} 2 7 0 1.000 -48 0 pinlabel
-endgate
-} def
-
-/generic::arrow {
-% nonetwork
-begingate
-1 0.800 0 -40 0 20 2 polygon
-1.000 0 0 40 generic::arrowhead
-endgate
-} def
-
 
 %%EndSetup
 
-%%Page: BootstrappedSwitch 1
+%%Page: Bootstrap_Basic 1
 %%PageOrientation: Portrait
 /pgsave save def bop
+% 32.00 8.00 gridspace
 1.0000 inchscale
-2.6000 setlinewidth 1000 508 translate
+2.6000 setlinewidth -322 332 translate
 
-1.000 90 -32 -128 analog::nmos2
--1.000 0 -160 -32 analog::nmos2
-1.000 90 96 -128 analog::nmos2
-1 1.000 -32 -64 -32 16 2 polygon
-(M5) {/Times-Roman cf} 2 21 0 0.700 -256 -32 label
-(M12) {/Times-Roman cf} 2 21 0 0.700 -176 -32 label
-1.000 0 -272 64 analog::pmos2
-1.000 0 -272 -32 analog::nmos2
-(M8) {/Times-Roman cf} 2 21 0 0.700 -32 -144 label
-(M10) {/Times-Roman cf} 2 21 0 0.700 96 -144 label
-(M4) {/Times-Roman cf} 2 21 0 0.700 -256 64 label
-1.000 0 -272 128 analog::vdd
--1.000 90 -160 208 analog::nmos2
-1.000 180 -336 16 generic::circle
-1.000 0 -448 32 analog::capacitor
-1.000 0 -32 16 generic::dot
-1 1.000 -208 208 -208 224 -160 224 -160 192 4 polygon
-1.000 0 -448 272 analog::nmos2
-1.000 0 -448 336 analog::vdd
-1 1.000 -96 -128 -160 -128 -160 -96 3 polygon
-1 1.000 -96 -32 -32 -32 2 polygon
-1 1.000 -32 16 96 16 96 -64 3 polygon
-1.000 0 -32 -32 generic::dot
-1 1.000 -160 -128 -272 -128 -272 -96 3 polygon
-1 1.000 -336 -32 -336 64 2 polygon
-1 1.000 -272 16 -160 16 2 polygon
-1.000 0 -160 16 generic::dot
-1.000 0 -272 16 generic::dot
-1 1.000 -160 32 -160 144 2 polygon
-1 1.000 -32 16 -32 208 -96 208 3 polygon
-(M7) {/Times-Roman cf} 2 21 0 0.700 -160 240 label
-1 1.000 -448 -32 -448 -128 -272 -128 3 polygon
-1 1.000 -448 96 -448 208 -224 208 3 polygon
-(M3) {/Times-Roman cf} 2 21 0 0.700 -432 272 label
-1.000 0 -448 -192 analog::nmos2
-(M11) {/Times-Roman cf} 2 21 0 0.700 -432 -192 label
-1.000 0 -448 -256 analog::gnd
-1.000 270 -560 -96 digital::invert
-1 1.000 -512 -192 -560 -192 -560 -144 3 polygon
-1.000 0 -560 32 analog::capacitor
-1.000 0 -560 272 analog::nmos2
-1 1.000 -560 96 -560 208 2 polygon
-(M2) {/Times-Roman cf} 2 21 0 0.700 -608 320 label
-1.000 0 -560 336 analog::vdd
--1.000 0 -752 272 analog::nmos2
-1.000 0 -752 32 analog::capacitor
-1 1.000 -752 96 -752 208 2 polygon
-1 1.000 -752 -32 -752 -192 -560 -192 3 polygon
-1 1.000 -624 272 -704 192 -752 192 3 polygon
-1 1.000 -688 272 -608 192 -560 192 3 polygon
-1.000 0 -752 336 analog::vdd
-1.000 0 -752 192 generic::dot
-1.000 0 -560 192 generic::dot
-1.000 0 -560 -192 generic::dot
-1.000 0 -448 -128 generic::dot
-1 1.000 -512 272 -624 272 2 polygon
-(p1) {ss} (C) {/Times-Roman cf} 4 21 0 0.700 -720 64 label
-(p2) {ss} (C) {/Times-Roman cf} 4 21 0 0.700 -528 64 label
-(boot) {ss} (C) {/Times-Roman cf} 4 21 0 0.700 -409 64 label
-(M1) {/Times-Roman cf} 2 21 0 0.700 -768 272 label
--1.000 270 32 208 analog::nmos2
--1.000 270 160 208 analog::nmos2
-1 1.000 32 272 32 352 2 polygon
-1.000 0 32 336 analog::vdd
-1.000 0 -448 208 generic::dot
-1.000 0 -208 208 generic::dot
-1.000 0 -32 208 generic::dot
-(M6) {/Times-Roman cf} 2 21 0 0.700 32 192 label
-(M9) {/Times-Roman cf} 2 21 0 0.700 160 192 label
-1.000 270 160 288 generic::circle
-1 1.000 160 272 160 288 2 polygon
-(f) {ol} {/Symbol cf} 3 21 0 0.700 160 336 label
-(f) {ol} {/Symbol cf} 3 21 360 0.700 -800 -192 label
-1.000 180 -752 -192 generic::circle
-(f) {/Symbol cf} 2 21 0 0.700 -384 16 label
-1 1.000 32 -128 32 -208 2 polygon
-1 1.000 160 -128 192 -128 2 polygon
-1.000 0.000 0.000 scb
-2 1.000 152 -170 152 -58 40 -58 40 -170 4 polygon
-sce
-1.000 0 224 176 analog::gnd
-0.000 0.000 0.000 scb
-1 1.000 224 176 224 208 2 polygon
-1 1.000 32 -208 32 -240 -16 -240 -32 -240 4 polygon
-1 1.000 -32 -240 -112 -240 2 polygon
-(in) {ss} (Sig) {/Times-Roman cf} 4 17 0 0.700 -64 -208 label
-(out) {ss} (Sig) {/Times-Roman cf} 4 17 0 0.700 208 -96 label
-1.000 90 -63 -226 generic::arrow
-1.000 90 209 -114 generic::arrow
-1 1.000 192 -128 256 -128 2 polygon
+1.000 90 752 16 analog::nmos
+1 1.000 656 16 704 16 2 polygon
+-1.000 90 816 144 analog::switch
+-1.000 90 704 144 analog::switch
+1.000 0 640 80 analog::capacitor
+1 1.000 752 80 752 144 2 polygon
+1 1.000 664 16 640 16 2 polygon
+1.000 0 736 208 analog::vdd
+1.000 0 864 144 analog::gnd
+(+) {/Helvetica cf} 2 16 0 1.000 656 96 label
+(-) {/Helvetica cf} 2 16 0 1.000 656 48 label
+1 1.000 640 16 528 16 2 polygon
+1.000 0 888 -48 analog::capacitor
+1.000 0 888 -80 analog::gnd
+1.000 360 888 16 generic::circle
+1.000 180 536 16 generic::circle
+(f) {/Symbol cf} 2 16 0 1.000 800 192 label
+(f) {ol} {/Symbol cf} 3 16 0 1.000 688 192 label
+1 1.000 736 176 736 208 2 polygon
+(boot) {ss} (C) {/Times-Roman cf} 4 16 0 1.000 528 80 label
+(hold) {ss} (C) {/Times-Roman cf} 4 16 0 1.000 776 -48 label
+1 1.000 888 16 808 16 2 polygon
 pgsave restore showpage
 
 %%Trailer
