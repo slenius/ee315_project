@@ -128,12 +128,35 @@ S3,4 & ? & ? & ? \\ \hline
 \section{Track and Hold}
 \begin{figure}[tbph]
 \begin{center}
+\includegraphics[width=1\columnwidth]{Switch_types.pdf}
+\caption{Track and hold switch designs. A) Simple nmos swith, B) transmission gate, and C) bootstrapped nmos.}
+\label{fig:SwitchTypes}
+\end{center}
+\end{figure}
+\begin{figure}[tbph]
+\begin{center}
 \includegraphics[width=1\columnwidth]{BootstrappedSwitch.pdf}
 \caption{Circuit topology for the bootstrapped switch for improved linearity.}
 \label{fig:BootstrappedSwitch}
 \end{center}
 \end{figure}
-\lipsum[1-4]
+
+For the SAR ADC to accurately reproduce the input signal in digital code, the signal must be relayed to the comparator input capacitors with minimal distortion. The initial sample acquisition, or "track" mode, must accurately follow the input and later hold the signal in "hold mode" on the comparator input capacitors for the SAR logic to determine the bit level. This requires the use of a switch with highly linear channel resistance across the input full-scale voltage. For nmos devices, we can write the channel on resistance as
+\begin{equation}
+R_{on}=\frac{\mu_nC_{ox}\frac{W}{L}}{V_{DD}-V_{in}-V_{th}}
+\label{eq:channel_res}
+\end{equation}
+where $V_g=V_{DD}$ and $V_{s}=V_{in}$. The on-resistance clearly shows a signal dependence $\propto\frac{1}{V_{in}}$, with the channel becoming infinitely resistive at $V_{in}=V_{DD}-V_{th}$ (REFERENCE FIGURE). To alleviate this issue, a transmission gate can be used in which nmos and pmos devices with tied source and drain are driven out of phase, resulting in finite input resistance across all signal inputs due to the parallel combination of the channels. However, there remains strong signal dependence maximal around half of the full-scale (REFERENCE FIGURE), which will distort the signal. 
+
+The transmission gate is also problematic due to input signal dependent charge injection incident upon the hold capacitor. The channel charge for the nmos device can be written as
+\begin{equation}
+Q_{ch}=WLC_{ox}\left(V_{DD}-V_{in}-V_{th}\right)
+\label{eq:charge_inj}
+\end{equation}
+where $Q_{ch}\propto V_{in}$. 
+
+For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \ref{fig:BootstrappedSwitch}) for highly linear channel resistance. Equations \ref{eq:channel_res} and \ref{eq:charge_inj} indicate that signal dependence will be greatly reduced when $V_{gs}=V_{DD}-V_{in}$ is held constant. The bootstrapped nmos accomplishes this by maintaining a constant voltage drop of $V_{gs}=V_{DD}$ by connecting a precharged capacitor $C_3$ from the gate to source terminals. 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
