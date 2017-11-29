@@ -11,6 +11,8 @@ p2_c.v_fs = -0.59*2;
 
 % ideal quantizer
 data_dir = '../sam_cadence/pt_2_tran_psf';
+data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate';
+
 
 ideal_vod = cds_srr(data_dir, 'tran-tran', 'vod');
 ideal_vid = cds_srr(data_dir, 'tran-tran', 'vid');

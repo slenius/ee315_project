@@ -125,3 +125,11 @@ ylim([0, 1]);
 xlabel('Unit Width (um)')
 ylabel('Delay (ns)');
 title('Time to settle to 0.5 LSB');
+
+
+figure(4);
+plot(wu*1e6, settle_time(9,:)*1e9, 'k-*');
+ylim([0, 1]);
+xlabel('Unit Width (um)')
+ylabel('Delay (ns)');
+title('Time to settle to 0.5 LSB');

@@ -1,1 +1,1 @@
-dot -Tsvg async.dot > async.svg
+dot -Tpdf async.dot > async.pdf
