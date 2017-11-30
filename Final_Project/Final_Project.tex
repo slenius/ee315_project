@@ -62,7 +62,7 @@
 
 %%%%%% ABSTRACT %%%%%%%
 \begin{abstract}
-An asynchronous ten bit analog-to-digital converter based on a successive approximation architecture is presented. This device features a StrongARM based comparator latch, minimum size unit capacitors (2.5fF) and bootstrapped track and hold circuit. This design achieves 59.31dB SNR with a 6.1MHz full-scale input. At 130MS/s this converter achieves a 84.9 fJ/MHz figure of merit.
+An asynchronous ten bit analog-to-digital converter based on a successive approximation architecture is presented. This device features a StrongARM based comparator latch, minimum size unit capacitors (2.5 fF) and bootstrapped track and hold circuit. This design achieves 59.31dB SNR with a 6.1MHz, 1V full-scale input. At 130MS/s this converter achieves a 84.9 fJ/MHz figure of merit.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -162,7 +162,7 @@ Q_{ch}=WLC_{ox}\left(V_{DD}-V_{in}-V_{th}\right)
 \end{equation}
 where $Q_{ch}\propto V_{in}$. 
 
-For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \ref{fig:SwitchTypes}C) for highly linear channel resistance. Equations \ref{eq:channel_res} and \ref{eq:charge_inj} indicate that signal dependence will be greatly reduced when $V_{gs}=V_{DD}-V_{in}$ is held constant. The bootstrapped nmos accomplishes this by maintaining a constant voltage drop of $V_{gs}=V_{DD}$ by connecting a precharged capacitor $C_3$ from the gate to source terminals. 
+For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \ref{fig:SwitchTypes}C) for highly linear channel resistance \cite{Razavi:boot}. Equations \ref{eq:channel_res} and \ref{eq:charge_inj} indicate that signal dependence will be greatly reduced when $V_{gs}=V_{DD}-V_{in}$ is held constant. The bootstrapped nmos accomplishes this by maintaining a constant voltage drop of $V_{gs}=V_{DD}$ by connecting a precharged capacitor $C_3$ from the gate to source terminals. 
 \begin{figure}[tbph]
 \begin{center}
 \includegraphics[width=1\columnwidth]{BootstrappedSwitch.pdf}
@@ -216,14 +216,6 @@ $C_{p2}$ & \SI{200}{\femto\farad}  \\ \hline
 
 %%%%%%% DAC DESIGN %%%%%%%%%%%%
 \subsection{9 Bit Capacitive DAC}
-
-\begin{figure}[tbph]
-\begin{center}
-\includegraphics[width=1\columnwidth]{dac_optimization.eps}
-\caption{Optimization of settling time vs device unit width.}
-\label{fig:DacOptimization}
-\end{center}
-\end{figure}
 \begin{figure}[tbph]
 \begin{center}
 \includegraphics[width=1\columnwidth]{CapDacV3.pdf}
@@ -231,6 +223,14 @@ $C_{p2}$ & \SI{200}{\femto\farad}  \\ \hline
 \label{fig:CapDac}
 \end{center}
 \end{figure}
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{dac_optimization.eps}
+\caption{Optimization of settling time vs device unit width.}
+\label{fig:DacOptimization}
+\end{center}
+\end{figure}
+
 
 % TODO(sam) reference
 Here we implement a 9 bit capacitive constant common mode top plate sampling DAC as in \cite{Tripathi:2013}.
@@ -249,7 +249,7 @@ This leads to each DAC inverter cell being designed individually for the expecte
 % TODO(sam) put a real circuit here
 \begin{figure}[tbph]
 \begin{center}
-\includegraphics[width=1\columnwidth]{DAC_Switch.pdf}
+\includegraphics[width=0.7\columnwidth]{DAC_Switch.pdf}
 \caption{DAC inverter unit cells.}
 \label{fig:DACUnitInverterSch}
 \end{center}
@@ -257,7 +257,7 @@ This leads to each DAC inverter cell being designed individually for the expecte
 
 
 % TODO(sam) reference
-Our initial implementation of the inverter cell followed [2013 Tripathi] however we found that by using an inverter and a pair of N-channel devices we were able to achieve lower total delay and settling time. 
+Our initial implementation of the inverter cell followed \cite{Tripathi:2013} however we found that by using an inverter and a pair of N-channel devices we were able to achieve lower total delay and settling time. 
 
 The specific issue with a standard inverter cell was that as the DAC switched it's MSB or MSB-1 bits, the dV/dT induced currents through the P-channel devices of the MSB-1 and MSB-2 cells caused a disturbance that reduced the gate overvoltage, hence increasing channel resistance and lengthening the duration of the glitch. 
 
@@ -274,7 +274,7 @@ Accounting for the 1\% parasitic capacitance to ground on the top plate of the D
 %%%%%%% LOGIC DESIGN %%%%%%%%%%%%
 \subsection{Asynchronous Reset Logic}
 
-\begin{figure}[tbph]
+\begin{figure}[tb]
 \begin{center}
 \includegraphics[width=1\columnwidth]{async.pdf}
 \caption{State transition diagram for asynchronous reset logic.}
@@ -282,7 +282,14 @@ Accounting for the 1\% parasitic capacitance to ground on the top plate of the D
 \end{center}
 \end{figure}
 
-% TODO(sam) timing diagram
+
+\begin{figure*}[tb]
+\begin{center}
+\includegraphics[width=0.8\textwidth]{TimingDiagram.pdf}
+\caption{Asynchronous logic timing diagram.}
+\label{fig:TimingDiagram}
+\end{center}
+\end{figure*}
 
 In this ADC we implement asynchronous reset logic as in \cite{Chen:2006}. The state machine that our asynchronous logic implements is as follows.
 
@@ -350,28 +357,52 @@ This establishes the maximum achievable speed of our device while maintaining th
 \label{fig:ComparatorTranNoise}
 \end{center}
 \end{figure}
+Simulations for our comparator are shown in Figures \ref{fig:ComparatorRegTime} and \ref{fig:ComparatorTranNoise}. Figure \ref{fig:ComparatorRegTime} (left) displays the decision time for a minimum input voltage ($v_{id}=\SI{100}{\pico\volt}$) at the comparator input. This input requires \SI{420.13}{\pico\second} for the comparator to settle to within $0.9V_{DD}$. The regeneration time can be extracted from Figure \ref{fig:ComparatorRegTime} (right) by finding the slope of the linear region on the log plot. For our design, we find a regenerative time constant $\tau_{reg}=\SI{16.7}{\pico\second}$. 
+
+The input referred noise is extracted using a transient noise simulation for our comparator across several differential input voltage, with the resulting probability of each input fit to the error function \cite{nuzzo2008noise}
+\begin{equation}
+p=\frac{1+\text{erf}\left(\frac{v_{din}}{\sqrt{2}\sigma_n}\right)}{2}
+\end{equation}
+Our optimized comparator exhibits an input referred noise voltage of $\sigma_n=\SI{411}{\uvrms}$, which is 92\% of our targeted noise budget.
+\subsection{Top Level ADC Performance}
+
 
 %% Trans Sims %%
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{final_sim-crop.pdf}
+\caption{Transient noise simulations and 64 point FFTs.}
+\label{fig:TransientSims}
+\end{center}
+\end{figure}
 
 The proposed device achieves 59.31dB SNR at 6.1MHz input and 64.6dB SNR at Nyquist with 64 point FFTs.
 The transient time domain results along with their corresponding fourier transforms are presented here at fs = 130MS/s.
 In this operating condition the design consumes 1.43mW of power and hence achieves a figure of merit of 84.9 fJ/MHz.
 We achieve these results through judicious optimization of each module individually followed by careful integration paying close attention to delays caused by suboptimal logic fanouts.
 
-\begin{figure}[tbph]
+
+%% Power
+
+The total power consumed for the complete design is \SI{1.43}{\milli\watt}, and the relative power consumption for each block is shown in Figure \ref{fig:Power}. Here, we see that the majority of power is required to run the DAC switches (51\%) which perform the voltage maniuplation for the SAR logic input. The clock and SAR logic then consume the next greatest amounts of power (20\% and 13\% respectively). 
+
+The benefit of the fully dynamic strong arm comparator is evident from this breakdown, as it only consumes 6\% of the total power due to its current draw only while making a comparison. Finally, the bootstrapped switch consumes very little power (1\%) as it only consumes power for charging the small \SI{300}{\femto\farad} capacitance prior to making a comparison.
+
+Our results indicate that further improvement in the FOM would require variation in the DAC switching scheme beyond using minimum size capacitors of \SI{2}{\femto\farad} as we do here to reduce the power consumption. However, the speed and power consumption of both the comparator and bootstrapped switch indicate that these designs are optimized for this technology node. Further improvement in sampling speed would require a faster technology node, as our sampling speed is largely limited by the digital delay created by the necessary digital elements. 
+
+\begin{figure}[t]
 \begin{center}
-\includegraphics[width=1\columnwidth]{final_sim.eps}
-\caption{Transient noise simulations and 64 point FFTs.}
-\label{fig:TransientSims}
+\includegraphics[width=1\columnwidth]{PowerConsumption.pdf}
+\caption{Power consumption for different blocks within the SAR ADC.}
+\label{fig:Power}
 \end{center}
 \end{figure}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%% Conclusions %%%%%%%%%%%%
 \section{Conclusions}
-\lipsum[5]
+Our work exhibits the optimization of a 10-bit SAR ADC in \SI{90}{\nano\metre} CMOS using asynchronous timing for increased sampling rate, a dynamic strong-arm comparator latch for minimal power consumption, and bootstrapped nmos switch for improved sampling linearity. Our design exhibits a maximum sampling rate of \SI{125}{\mega\siemens\per\second} with \SI{1.38}{\milli\watt} power consumption, yielding a $FOM=\frac{P}{f_s^2}=\SI{8.462e-20}{\joule\second}$ (\SI{84.62}{\femto\joule\per\mega\hertz}) and $SNR=\SI{59.31}{\decibel}$ for $V_{FS}=\SI{1.1}{\volt}$. We have shown that our present design is limited largely by the digital delay determined by the \SI{90}{\nano\metre} technology node, and so further speed improvement for our asynchronous SAR configuration would require a newer technology node. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
