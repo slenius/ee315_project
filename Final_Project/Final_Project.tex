@@ -79,8 +79,9 @@
 \lipsum[1-3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Block Design}
 %%%%%%% COMPARATOR DESIGN %%%%%%%%%%%%
-\section{Comparator}
+\subsection{Comparator}
 \begin{figure}[tb]
 \begin{center}
 \includegraphics[width=1\columnwidth]{StrongArmLatch.pdf}
@@ -88,13 +89,13 @@
 \label{fig:StrongArmLatch}
 \end{center}
 \end{figure}
-Proper optimization of the comparator element in the SAR ADC will provide the greatest improvement in our figure of merit, as it will ultimately set the maximum speed of our design. Given that our figure of merit is proportional to the power consumed for each decision, the ideal design includes a dynamic comparator which only draws current during the decision time. For this reason, we choose the Strong Arm Latch \cite{Razavi:bp} for its energy efficiency and simple design.
+Proper optimization of the comparator element in the SAR ADC will provide the greatest improvement in our figure of merit, as it will ultimately set the maximum speed of our design. Given that our figure of merit is proportional to the power consumed for each decision, the ideal design includes a dynamic comparator which only draws current during the decision time. For this reason, we choose the Strong Arm Latch (Figure \ref{fig:StrongArmLatch}) for its energy efficiency and simple design \cite{Razavi:bp}.
 
 To size our comparator to first order, we begin by considering the required noise specification of the total SAR ADC. We can derive the maximum noise power for our full-scale signal power as
 \begin{equation}
 \sigma_{n,in}^2=\frac{P_{sig}}{10^{SNR_{spec}/10}}=\frac{\frac{\left(0.5V_{FS}\right)^2}{2}}{10^{\frac{SNR_{spec}}{10}}}
 \end{equation}
-Because we are designing to first order and expect some noise contribution from the other blocks, we impose a slightly higher noise spec of \SI{60}{\decibel}. This gives an input referred noise requirement of $\sigma_{n,in}=\SI{707.11}{\uvrms}$ for $V_{FS}=\SI{2}{\volt}$.
+Because we are designing to first order and want to budget a large amount of noise to the comparator function to improve speed, we impose a slightly higher noise spec of \SI{58}{\decibel}, thereby allocating half of our noise budget to the comparator. This gives an input referred noise requirement of $\sigma_{n,in}=\SI{445}{\uvrms}$ for $V_{FS}=\SI{1}{\volt}$.
 
 We approximate the input referred noise for the strong arm latch as
 \begin{equation}
@@ -106,23 +107,25 @@ where the gain $A_v$ during the amplification phase can be approximated as
 A_v\approx\frac{g_{m1,2}}{I_D}V_{tn}
 \label{eq:StrongArmGain}
 \end{equation}
-We select $\frac{g_m}{I_D}=15$ as this provides a reasonable tradeoff between speed and power of the transistor (SHOW CURVE?). From simulations, we find that the approximate threshold voltage $V_{tn}\approx\SI{250}{\milli\volt}$ for our nmos devices. We can then solve for the minimum capacitance necessary nodes P and Q using Equations \ref{eq:InputNoise}, \ref{eq:StrongArmGain}, and $\sigma_{n,in}=\SI{707}{\uvrms}$ 
+We select $\frac{g_m}{I_D}=15$ as this provides a reasonable tradeoff between speed and power of the transistor. From simulations, we find that the approximate threshold voltage $V_{tn}\approx\SI{300}{\milli\volt}$ for our nmos devices. We can then solve for the minimum capacitance necessary nodes P and Q using Equations \ref{eq:InputNoise}, \ref{eq:StrongArmGain}, and $\sigma_{n,in}=\SI{500}{\uvrms}$ 
 \begin{equation}
-C_{P,Q}\geq\frac{8\gamma}{A_v}\frac{kT}{\sigma_{n,in}^2}\rightarrow C_{P,Q}\geq\SI{14.79}{\femto\farad}
+C_{P,Q}\geq\frac{8\gamma}{A_v}\frac{kT}{\sigma_{n,in}^2}\rightarrow C_{P,Q}\geq\SI{31.11}{\femto\farad}
 \end{equation}
-To begin our design, we create a unit comparator constructed from some reasonable design choices. To maximize speed in the cross coupled inverters, we assume that pmos elements M5,6 should be twice the width of the nmos elements M3,4. To size M3,4, we must limit the widths so they do not signficantly contribute to the mismatch at the input. For our design with $A_v\approx3.5$, this means that $W3,4\geq\frac{1}{3.5}W1,2$ due to the offset referral to the input. 
+
+To begin our design, we create a unit comparator constructed from some reasonable design choices. To maximize speed in the cross coupled inverters, we assume that pmos elements M5,6 should be twice the width of the nmos elements M3,4. To size M3,4, we must limit the widths so they do not significantly contribute to the mismatch at the input. For our design with $A_v\approx4$, this means that $W3,4\geq\frac{1}{4}W1,2$ due to the offset referral to the input. M7 must be able to bias the complete latch structure, and so we set $W7=2W1,2$. Finally, we size S1-S4 such that they are equal width to M1,2.
+
+Our design methodology involves sweeping this unit cell over $W1$ until the $C_{P,Q}$ is above spec. A transient noise simulation is conducted to verify the input referred noise voltage over spec. The first order design resulted in much less input referred noise, and so the unit cell width W1 was decreased to approach the noise spec. The resulting sizing is shown in Table \ref{tbl:ComparatorDesign}.
 
 \begin{table}[h]
-\caption{Widths for comparators. All lengths minimum length $L=\SI{90}{\nano\metre}$}
+\caption{Width sizing of strong arm latch comparator topology (\SI{}{\micro\metre}). All transistors minimum length $L=\SI{90}{\nano\metre}$}
 \begin{center}
-\begin{tabular}{c|c|c|c}
-\hline \rowstyle{\bfseries} Transistor & \rowstyle{\bfseries} Unit & \rowstyle{\bfseries} First Order Design & \rowstyle{\bfseries} Optimized \\ \hline
-M1,2 & \SI{1}{\micro\metre} & ? & ? \\ \hline
-M3,4 & $\alpha W_{M1,2}$ & ? & ? \\ \hline
-M5,6 & $2W_{M3,4}$ & ? & ? \\ \hline
-M7 & ? & ? & ? \\ \hline
-S1,2 & ? & ? & ? \\ \hline
-S3,4 & ? & ? & ? \\ \hline
+\begin{tabular}{c|c|c}
+\hline \rowstyle{\bfseries} Transistor & \rowstyle{\bfseries} Unit & \rowstyle{\bfseries}  Optimized \\ \hline
+M1,2 & \SI{1}{\micro\metre} & \SI{5.3}{\micro\metre} \\ \hline
+M3,4 & $\frac{1}{4} W_{M1,2}$ & \SI{1.3}{\micro\metre}  \\ \hline
+M5,6 & $2W_{M3,4}$ & \SI{2.6}{\micro\metre}\\ \hline
+M7 & $2W_{M1,2}$ & \SI{10.6}{\micro\metre} \\ \hline
+S1-4 & $W_{M1,2}$ & \SI{5.3}{\micro\metre}  \\ \hline
 \end{tabular}
 \end{center}
 \label{tbl:ComparatorDesign}
@@ -132,7 +135,7 @@ S3,4 & ? & ? & ? \\ \hline
 
 
 %%%%%%% BOOTSTRAPPED SWITCH DESIGN %%%%%%%%%%%%
-\section{Track and Hold}
+\subsection{Track and Hold}
 \begin{figure}[tbph]
 \begin{center}
 \includegraphics[width=1\columnwidth]{Switch_types.pdf}
@@ -140,20 +143,14 @@ S3,4 & ? & ? & ? \\ \hline
 \label{fig:SwitchTypes}
 \end{center}
 \end{figure}
-\begin{figure}[tbph]
-\begin{center}
-\includegraphics[width=1\columnwidth]{BootstrappedSwitch.pdf}
-\caption{Circuit topology for the bootstrapped switch for improved linearity.}
-\label{fig:BootstrappedSwitch}
-\end{center}
-\end{figure}
 
-For the SAR ADC to accurately reproduce the input signal in digital code, the signal must be relayed to the comparator input capacitors with minimal distortion. The initial sample acquisition, or "track" mode, must accurately follow the input and later hold the signal in "hold mode" on the comparator input capacitors for the SAR logic to determine the bit level. This requires the use of a switch with highly linear channel resistance across the input full-scale voltage. For nmos devices, we can write the channel on resistance as
+
+For the SAR ADC to accurately reproduce the input signal in digital code, the signal must be relayed to the comparator input capacitors with minimal distortion. The initial sample acquisition, or "track" mode, must accurately follow the input and later hold the signal in "hold mode" on the comparator input capacitors for the SAR logic to determine the bit level. This requires the use of a switch with highly linear channel resistance across the input full-scale voltage. For a simple nmos switch (Figure \ref{fig:SwitchTypes}A), we can write the channel on resistance as
 \begin{equation}
 R_{on}=\frac{\mu_nC_{ox}\frac{W}{L}}{V_{DD}-V_{in}-V_{th}}
 \label{eq:channel_res}
 \end{equation}
-where $V_g=V_{DD}$ and $V_{s}=V_{in}$. The on-resistance clearly shows a signal dependence $\propto\frac{1}{V_{in}}$, with the channel becoming infinitely resistive at $V_{in}=V_{DD}-V_{th}$ (REFERENCE FIGURE). To alleviate this issue, a transmission gate can be used in which nmos and pmos devices with tied source and drain are driven out of phase, resulting in finite input resistance across all signal inputs due to the parallel combination of the channels. However, there remains strong signal dependence maximal around half of the full-scale (REFERENCE FIGURE), which will distort the signal. 
+where $V_g=V_{DD}$ and $V_{s}=V_{in}$. The on-resistance clearly shows a signal dependence $\propto\frac{1}{V_{in}}$, with the channel becoming infinitely resistive at $V_{in}=V_{DD}-V_{th}$. To alleviate this issue, a transmission gate can be used in which nmos and pmos devices with tied source and drain are driven out of phase (Figure \ref{fig:SwitchTypes}B), resulting in finite input resistance across all signal inputs due to the parallel combination of the channels. However, there remains strong signal dependence maximal around half of the full-scale, which will distort the signal. 
 
 The transmission gate is also problematic due to input signal dependent charge injection incident upon the hold capacitor. The channel charge for the nmos device can be written as
 \begin{equation}
@@ -162,14 +159,60 @@ Q_{ch}=WLC_{ox}\left(V_{DD}-V_{in}-V_{th}\right)
 \end{equation}
 where $Q_{ch}\propto V_{in}$. 
 
-For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \ref{fig:BootstrappedSwitch}) for highly linear channel resistance. Equations \ref{eq:channel_res} and \ref{eq:charge_inj} indicate that signal dependence will be greatly reduced when $V_{gs}=V_{DD}-V_{in}$ is held constant. The bootstrapped nmos accomplishes this by maintaining a constant voltage drop of $V_{gs}=V_{DD}$ by connecting a precharged capacitor $C_3$ from the gate to source terminals. 
+For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \ref{fig:SwitchTypes}C) for highly linear channel resistance. Equations \ref{eq:channel_res} and \ref{eq:charge_inj} indicate that signal dependence will be greatly reduced when $V_{gs}=V_{DD}-V_{in}$ is held constant. The bootstrapped nmos accomplishes this by maintaining a constant voltage drop of $V_{gs}=V_{DD}$ by connecting a precharged capacitor $C_3$ from the gate to source terminals. 
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{BootstrappedSwitch.pdf}
+\caption{Circuit topology for the bootstrapped switch for improved on-resistance linearity and reduced charge injection. Switch M10 (red) denotes the main switch.}
+\label{fig:BootstrappedSwitch}
+\end{center}
+\end{figure}
+The complete circuit topology for the bootstrapped switch is shown in Figure \ref{fig:BootstrappedSwitch}. Here, M10 acts as the main nmos switch, with $C_{boot}$ connected across the gate and source terminals. The remaining switches work to precharge $C_{boot}$ and connect or disconnect it from M10 and discharge the M10 gate capacitance.
+
+When $\phi=0$, $C_{boot}$ is disconnected from the  switch M10 by closing M7 and M8 and charged to the supply rail through M3 and charged to $V_{DD}$. During this time, the gate of M10 is tied to ground through M6 and M9. When $\phi=1$, M3 and M11 close, allowing $C_{boot}$ to be connected across M10 by opening M7 and closing M9. This allows the signal to pass through M10 while maintaining $V_{GS}=V_{DD}$. When $\phi=0$, $C_{boot}$ disconnects and recharges back to $V_{DD}$, while the gate capacitance of M10 is discharged to ground.
+
+Sizing the bootstrapped switch is straightforward. The main design consideration involves the tradeoff between minimizing the on resistance by increasing width and minimizing charge injection by reducing width. 
+We then considering the on resistance seen through the main switch M10 as
+\begin{equation}
+R_{on}=\frac{\mu_nC_{ox}\frac{W}{L}}{\frac{C_{par}}{C_{boot}+C_{par}}V_{DD}-\frac{C_{par}}{C_{boot}+C_{par}}V_{in}-V_{th}}
+\end{equation}
+To limit the signal dependence, we need to ensure $\frac{C_{par}}{C_{boot}+C_{par}}<1\rightarrow C_{boot}>C_{par}$ where $C_{par}$ is the parastitic capacitance as seen from the top plate of $C_{boot}$. As a design choice, we choose $C_{boot}>10C_{gM10}$, as the major capactive element in this path is the gate capacitance of the M10 switch. 
+
+Sizing M3 and M11 remains the only critical choice. Here, the transistors must be large enough to ensure the capacitor charges completely to $V_{DD}$ within the sampling window. 
+
+The remainder of the sizing is to ensure that the switches function as intended. M7 is sized large to ensure minimum resistance for the cap connection to the gate of M10. M4 and M5 are sized with reasonable widths such that $W_p=2W_n$, and M1 and M2 are equivalent. Finally, M6 and M9 are moderately sized to ensure fast discharge of the M10 gate capacitance. The resulting sizing of the bootstrapped topology is shown in Table \ref{tbl:BootstrappedDesign}.
+
+\begin{table}[hb]
+\caption{Sizing of bootstrapped switch topology. All transistors minimum length $L=\SI{90}{\nano\metre}$}
+\begin{center}
+\begin{tabular}{c|c}
+\hline \rowstyle{\bfseries} Transistor & \rowstyle{\bfseries} Optimized  \\ \hline
+M1 & \SI{1}{\micro\metre}  \\ \hline
+M2 & \SI{1}{\micro\metre}  \\ \hline
+M3 & \SI{2}{\micro\metre}  \\ \hline
+M4 & \SI{2}{\micro\metre}  \\ \hline
+M5 & \SI{1}{\micro\metre}  \\ \hline
+M6 & \SI{5}{\micro\metre}  \\ \hline
+M7 & \SI{10}{\micro\metre}  \\ \hline
+M8 & \SI{5}{\micro\metre}  \\ \hline
+M9 & \SI{5}{\micro\metre}  \\ \hline
+M10 & \SI{25}{\micro\metre}  \\ \hline
+M11 & \SI{2}{\micro\metre}  \\ \hline
+M12 & \SI{1}{\micro\metre}  \\ \hline
+$C_{boot}$ & \SI{300}{\femto\farad}  \\ \hline
+$C_{p1}$ & \SI{200}{\femto\farad}  \\ \hline
+$C_{p2}$ & \SI{200}{\femto\farad}  \\ \hline
+\end{tabular}
+\end{center}
+\label{tbl:BootstrappedDesign}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %%%%%%% DAC DESIGN %%%%%%%%%%%%
-\section{9 Bit Capacitive DAC}
+\subsection{9 Bit Capacitive DAC}
 
 \begin{figure}[tbph]
 \begin{center}
@@ -180,7 +223,7 @@ For our track and hold circuit, we choose the bootstrapped nmos switch (Figure \
 \end{figure}
 \begin{figure}[tbph]
 \begin{center}
-\includegraphics[width=1\columnwidth]{CapDacV2.pdf}
+\includegraphics[width=1\columnwidth]{CapDacV3.pdf}
 \caption{Capacitive DAC with top-plate sampling.}
 \label{fig:CapDac}
 \end{center}
@@ -202,7 +245,7 @@ This leads to each DAC inverter cell being designed individually for the expecte
 % TODO(sam) put a real circuit here
 \begin{figure}[tbph]
 \begin{center}
-\includegraphics[width=0.5\columnwidth]{DAC_Switch.pdf}
+\includegraphics[width=1\columnwidth]{DAC_Switch.pdf}
 \caption{DAC inverter unit cells.}
 \label{fig:DACUnitInverterSch}
 \end{center}
@@ -225,7 +268,7 @@ Accounting for the 1\% parasitic capacitance to ground on the top plate of the D
 
 
 %%%%%%% LOGIC DESIGN %%%%%%%%%%%%
-\section{Asynchronous Reset Logic}
+\subsection{Asynchronous Reset Logic}
 
 \begin{figure}[tbph]
 \begin{center}
@@ -288,6 +331,32 @@ For computing the sampling frequency in our converter we use this speedup factor
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Results %%%%%%%%%%%%
+\section{Results}
+\subsection{Comparator}
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{Comparator_Result_Reg_Time.pdf}
+\caption{Comparator switching (left) and regeneration time (right).}
+\label{fig:ComparatorRegTime}
+\end{center}
+\end{figure}
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{ComparatorTranNoise.pdf}
+\caption{Transient noise simulation with varying input differential voltage. Error function fit extracts the input referred noise voltage $\sigma_{n}=\SI{411}{\uvrms}$}
+\label{fig:ComparatorTranNoise}
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Conclusions %%%%%%%%%%%%
+\section{Conclusions}
+\lipsum[5]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \bibliographystyle{IEEEtran}

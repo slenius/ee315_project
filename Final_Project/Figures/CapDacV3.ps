@@ -1,9 +1,9 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Title: DAC_Switch.ps
+%%Title: CapDacV3.ps
 %%Creator: XCircuit v3.8 rev78
-%%CreationDate: Wed Nov 29 22:01:12 2017
+%%CreationDate: Wed Nov 29 15:59:27 2017
 %%Pages: 1
-%%BoundingBox: 68 68 320 234
+%%BoundingBox: 68 68 603 253
 %%DocumentNeededResources: font Times-Roman 
 %%EndComments
 %%BeginProlog
@@ -176,22 +176,6 @@
 
 %%BeginSetup
 
-/analog::nmos {
-begingate
-1 1.000 0 -64 0 -28 -32 -28 -32 28 0 28 0 64 6 polygon
-1 1.000 -44 -28 -44 28 2 polygon
-1 1.000 -44 0 -64 0 2 polygon
-1.000 0.000 0.000 scb
-(G) {/Times-Roman cf} 2 7 0 1.000 -64 0 pinlabel
-(S) {/Times-Roman cf} 2 13 0 1.000 0 -64 pinlabel
-(D) {/Times-Roman cf} 2 9 0 1.000 0 64 pinlabel
-0.180 0.545 0.341 scb
-(spice:M%i %pD %pG %pS GND nmos) {/Times-Roman cf} 2 4 0 1.000 -244 -139 
-infolabel
-(sim:n %pG %pS %pD) {/Times-Roman cf} 2 4 0 1.000 -244 -187 infolabel
-endgate
-} def
-
 /generic::circle {
 % trivial
 begingate
@@ -203,69 +187,195 @@ begingate
 endgate
 } def
 
-/digital::invert {
-% trivial
+/generic::arrowhead {
+% nonetwork
 begingate
-0 1.000 -32 -40 -32 40 40 0 3 polygon
-1 1.000 48 0 8 0.000 360.000 xcarc
-1 1.000 -32 0 -48 0 2 polygon
-1 1.000 56 0 64 0 2 polygon
-1.000 0.000 0.000 scb
-(Out) {/Times-Roman cf} 2 4 0 1.000 64 0 pinlabel
-(In) {/Times-Roman cf} 2 7 0 1.000 -48 0 pinlabel
+8 -28 beginpath
+3 -18 3 -15 0 0 curveto
+-3 -15 -3 -18 -8 -28 curveto
+-2 -26 2 -26 8 -28 curveto
+249 
+1.000 endpath
 endgate
 } def
 
-/analog::gnd {
+/analog::switch {
 % trivial
 begingate
-1 1.000 0 0 0 -32 2 polygon
-1 1.000 -32 -32 32 -32 2 polygon
-1 1.000 -18 -46 18 -46 2 polygon
-1 1.000 -4 -60 4 -60 2 polygon
-0.933 0.604 0.000 scb
-(GND) {/Times-Roman cf} 2 1 0 1.000 0 0 pinglobal
+1 1.300 32 32 2 -43 2 polygon
+1 0.600 0 -48 57 49.000 90.000 xcarc
+-1.000 /sv 90 0 -64 generic::circle
+0.600 /sv 270 -12 8 generic::arrowhead
+1.000 90 0 48 generic::circle
+1.000 0.000 0.000 scb
+(sw.1) {/Times-Roman cf} 2 9 0 1.000 0 48 pinlabel
+(sw.2) {/Times-Roman cf} 2 13 0 1.000 0 -64 pinlabel
+endgate
+} def
+
+/analog::capacitor {
+begingate
+1 1.000 0 -64 0 -6 2 polygon
+1 1.000 0 64 0 6 2 polygon
+1 1.000 -32 6 32 6 2 polygon
+1 1.000 -32 -6 32 -6 2 polygon
+1.000 0.000 0.000 scb
+(c.1) {/Times-Roman cf} 2 9 0 1.000 0 64 pinlabel
+(c.2) {/Times-Roman cf} 2 13 0 1.000 0 -64 pinlabel
+0.180 0.545 0.341 scb
+(spice:C%i %pc.1 %pc.2 1.0P) {/Times-Roman cf} 2 0 0 1.000 -208 -160 infolabel
+(sim:c %pc.1 %pc.2) {/Times-Roman cf} 2 0 0 1.000 -208 -208 infolabel
+endgate
+} def
+
+/generic::dot {
+% trivial
+begingate
+248 1.000 0 0 6 0.000 360.000 xcarc
+1.000 0.000 0.000 scb
+(x) {/Times-Roman cf} 2 29 0 1.000 0 0 pinlabel
 endgate
 } def
 
 
 %%EndSetup
 
-%%Page: DAC_Switch 1
+%%Page: CapDacV3 1
 %%PageOrientation: Portrait
 /pgsave save def bop
+% 32.00 2.00 gridspace
 1.0000 inchscale
-2.6000 setlinewidth 326 140 translate
+2.6000 setlinewidth 992 424 translate
 
-1 1.000 96 368 96 384 2 polygon
-(Vref) {/Times-Roman cf} 2 16 0 1.000 48 416 label
-1.000 0 96 304 analog::nmos
-1.000 270 96 384 generic::circle
-1.000 0 -32 304 digital::invert
-1 1.000 -80 288 -80 304 -80 288 3 polygon
-1 1.000 -112 176 -96 176 2 polygon
-1.000 180 -112 176 generic::circle
-1 1.000 -96 176 -80 176 2 polygon
-1 1.000 -80 288 -80 176 32 176 3 polygon
-1.000 0 96 176 analog::nmos
-1.000 0 96 112 analog::gnd
-1 1.000 96 240 144 240 2 polygon
-1.000 0 144 240 generic::circle
-1 1.000 448 368 448 384 2 polygon
-(Vref) {/Times-Roman cf} 2 16 0 1.000 400 416 label
-1.000 0 448 304 analog::nmos
-1.000 270 448 384 generic::circle
-1.000 0 320 176 digital::invert
-1 1.000 240 176 256 176 2 polygon
-1.000 180 240 176 generic::circle
-1 1.000 256 176 272 176 2 polygon
-1.000 0 448 176 analog::nmos
-1.000 0 448 112 analog::gnd
-1 1.000 448 240 496 240 2 polygon
-1.000 0 496 240 generic::circle
-1 1.000 384 304 272 304 272 176 3 polygon
-(A) {/Times-Roman cf} 2 16 0 1.000 -128 448 label
-(B) {/Times-Roman cf} 2 16 0 1.000 224 448 label
+(u) {ss} (C) {/Times-Roman cf} 4 20 0 1.000 -368 176 label
+(u) {ss} (C) {/Times-Roman cf} 4 20 0 1.000 -240 176 label
+(u) {ss} {ns} {ss} {ss} (C) {ns} {ss} {Ss} (2) {/Times-Roman cf} 11 20 0 1.000 
+-128 176 label
+0.000 0.000 0.000 scb
+-1.000 180 208 -62 analog::switch
+sce
+-1.000 180 208 66 analog::capacitor
+0.000 0.000 0.000 scb
+-1.000 180 272 34 analog::capacitor
+-1.000 180 -272 -206 generic::dot
+1 1.000 -368 -126 -368 -206 2 polygon
+(GND) {/Times-Roman cf} 2 23 0 1.000 -464 -206 label
+(ref) {ns} {ss} {ss} (V) {/Times-Roman cf} 6 23 0 1.000 -464 -174 label
+(vim) {/Times-Roman cf} 2 31 0 1.000 -740 10 label
+1 1.000 -368 130 -304 98 2 polygon
+1 1.000 -336 114 -432 114 2 polygon
+sce
+-1.000 180 -368 66 analog::capacitor
+0.000 0.000 0.000 scb
+-1.000 180 -304 34 analog::capacitor
+-1.000 180 -304 -94 analog::switch
+-1.000 180 -368 -62 analog::switch
+1 1.000 -208 -94 -208 -206 2 polygon
+-1.000 180 -176 -94 analog::switch
+1 1.000 -80 -94 -80 -206 2 polygon
+-1.000 180 -48 -94 analog::switch
+1 1.000 48 -94 48 -206 2 polygon
+-1.000 180 80 -94 analog::switch
+1 1.000 240 -94 240 -206 2 polygon
+-1.000 180 272 -94 analog::switch
+-1.000 180 272 -174 generic::dot
+-1.000 180 240 -206 generic::dot
+-1.000 180 304 -206 generic::dot
+-1.000 180 -368 -206 generic::dot
+-1.000 0 -432 -206 generic::circle
+-1.000 0 -432 -174 generic::circle
+1 1.000 -368 -174 -432 -174 2 polygon
+-1.000 0 -432 114 generic::circle
+-1.000 180 80 34 analog::capacitor
+sce
+-1.000 180 16 66 analog::capacitor
+0.000 0.000 0.000 scb
+-1.000 180 -48 34 analog::capacitor
+sce
+-1.000 180 -112 66 analog::capacitor
+0.000 0.000 0.000 scb
+-1.000 180 -176 34 analog::capacitor
+sce
+-1.000 180 -240 66 analog::capacitor
+0.000 0.000 0.000 scb
+-1.000 180 -240 -62 analog::switch
+-1.000 180 -112 -62 analog::switch
+-1.000 180 16 -62 analog::switch
+-1.000 180 208 -174 generic::dot
+1 1.000 -368 -110 -368 -126 2 polygon
+-1.000 180 -304 -174 generic::dot
+1 1.000 -304 -142 -304 -174 2 polygon
+-1.000 180 -240 -174 generic::dot
+1 1.000 -240 -110 -240 -174 2 polygon
+-1.000 180 -208 -206 generic::dot
+1 1.000 -272 -126 -272 -206 2 polygon
+-1.000 180 -176 -174 generic::dot
+1 1.000 -176 -142 -176 -174 2 polygon
+-1.000 180 -144 -206 generic::dot
+1 1.000 -144 -126 -144 -206 2 polygon
+-1.000 180 -112 -174 generic::dot
+1 1.000 -112 -110 -112 -174 2 polygon
+-1.000 180 -80 -206 generic::dot
+-1.000 180 -48 -174 generic::dot
+1 1.000 -48 -142 -48 -174 2 polygon
+-1.000 180 -16 -206 generic::dot
+1 1.000 -16 -126 -16 -206 2 polygon
+-1.000 180 16 -174 generic::dot
+1 1.000 16 -110 16 -174 2 polygon
+-1.000 180 48 -206 generic::dot
+-1.000 180 80 -174 generic::dot
+1 1.000 80 -142 80 -174 2 polygon
+-1.000 180 112 -206 generic::dot
+1 1.000 112 -126 112 -206 2 polygon
+-1.000 180 -336 114 generic::dot
+-1.000 180 -208 114 generic::dot
+1 1.000 -240 130 -176 98 2 polygon
+-1.000 180 -80 114 generic::dot
+1 1.000 -112 130 -48 98 2 polygon
+-1.000 180 48 114 generic::dot
+1 1.000 16 130 80 98 2 polygon
+-1.000 180 240 114 generic::dot
+1 1.000 208 130 272 98 2 polygon
+1 1.000 478 -10 494 -10 494 54 510 54 4 polygon
+1 1.000 478 22 510 22 2 polygon
+1 1.000 208 -176 208 -112 2 polygon
+1.000 0.000 0.000 scb
+2 1.000 -400 0 -400 -146 320 -146 320 0 4 polygon
+0.000 0.000 0.000 scb
+1 1.000 446 -42 446 86 446 102 606 22 446 -58 446 -42 6 polygon
+-1.000 180 284 114 generic::circle
+sce
+1 1.000 240 114 290 114 2 polygon
+0 1.000 332 -232 332 210 -560 210 -560 -232 4 polygon
+1 1.000 364 -204 364 240 -528 240 3 polygon
+1 1.000 -528 240 -528 210 2 polygon
+1.000 180 -704 0 generic::circle
+1 1.000 -704 0 -560 0 2 polygon
+1.000 0 -560 0 generic::dot
+(DAC) {/Times-Roman cf} 2 16 0 1.000 -528 -64 label
+(Control) {/Times-Roman cf} 2 16 0 1.000 -544 -112 label
+0.000 0.000 0.000 scb
+(vip) {/Times-Roman cf} 2 31 0 1.000 -740 58 label
+sce
+1.000 180 -704 48 generic::circle
+1 1.000 -704 48 -560 48 2 polygon
+1.000 0 332 0 generic::dot
+1.000 0 364 48 generic::dot
+1 1.000 364 48 444 48 2 polygon
+1 1.000 332 0 444 0 2 polygon
+1 1.000 -340 114 96 114 2 polygon
+5 1.000 96 114 170 114 2 polygon
+1 1.000 272 -142 272 -174 188 -174 3 polygon
+1 1.000 304 -126 304 -206 188 -206 3 polygon
+1 1.000 332 -204 364 -204 2 polygon
+1 1.000 -370 -174 134 -174 2 polygon
+1 1.000 -432 -206 134 -206 2 polygon
+5 1.000 188 -174 134 -174 2 polygon
+5 1.000 188 -206 134 -206 2 polygon
+(u) {ss} {ns} {ss} {ss} (C) {ns} {ss} {Ss} (4) {/Times-Roman cf} 11 20 0 1.000 
+10 176 label
+(u) {ss} (C) {ns} (n-3) {Ss} (2) {/Times-Roman cf} 8 20 0 1.000 196 176 label
+1 1.000 240 114 170 114 2 polygon
 pgsave restore showpage
 
 %%Trailer
