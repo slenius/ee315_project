@@ -80,12 +80,12 @@ module SAR_logic(phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_clk_asyn
   //@(cross(V(ready)-vth, +1)) begin
   @(cross(ready_int-vth, +1)) begin
     if (index >= 0 && state == READY) begin
-      if((V(outp)-V(outm)) > 0.9*vh) begin
+      if((V(outp)-V(outm)) > vth) begin
         adc_out[index] = vh;
         dac_controlP[index] = vh;
         dac_controlM[index] = vl;
       end
-      if((V(outp)-V(outm)) < 0.1*vh) begin
+      if((V(outp)-V(outm)) < vth) begin
         adc_out[index] = vl;
         dac_controlP[index] = vl;
         dac_controlM[index] = vh;

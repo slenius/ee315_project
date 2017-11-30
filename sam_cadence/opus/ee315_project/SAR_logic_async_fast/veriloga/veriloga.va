@@ -106,10 +106,12 @@ module SAR_logic(phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_clk_asyn
       clk_out_n = vl;
       state = READY;
     end else begin
-      // if we're done, keep the comparator off to save power
-      clk_out = vl;
-      clk_out_n = vh;
-      state = DONE;
+      // if we're done, keep the comparator off to save power - make sure we're not sampling here
+      if (V(phiS) < vth) begin
+        clk_out = vl;
+        clk_out_n = vh;
+        state = DONE;
+      end
     end
   end
 
