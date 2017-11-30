@@ -31,7 +31,7 @@ async_speed = speedup * sync_speed;
 figure();
 
 %data_dir = '../sam_cadence/pt_2_tran_psf';
-data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate_32_64_125';
+data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate_32_64_130';
 
 
 nyquist_vod = cds_srr(data_dir, 'tran-tran', 'vod');
@@ -41,7 +41,7 @@ N = 64;
 
 d = nyquist_vod.V(1:N);
 
-fs = 125e6;
+fs = 130e6;
 
 [s_dbfs, f] = my_psd_dbfs(d, fs, N);
 [~, idx] = max(s_dbfs);
@@ -79,16 +79,13 @@ fprintf('SNDR: %0.3fdB\n', sinad(d, fs));
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate_3_64_125';
+data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate_3_64_130';
 
 lowf_vod = cds_srr(data_dir, 'tran-tran', 'vod');
 lowf_vid = cds_srr(data_dir, 'tran-tran', 'vid');
 
-N = 64;
-
 d = lowf_vod.V(1:N);
 
-fs = 125e6;
 
 [s_dbfs, f] = my_psd_dbfs(d, fs, N);
 [~, idx] = max(s_dbfs);

@@ -54,7 +54,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{EE 315\\Final Project}
+\title{A 10 bit 130Msample/s 1.43mW 84.9fJ/MHz asynchronous StrongARM SAR ADC in 90nm CMOS}
 \author{Thomas Flores and Samuel Lenius}
 \date{\today}
 \maketitle
@@ -62,7 +62,7 @@
 
 %%%%%% ABSTRACT %%%%%%%
 \begin{abstract}
-\lipsum[1]
+An asynchronous ten bit analog-to-digital converter based on a successive approximation architecture is presented. This device features a StrongARM based comparator latch, minimum size unit capacitors (2.5fF) and bootstrapped track and hold circuit. This design achieves 59.31dB SNR with a 6.1MHz full-scale input. At 130MS/s this converter achieves a 84.9 fJ/MHz figure of merit.
 \end{abstract}
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -76,7 +76,10 @@
 \label{fig:TopLevel}
 \end{center}
 \end{figure}
-\lipsum[1-3]
+The architecture of this proposed device is based around a top-plate sampling constant common mode 9-bit capacitive DAC, bootstrapped track-and-hold, StrongARM latch comparator and asynchronous processing logic to achieve high throughput and low power consumption. The optimized top plate sampling DAC achieves good settling and transient characteristics. The bootstrapped track-and-hold circuit achieves a high tracking bandwidth and good linearity across the full scale input range. The highly biased StrongARM comparator achieves both a fast regeneration time constant and low dynamic power consumption. The asynchronous logic allows this device to allocate more time to bits that are difficult to resolve and less time to bits that are easy to resolve in order to achieve both high conversion rate with low metastability.
+
+This paper is organized as follows; section two discusss design modules in detail, section three details the results and section four concludes.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Block Design}
@@ -347,6 +350,23 @@ This establishes the maximum achievable speed of our device while maintaining th
 \label{fig:ComparatorTranNoise}
 \end{center}
 \end{figure}
+
+%% Trans Sims %%
+
+The proposed device achieves 59.31dB SNR at 6.1MHz input and 64.6dB SNR at Nyquist with 64 point FFTs.
+The transient time domain results along with their corresponding fourier transforms are presented here at fs = 130MS/s.
+In this operating condition the design consumes 1.43mW of power and hence achieves a figure of merit of 84.9 fJ/MHz.
+We achieve these results through judicious optimization of each module individually followed by careful integration paying close attention to delays caused by suboptimal logic fanouts.
+
+\begin{figure}[tbph]
+\begin{center}
+\includegraphics[width=1\columnwidth]{final_sim.eps}
+\caption{Transient noise simulations and 64 point FFTs.}
+\label{fig:TransientSims}
+\end{center}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%% Conclusions %%%%%%%%%%%%
