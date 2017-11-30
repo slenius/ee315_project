@@ -1,0 +1,156 @@
+
+// VerilogA for Project_Lib2, SAR_logic, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_clk_async_n, debug) ;
+
+  output [0:9] Dout;
+  output [0:9] conP;
+  output [0:9] conM;
+  output sar_clk_async;
+  output sar_clk_async_n;
+  output debug;
+
+  input ready, phiS, outp, outm;
+
+  electrical [0:9] Dout;
+  electrical [0:9] conP;
+  electrical [0:9] conM;
+  electrical ready, phiS, outp, outm, sar_clk_async, sar_clk_async_n, debug;
+
+  parameter integer bits = 10;
+  parameter real tL = 80p from [0:inf); //models the logic delay, do not change
+  parameter real vh = 1.2;
+  parameter real vl = 0.0;
+  parameter real vth = 0.6;
+  parameter real tt = 50p from [0:inf); //Transition time, do not change
+  parameter real tx = 1p from [0:inf);
+
+  real adc_out[0:bits-1];
+  real dac_controlP[0:bits-1];
+  real dac_controlM[0:bits-1];
+  real ready_int;
+  integer i, index;
+
+  integer clk_out;
+  integer clk_out_n;
+
+  // states of the FSM
+  parameter SAMPLE = 0;
+  parameter READY = 1;
+  parameter RESET_COMP = 2;
+  parameter DONE = 3;
+
+  integer state;
+
+  analog begin
+
+  // combinatorial NAND
+  if ((V(outp) < 0.1*vh) || (V(outm) < 0.1*vh)) begin
+    ready_int = vh;
+  end else begin
+    ready_int = vl;
+  end
+
+  // posedge on phiS
+  @(cross(V(phiS)-vth, +1)) begin
+    index = bits-1;
+    state = SAMPLE;
+    for(i=bits-1; i>=0; i=i-1) begin
+      dac_controlP[i] = vl;
+      dac_controlM[i] = vl;
+      adc_out[i] = vl;
+    end
+    clk_out = vl;
+    clk_out_n = vh;
+  end
+
+  // negedge on phiS
+  @(cross(V(phiS)-vth, -1)) begin
+    if(state == SAMPLE) begin
+      state = READY;
+      // turn on the comparator
+      clk_out = vh;
+      clk_out_n = vl;
+    end
+  end
+
+  // posedge on ready - get a bit then reset comparator
+  //@(cross(V(ready)-vth, +1)) begin
+  @(cross(ready_int-vth, +1)) begin
+    if (index >= 0 && state == READY) begin
+      if((V(outp)-V(outm)) > 0.9*vh) begin
+        adc_out[index] = vh;
+        dac_controlP[index] = vh;
+        dac_controlM[index] = vl;
+      end
+      if((V(outp)-V(outm)) < 0.1*vh) begin
+        adc_out[index] = vl;
+        dac_controlP[index] = vl;
+        dac_controlM[index] = vh;
+      end
+      index = index-1;
+      // reset the comparator
+      clk_out = vl;
+      clk_out_n = vh;
+      state = RESET_COMP;
+    end
+  end
+
+  // negedge on ready - ready to start next bit
+  @(cross(ready_int-vth, -1)) begin
+    if (index >= 0 && state == RESET_COMP) begin
+      // ready to start another comparison cycle - enable the comp
+      clk_out = vh;
+      clk_out_n = vl;
+      state = READY;
+    end else begin
+      // if we're done, keep the comparator off to save power
+      clk_out = vl;
+      clk_out_n = vh;
+      state = DONE;
+    end
+  end
+
+  V(conP[9]) <+ transition(dac_controlP[9],tL,tt);
+  V(conP[8]) <+ transition(dac_controlP[8],tL,tt);
+  V(conP[7]) <+ transition(dac_controlP[7],tL,tt);
+  V(conP[6]) <+ transition(dac_controlP[6],tL,tt);
+  V(conP[5]) <+ transition(dac_controlP[5],tL,tt);
+  V(conP[4]) <+ transition(dac_controlP[4],tL,tt);
+  V(conP[3]) <+ transition(dac_controlP[3],tL,tt);
+  V(conP[2]) <+ transition(dac_controlP[2],tL,tt);
+  V(conP[1]) <+ transition(dac_controlP[1],tL,tt);
+  V(conP[0]) <+ transition(dac_controlP[0],tL,tt);
+
+  V(conM[9]) <+ transition(dac_controlM[9],tL,tt);
+  V(conM[8]) <+ transition(dac_controlM[8],tL,tt);
+  V(conM[7]) <+ transition(dac_controlM[7],tL,tt);
+  V(conM[6]) <+ transition(dac_controlM[6],tL,tt);
+  V(conM[5]) <+ transition(dac_controlM[5],tL,tt);
+  V(conM[4]) <+ transition(dac_controlM[4],tL,tt);
+  V(conM[3]) <+ transition(dac_controlM[3],tL,tt);
+  V(conM[2]) <+ transition(dac_controlM[2],tL,tt);
+  V(conM[1]) <+ transition(dac_controlM[1],tL,tt);
+  V(conM[0]) <+ transition(dac_controlM[0],tL,tt);
+
+  V(Dout[9]) <+ transition(adc_out[9],tL,tt);
+  V(Dout[8]) <+ transition(adc_out[8],tL,tt);
+  V(Dout[7]) <+ transition(adc_out[7],tL,tt);
+  V(Dout[6]) <+ transition(adc_out[6],tL,tt);
+  V(Dout[5]) <+ transition(adc_out[5],tL,tt);
+  V(Dout[4]) <+ transition(adc_out[4],tL,tt);
+  V(Dout[3]) <+ transition(adc_out[3],tL,tt);
+  V(Dout[2]) <+ transition(adc_out[2],tL,tt);
+  V(Dout[1]) <+ transition(adc_out[1],tL,tt);
+  V(Dout[0]) <+ transition(adc_out[0],tL,tt);
+
+  V(sar_clk_async) <+ transition(clk_out,tL,tt);
+  V(sar_clk_async_n) <+ transition(clk_out_n,tL,tt);
+  V(debug) <+ transition(ready_int,tx,tx);
+
+
+end
+endmodule
