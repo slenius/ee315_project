@@ -8,6 +8,23 @@ c = load_project_const();
 p2_c = struct();
 p2_c.v_fs = -0.59*2;
 
+% worst case async speedup
+N = c.bits;
+speedup_t = ((N-1) * log(3) + log(2) + N/2*(N+1)*log(2)) / (N*(N+1)*log(2));
+speedup = 1/speedup_t;
+
+% calculate sync speed
+tau = 16.7e-12;
+n_taus = 20.7;
+regen_time = n_taus * tau;
+fo4_time = 40e-12;
+slew_time = 65e-12;
+high_time = regen_time + 2 * fo4_time + slew_time;
+bit_time = high_time * 2;
+sync_time = bit_time * 12;
+sync_speed = 1/sync_time;
+async_speed = speedup * sync_speed;
+
 
 % ideal quantizer
 %data_dir = '../sam_cadence/pt_2_tran_psf';
@@ -51,3 +68,6 @@ xlabel('Frequency (MHz)')
 
 fprintf('Noiseless SNR: %0.3fdB\n', snr(d, fs, 6));
 fprintf('Noiseless SNDR: %0.3fdB\n', sinad(d, fs));
+
+
+

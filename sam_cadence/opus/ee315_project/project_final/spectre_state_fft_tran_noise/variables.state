@@ -25,7 +25,7 @@ tmp3 = make_sevVariableStruct()
 tmp3 = (ncons nil)
 )
 tmp3->name = "fs"
-tmp3->expression = "100M"
+tmp3->expression = "130M"
 tmp3->index = 3
 (unless tmp4
 tmp4 = make_sevVariableStruct()
@@ -70,7 +70,7 @@ tmp8 = make_sevVariableStruct()
 tmp8 = (ncons nil)
 )
 tmp8->name = "vref"
-tmp8->expression = "0.6"
+tmp8->expression = "606m"
 tmp8->index = 8
 (unless tmp9
 tmp9 = make_sevVariableStruct()
