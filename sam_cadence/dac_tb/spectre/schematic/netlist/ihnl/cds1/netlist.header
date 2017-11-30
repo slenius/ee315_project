@@ -1,0 +1,5 @@
+
+// Library name: ee315_project
+// Cell name: INVD1_16-64
+// View name: schematic
+subckt _sub7 IN OUT VDD VSS inh_bulk_n

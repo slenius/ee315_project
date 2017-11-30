@@ -1,0 +1,5 @@
+
+// Library name: Project_Lib2
+// Cell name: INVD1
+// View name: schematic
+subckt INVD1 IN OUT VDD VSS inh_bulk_n

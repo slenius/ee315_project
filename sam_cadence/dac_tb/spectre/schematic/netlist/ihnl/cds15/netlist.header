@@ -1,0 +1,8 @@
+
+// Library name: ee315_project
+// Cell name: dac_switches_real_bot_A
+// View name: schematic
+subckt dac_switches_real_bot_A DVDD GND NA\<8\> NA\<7\> NA\<6\> NA\<5\> \
+        NA\<4\> NA\<3\> NA\<2\> NA\<1\> NA\<0\> VREF con\<1\> con\<2\> \
+        con\<3\> con\<4\> con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> \
+        inh_bulk_n

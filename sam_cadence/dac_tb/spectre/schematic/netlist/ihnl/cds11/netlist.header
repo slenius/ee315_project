@@ -1,0 +1,5 @@
+
+// Library name: Project_Lib2
+// Cell name: clk_gen
+// View name: schematic
+subckt clk_gen DVDD GND phiC phiS phi_ext inh_bulk_n

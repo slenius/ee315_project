@@ -1,0 +1,28 @@
+HEADER
+"PSFversion" "1.00"
+"Time Stamp" "Nov 25 23:09:15 2017"
+TYPE
+"variable" STRUCT(
+"value" FLOAT DOUBLE
+) PROP( "key" "element" )
+VALUE
+"tsample" "variable" ( 2.5e-9 ) PROP( )
+"tper" "variable" ( 20e-9 ) PROP( )
+"tbit" "variable" ( 1.66666666666667e-9 ) PROP( )
+"fin" "variable" ( 2.34375e6 ) PROP( )
+"vh" "variable" ( 1.2 ) PROP( )
+"wu_bot_p" "variable" ( 180e-9 ) PROP( )
+"wu_top_n" "variable" ( 180e-9 ) PROP( )
+"wu_sample" "variable" ( 180e-9 ) PROP( )
+"pn_b" "variable" ( 2 ) PROP( )
+"pn_a" "variable" ( 2 ) PROP( )
+"wu" "variable" ( 3.99583333333333e-6 ) PROP( )
+"vref" "variable" ( 600e-3 ) PROP( )
+"vl" "variable" ( 0 ) PROP( )
+"vdd" "variable" ( 1.2 ) PROP( )
+"vcm" "variable" ( 600e-3 ) PROP( )
+"fs" "variable" ( 50e6 ) PROP( )
+"dc_in" "variable" ( 0 ) PROP( )
+"amp" "variable" ( 0 ) PROP( )
+"temp" "variable" ( 27 ) PROP( )
+END

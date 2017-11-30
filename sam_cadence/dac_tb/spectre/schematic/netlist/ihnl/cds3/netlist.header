@@ -1,0 +1,6 @@
+
+// Library name: ee315_project
+// Cell name: INV_DAC_SWITCHES
+// View name: schematic
+subckt INV_DAC_SWITCHES IN OUT VDD VSS inh_bulk_n
+parameters wn=400n wp=800n

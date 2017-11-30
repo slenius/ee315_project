@@ -1,0 +1,22 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  hierDelim "."
+ )
+( net
+( "[@bulk_n:%:gnd!]" "inh_bulk_n" )
+ )
+( inst
+ )
+( model
+( "INVD1_64-256" "_sub6" )
+( "BUFFD1_16-256" "_sub8" )
+( "INVD1_16-64" "_sub7" )
+ )
+( term
+ )
+( param
+ )
+ )

@@ -1,0 +1,7 @@
+
+// Library name: Project_Lib2
+// Cell name: dac_switches_B
+// View name: schematic
+subckt dac_switches_B DVDD GND NB\<8\> NB\<7\> NB\<6\> NB\<5\> NB\<4\> \
+        NB\<3\> NB\<2\> NB\<1\> NB\<0\> VREF con\<2\> con\<3\> con\<4\> \
+        con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> inh_bulk_n

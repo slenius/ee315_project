@@ -1,0 +1,49 @@
+CADENCE IHNL01070
+$model
+Project_Lib2/dac_switches_A/schematic dac_switches_A
+ee315_project/INVD1_1-4/schematic _sub9
+ee315_project/INVD1_16-64/schematic _sub7
+ee315_project/dac_switches_real_bot_A/schematic dac_switches_real_bot_A
+ee315_project/dac_tb/schematic dac_tb
+ee315_project/dac_switches_real_bot_B/schematic dac_switches_real_bot_B
+Project_Lib2/ideal_TH/schematic ideal_TH
+ee315_project/BUFFD1_1-16/schematic _sub11
+ee315_project/INVD1_4-16/schematic _sub10
+Project_Lib2/INVD1/schematic INVD1
+ee315_project/INVD1/schematic INVD1_schematic
+ee315_project/dac_switches_real_top_B/schematic dac_switches_real_top_B
+ee315_project/dac_switches_real_top_A/schematic dac_switches_real_top_A
+Project_Lib2/cap_DAC/schematic cap_DAC
+ee315_project/INV_DAC_SWITCHES/schematic INV_DAC_SWITCHES
+Project_Lib2/clk_gen/schematic clk_gen
+Project_Lib2/BUFFD1/schematic BUFFD1
+ee315_project/INVD1_64-256/schematic _sub6
+ee315/switch_ideal/schematic switch_ideal
+Project_Lib2/dac_switches_B/schematic dac_switches_B
+ee315_project/BUFFD1_16-256/schematic _sub8
+ee315/ideal_balun/schematic ideal_balun
+$endmodel
+$net
+gnd! 0
+VDD! VDD!
+$endnet
+$param
+vl vl
+tper tper
+vdd vdd
+wu_sample wu_sample
+wu_top_n wu_top_n
+pn_b pn_b
+vh vh
+pn_a pn_a
+vref vref
+fin fin
+amp amp
+vcm vcm
+wu wu
+tbit tbit
+dc_in dc_in
+wu_bot_p wu_bot_p
+fs fs
+tsample tsample
+$endparam

@@ -1,0 +1,11 @@
+    I6 (DVDD GND net03 phiC inh_bulk_n) BUFFD1
+    I5 (DVDD GND net02 phiS inh_bulk_n) BUFFD1
+    I3 (DVDD GND net03 phiC inh_bulk_n) BUFFD1
+    I2 (DVDD GND net02 phiS inh_bulk_n) BUFFD1
+    I4 (net02 net9 DVDD GND inh_bulk_n) INVD1
+    I0 (net03 net9 phi_ext) AND2 vh=1.2 vl=0 vth=((vh)+(vl))/(2) td=1e-10 \
+        tt=1e-10
+    V0 (net02 GND) vsource type=pulse val0=0 val1=vdd period=1/fs \
+        delay=1/fs rise=100p fall=100p width=1.5/fs/12
+ends clk_gen
+// End of subcircuit definition.

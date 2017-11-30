@@ -1,0 +1,8 @@
+    C1 (net9 0) capacitor c=100.0a
+    C0 (s1 0) capacitor c=100.0a
+    R2 (net9 s2) resistor r=Ron isnoisy=yes
+    R1 (net9 0) resistor r=100G isnoisy=no
+    R0 (s1 0) resistor r=100G isnoisy=no
+    p1switch (s1 net9 clk 0) relay vt1=400m vt2=800m ropen=100G rclosed=1m
+ends switch_ideal
+// End of subcircuit definition.

@@ -1,0 +1,3 @@
+parameters amp=0 dc_in=0 fs=50M vcm=600m vdd=1.2 vl=0 vref=0.6 wu=1.8e-07 \
+    pn_a=2 pn_b=2 wu_sample=180n wu_top_n=wu_sample wu_bot_p=wu_sample \
+    vh=vdd fin=3/64*fs tbit=(1/fs)/12 tper=1/fs tsample=tbit*1.5

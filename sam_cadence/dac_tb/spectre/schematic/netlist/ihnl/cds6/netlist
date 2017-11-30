@@ -1,0 +1,4 @@
+    M0 (OUT IN VSS inh_bulk_n) nmos w=720n l=90n
+    M1 (OUT IN VDD VDD) pmos w=1.44u l=90n
+ends _sub10
+// End of subcircuit definition.

@@ -1,0 +1,537 @@
+// Generated for: spectre
+// Generated on: Nov 25 21:54:08 2017
+// Design library name: ee315_project
+// Design cell name: dac_tb
+// Design view name: schematic
+simulator lang=spectre
+global 0 VDD!
+parameters amp=0 dc_in=0 fs=50M vcm=600m vdd=1.2 vl=0 vref=0.6 wu=1.8e-07 \
+    pn_a=2 pn_b=2 wu_sample=180n wu_top_n=wu_sample wu_bot_p=wu_sample \
+    vh=vdd fin=3/64*fs tbit=(1/fs)/12 tper=1/fs tsample=tbit*1.5
+include "/afs/ir.stanford.edu/class/ee315/models/ee315_90nm.mod"
+
+// Library name: ee315_project
+// Cell name: INVD1_64-256
+// View name: schematic
+subckt _sub6 IN OUT VDD VSS inh_bulk_n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=11.52u l=90n
+    M1 (OUT IN VDD VDD) pmos w=23.04u l=90n
+ends _sub6
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: INVD1_16-64
+// View name: schematic
+subckt _sub7 IN OUT VDD VSS inh_bulk_n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=2.88u l=90n
+    M1 (OUT IN VDD VDD) pmos w=5.76u l=90n
+ends _sub7
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: BUFFD1_16-256
+// View name: schematic
+subckt _sub8 DVDD GND IN OUT inh_bulk_n
+    I7 (net11 OUT DVDD GND inh_bulk_n) _sub6
+    I6 (IN net11 DVDD GND inh_bulk_n) _sub7
+ends _sub8
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: INV_DAC_SWITCHES
+// View name: schematic
+subckt INV_DAC_SWITCHES IN OUT VDD VSS inh_bulk_n
+parameters wn=400n wp=800n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=wn l=90n
+    M1 (OUT IN VDD VDD) pmos w=wp l=90n
+ends INV_DAC_SWITCHES
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: dac_switches_real_top_A
+// View name: schematic
+subckt dac_switches_real_top_A DVDD GND NA\<8\> NA\<7\> NA\<6\> NA\<5\> \
+        NA\<4\> NA\<3\> NA\<2\> NA\<1\> NA\<0\> VREF con\<1\> con\<2\> \
+        con\<3\> con\<4\> con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> \
+        inh_bulk_n
+    I59 (con\<2\> NA\<1\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n wp=wu*pn_a
+    I62 (con\<5\> NA\<4\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*8 wp=wu*pn_a*8
+    I65 (con\<7\> NA\<6\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*32 wp=wu*pn_a*32
+    I64 (con\<8\> NA\<7\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*64 wp=wu*pn_a*64
+    I61 (con\<3\> NA\<2\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*2 wp=wu*pn_a*2
+    I57 (con\<1\> NA\<0\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n wp=wu*pn_a
+    I66 (con\<9\> NA\<8\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*128 wp=wu*pn_a*128
+    I60 (con\<4\> NA\<3\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*4 wp=wu*pn_a*4
+    I63 (con\<6\> NA\<5\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*16 wp=wu*pn_a*16
+ends dac_switches_real_top_A
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: INVD1_1-4
+// View name: schematic
+subckt _sub9 IN OUT VDD VSS inh_bulk_n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=180n l=90n
+    M1 (OUT IN VDD VDD) pmos w=360n l=90n
+ends _sub9
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: INVD1_4-16
+// View name: schematic
+subckt _sub10 IN OUT VDD VSS inh_bulk_n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=720n l=90n
+    M1 (OUT IN VDD VDD) pmos w=1.44u l=90n
+ends _sub10
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: BUFFD1_1-16
+// View name: schematic
+subckt _sub11 DVDD GND IN OUT inh_bulk_n
+    I5 (IN net11 DVDD GND inh_bulk_n) _sub9
+    I4 (net11 OUT DVDD GND inh_bulk_n) _sub10
+ends _sub11
+// End of subcircuit definition.
+
+// Library name: ee315
+// Cell name: ideal_balun
+// View name: schematic
+subckt ideal_balun d c p n
+    K0 (d 0 p c) transformer n1=2
+    K1 (d 0 c n) transformer n1=2
+ends ideal_balun
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: INVD1
+// View name: schematic
+subckt INVD1 IN OUT VDD VSS inh_bulk_n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=400n l=90n
+    M1 (OUT IN VDD VDD) pmos w=0.8u l=90n
+ends INVD1
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: BUFFD1
+// View name: schematic
+subckt BUFFD1 DVDD GND IN OUT inh_bulk_n
+    I3 (net11 OUT DVDD GND inh_bulk_n) INVD1
+    I2 (net11 OUT DVDD GND inh_bulk_n) INVD1
+    I1 (net11 OUT DVDD GND inh_bulk_n) INVD1
+    I0 (IN net11 DVDD GND inh_bulk_n) INVD1
+ends BUFFD1
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: clk_gen
+// View name: schematic
+subckt clk_gen DVDD GND phiC phiS phi_ext inh_bulk_n
+    I6 (DVDD GND net03 phiC inh_bulk_n) BUFFD1
+    I5 (DVDD GND net02 phiS inh_bulk_n) BUFFD1
+    I3 (DVDD GND net03 phiC inh_bulk_n) BUFFD1
+    I2 (DVDD GND net02 phiS inh_bulk_n) BUFFD1
+    I4 (net02 net9 DVDD GND inh_bulk_n) INVD1
+    I0 (net03 net9 phi_ext) AND2 vh=1.2 vl=0 vth=((vh)+(vl))/(2) td=1e-10 \
+        tt=1e-10
+    V0 (net02 GND) vsource type=pulse val0=0 val1=vdd period=1/fs \
+        delay=1/fs rise=100p fall=100p width=1.5/fs/12
+ends clk_gen
+// End of subcircuit definition.
+
+// Library name: ee315
+// Cell name: switch_ideal
+// View name: schematic
+subckt switch_ideal clk s1 s2
+parameters Ron=10
+    C1 (net9 0) capacitor c=100.0a
+    C0 (s1 0) capacitor c=100.0a
+    R2 (net9 s2) resistor r=Ron isnoisy=yes
+    R1 (net9 0) resistor r=100G isnoisy=no
+    R0 (s1 0) resistor r=100G isnoisy=no
+    p1switch (s1 net9 clk 0) relay vt1=400m vt2=800m ropen=100G rclosed=1m
+ends switch_ideal
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: ideal_TH
+// View name: schematic
+subckt ideal_TH clk vdd vim vimth vip vipth vss
+    I2 (clk vim vimth) switch_ideal Ron=10
+    I0 (clk vip vipth) switch_ideal Ron=10
+ends ideal_TH
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: INVD1
+// View name: schematic
+subckt INVD1_schematic IN OUT VDD VSS inh_bulk_n
+    M0 (OUT IN VSS inh_bulk_n) nmos w=400n l=90n
+    M1 (OUT IN VDD VDD) pmos w=0.8u l=90n
+ends INVD1_schematic
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: dac_switches_real_bot_A
+// View name: schematic
+subckt dac_switches_real_bot_A DVDD GND NA\<8\> NA\<7\> NA\<6\> NA\<5\> \
+        NA\<4\> NA\<3\> NA\<2\> NA\<1\> NA\<0\> VREF con\<1\> con\<2\> \
+        con\<3\> con\<4\> con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> \
+        inh_bulk_n
+    I59 (con\<2\> NA\<1\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu \
+        wp=wu_bot_p*pn_a
+    I62 (con\<5\> NA\<4\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*8 \
+        wp=wu_bot_p*pn_a*8
+    I65 (con\<7\> NA\<6\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*32 \
+        wp=wu_bot_p*pn_a*32
+    I64 (con\<8\> NA\<7\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*64 \
+        wp=wu_bot_p*pn_a*64
+    I61 (con\<3\> NA\<2\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*2 \
+        wp=wu_bot_p*pn_a*2
+    I57 (con\<1\> NA\<0\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu \
+        wp=wu_bot_p*pn_a
+    I66 (con\<9\> NA\<8\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*128 \
+        wp=wu_bot_p*pn_a*128
+    I60 (con\<4\> NA\<3\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*4 \
+        wp=wu_bot_p*pn_a*4
+    I63 (con\<6\> NA\<5\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*16 \
+        wp=wu_bot_p*pn_a*16
+ends dac_switches_real_bot_A
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: dac_switches_real_bot_B
+// View name: schematic
+subckt dac_switches_real_bot_B DVDD GND NB\<8\> NB\<7\> NB\<6\> NB\<5\> \
+        NB\<4\> NB\<3\> NB\<2\> NB\<1\> NB\<0\> VREF con\<2\> con\<3\> \
+        con\<4\> con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> inh_bulk_n
+    I54 (con\<8\> NB\<7\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*64 \
+        wp=wu_bot_p*pn_b*64
+    I48 (DVDD NB\<0\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu \
+        wp=wu_bot_p*pn_b
+    I56 (con\<9\> NB\<8\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*128 \
+        wp=wu_bot_p*pn_b*128
+    I50 (con\<4\> NB\<3\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*4 \
+        wp=wu_bot_p*pn_b*4
+    I51 (con\<3\> NB\<2\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*2 \
+        wp=wu_bot_p*pn_b*2
+    I49 (con\<2\> NB\<1\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu \
+        wp=wu_bot_p*pn_b
+    I55 (con\<7\> NB\<6\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*32 \
+        wp=wu_bot_p*pn_b*32
+    I53 (con\<6\> NB\<5\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*16 \
+        wp=wu_bot_p*pn_b*16
+    I52 (con\<5\> NB\<4\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*8 \
+        wp=wu_bot_p*pn_b*8
+ends dac_switches_real_bot_B
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: dac_switches_A
+// View name: schematic
+subckt dac_switches_A DVDD GND NA\<8\> NA\<7\> NA\<6\> NA\<5\> NA\<4\> \
+        NA\<3\> NA\<2\> NA\<1\> NA\<0\> VREF con\<1\> con\<2\> con\<3\> \
+        con\<4\> con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> inh_bulk_n
+    I28 (con\<9\> net15 DVDD GND inh_bulk_n) INVD1
+    I27 (con\<8\> net19 DVDD GND inh_bulk_n) INVD1
+    I26 (con\<7\> net18 DVDD GND inh_bulk_n) INVD1
+    I25 (con\<5\> net17 DVDD GND inh_bulk_n) INVD1
+    I24 (con\<4\> net16 DVDD GND inh_bulk_n) INVD1
+    I23 (con\<3\> net22 DVDD GND inh_bulk_n) INVD1
+    I22 (con\<2\> net21 DVDD GND inh_bulk_n) INVD1
+    I21 (con\<6\> net20 DVDD GND inh_bulk_n) INVD1
+    I20 (con\<1\> net23 DVDD GND inh_bulk_n) INVD1
+    I17 (con\<9\> GND NA\<8\>) switch_ideal Ron=10
+    I16 (net15 NA\<8\> VREF) switch_ideal Ron=10
+    I15 (con\<8\> GND NA\<7\>) switch_ideal Ron=10
+    I14 (net19 NA\<7\> VREF) switch_ideal Ron=10
+    I13 (con\<7\> GND NA\<6\>) switch_ideal Ron=10
+    I12 (net18 NA\<6\> VREF) switch_ideal Ron=10
+    I11 (con\<6\> GND NA\<5\>) switch_ideal Ron=10
+    I10 (net20 NA\<5\> VREF) switch_ideal Ron=10
+    I9 (con\<5\> GND NA\<4\>) switch_ideal Ron=10
+    I8 (net17 NA\<4\> VREF) switch_ideal Ron=10
+    I7 (con\<4\> GND NA\<3\>) switch_ideal Ron=10
+    I6 (net16 NA\<3\> VREF) switch_ideal Ron=10
+    I5 (con\<3\> GND NA\<2\>) switch_ideal Ron=10
+    I4 (net22 NA\<2\> VREF) switch_ideal Ron=10
+    I3 (con\<2\> GND NA\<1\>) switch_ideal Ron=10
+    I2 (net21 NA\<1\> VREF) switch_ideal Ron=10
+    I1 (con\<1\> GND NA\<0\>) switch_ideal Ron=10
+    I0 (net23 NA\<0\> VREF) switch_ideal Ron=10
+ends dac_switches_A
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: cap_DAC
+// View name: schematic
+subckt cap_DAC NA\<8\> NA\<7\> NA\<6\> NA\<5\> NA\<4\> NA\<3\> NA\<2\> \
+        NA\<1\> NA\<0\> NB\<8\> NB\<7\> NB\<6\> NB\<5\> NB\<4\> NB\<3\> \
+        NB\<2\> NB\<1\> NB\<0\> TOP
+parameters Cu
+    C18 (TOP NB\<0\>) capacitor c=Cu
+    C17 (TOP NB\<1\>) capacitor c=Cu
+    C16 (TOP NB\<2\>) capacitor c=Cu m=2
+    C15 (TOP NB\<3\>) capacitor c=Cu m=4
+    C14 (TOP NB\<4\>) capacitor c=Cu m=8
+    C13 (TOP NB\<5\>) capacitor c=Cu m=16
+    C12 (TOP NB\<6\>) capacitor c=Cu m=32
+    C11 (TOP NB\<7\>) capacitor c=Cu m=64
+    C10 (TOP NB\<8\>) capacitor c=Cu m=128
+    C8 (TOP NA\<8\>) capacitor c=Cu m=128
+    C7 (TOP NA\<7\>) capacitor c=Cu m=64
+    C6 (TOP NA\<6\>) capacitor c=Cu m=32
+    C5 (TOP NA\<5\>) capacitor c=Cu m=16
+    C4 (TOP NA\<4\>) capacitor c=Cu m=8
+    C3 (TOP NA\<3\>) capacitor c=Cu m=4
+    C2 (TOP NA\<2\>) capacitor c=Cu m=2
+    C1 (TOP NA\<1\>) capacitor c=Cu
+    C0 (TOP NA\<0\>) capacitor c=Cu
+ends cap_DAC
+// End of subcircuit definition.
+
+// Library name: Project_Lib2
+// Cell name: dac_switches_B
+// View name: schematic
+subckt dac_switches_B DVDD GND NB\<8\> NB\<7\> NB\<6\> NB\<5\> NB\<4\> \
+        NB\<3\> NB\<2\> NB\<1\> NB\<0\> VREF con\<2\> con\<3\> con\<4\> \
+        con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> inh_bulk_n
+    I28 (con\<9\> net15 DVDD GND inh_bulk_n) INVD1
+    I27 (con\<8\> net19 DVDD GND inh_bulk_n) INVD1
+    I26 (con\<7\> net18 DVDD GND inh_bulk_n) INVD1
+    I25 (con\<5\> net17 DVDD GND inh_bulk_n) INVD1
+    I24 (con\<4\> net16 DVDD GND inh_bulk_n) INVD1
+    I23 (con\<3\> net22 DVDD GND inh_bulk_n) INVD1
+    I22 (con\<2\> net21 DVDD GND inh_bulk_n) INVD1
+    I21 (con\<6\> net20 DVDD GND inh_bulk_n) INVD1
+    I17 (net15 GND NB\<8\>) switch_ideal Ron=10
+    I16 (con\<9\> NB\<8\> VREF) switch_ideal Ron=10
+    I15 (net19 GND NB\<7\>) switch_ideal Ron=10
+    I14 (con\<8\> NB\<7\> VREF) switch_ideal Ron=10
+    I13 (net18 GND NB\<6\>) switch_ideal Ron=10
+    I12 (con\<7\> NB\<6\> VREF) switch_ideal Ron=10
+    I11 (net20 GND NB\<5\>) switch_ideal Ron=10
+    I10 (con\<6\> NB\<5\> VREF) switch_ideal Ron=10
+    I9 (net17 GND NB\<4\>) switch_ideal Ron=10
+    I8 (con\<5\> NB\<4\> VREF) switch_ideal Ron=10
+    I7 (net16 GND NB\<3\>) switch_ideal Ron=10
+    I6 (con\<4\> NB\<3\> VREF) switch_ideal Ron=10
+    I5 (net22 GND NB\<2\>) switch_ideal Ron=10
+    I4 (con\<3\> NB\<2\> VREF) switch_ideal Ron=10
+    I3 (net21 GND NB\<1\>) switch_ideal Ron=10
+    I2 (con\<2\> NB\<1\> VREF) switch_ideal Ron=10
+    I1 (DVDD GND NB\<0\>) switch_ideal Ron=10
+ends dac_switches_B
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: dac_switches_real_top_B
+// View name: schematic
+subckt dac_switches_real_top_B DVDD GND NB\<8\> NB\<7\> NB\<6\> NB\<5\> \
+        NB\<4\> NB\<3\> NB\<2\> NB\<1\> NB\<0\> VREF con\<2\> con\<3\> \
+        con\<4\> con\<5\> con\<6\> con\<7\> con\<8\> con\<9\> inh_bulk_n
+    I54 (con\<8\> NB\<7\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*64 wp=wu*pn_b*64
+    I48 (DVDD NB\<0\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu_top_n \
+        wp=wu*pn_b
+    I56 (con\<9\> NB\<8\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*128 wp=wu*pn_b*128
+    I50 (con\<4\> NB\<3\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*4 wp=wu*pn_b*4
+    I51 (con\<3\> NB\<2\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*2 wp=wu*pn_b*2
+    I49 (con\<2\> NB\<1\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n wp=wu*pn_b
+    I55 (con\<7\> NB\<6\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*32 wp=wu*pn_b*32
+    I53 (con\<6\> NB\<5\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*16 wp=wu*pn_b*16
+    I52 (con\<5\> NB\<4\> VREF GND inh_bulk_n) INV_DAC_SWITCHES \
+        wn=wu_top_n*8 wp=wu*pn_b*8
+ends dac_switches_real_top_B
+// End of subcircuit definition.
+
+// Library name: ee315_project
+// Cell name: dac_tb
+// View name: schematic
+I86\<0\> (vdd vss net064\<0\> conp_2\<0\> 0) _sub8
+I86\<1\> (vdd vss net064\<1\> conp_2\<1\> 0) _sub8
+I86\<2\> (vdd vss net064\<2\> conp_2\<2\> 0) _sub8
+I86\<3\> (vdd vss net064\<3\> conp_2\<3\> 0) _sub8
+I86\<4\> (vdd vss net064\<4\> conp_2\<4\> 0) _sub8
+I86\<5\> (vdd vss net064\<5\> conp_2\<5\> 0) _sub8
+I86\<6\> (vdd vss net064\<6\> conp_2\<6\> 0) _sub8
+I86\<7\> (vdd vss net064\<7\> conp_2\<7\> 0) _sub8
+I86\<8\> (vdd vss net064\<8\> conp_2\<8\> 0) _sub8
+I86\<9\> (vdd vss net064\<9\> conp_2\<9\> 0) _sub8
+I87\<0\> (vdd vss net065\<0\> conm_2\<0\> 0) _sub8
+I87\<1\> (vdd vss net065\<1\> conm_2\<1\> 0) _sub8
+I87\<2\> (vdd vss net065\<2\> conm_2\<2\> 0) _sub8
+I87\<3\> (vdd vss net065\<3\> conm_2\<3\> 0) _sub8
+I87\<4\> (vdd vss net065\<4\> conm_2\<4\> 0) _sub8
+I87\<5\> (vdd vss net065\<5\> conm_2\<5\> 0) _sub8
+I87\<6\> (vdd vss net065\<6\> conm_2\<6\> 0) _sub8
+I87\<7\> (vdd vss net065\<7\> conm_2\<7\> 0) _sub8
+I87\<8\> (vdd vss net065\<8\> conm_2\<8\> 0) _sub8
+I87\<9\> (vdd vss net065\<9\> conm_2\<9\> 0) _sub8
+I90 (vdd vss na_2_p\<8\> na_2_p\<7\> na_2_p\<6\> na_2_p\<5\> na_2_p\<4\> \
+        na_2_p\<3\> na_2_p\<2\> na_2_p\<1\> na_2_p\<0\> vref conp_2\<1\> \
+        conp_2\<2\> conp_2\<3\> conp_2\<4\> conp_2\<5\> conp_2\<6\> \
+        conp_2\<7\> conp_2\<8\> conp_2\<9\> 0) dac_switches_real_top_A
+I80\<0\> (vdd vss VDD! net064\<0\> 0) _sub11
+I80\<1\> (vdd vss code\<1\> net064\<1\> 0) _sub11
+I80\<2\> (vdd vss code\<2\> net064\<2\> 0) _sub11
+I80\<3\> (vdd vss code\<3\> net064\<3\> 0) _sub11
+I80\<4\> (vdd vss code\<4\> net064\<4\> 0) _sub11
+I80\<5\> (vdd vss code\<5\> net064\<5\> 0) _sub11
+I80\<6\> (vdd vss code\<6\> net064\<6\> 0) _sub11
+I80\<7\> (vdd vss code\<7\> net064\<7\> 0) _sub11
+I80\<8\> (vdd vss code\<8\> net064\<8\> 0) _sub11
+I80\<9\> (vdd vss code\<9\> net064\<9\> 0) _sub11
+I81\<0\> (vdd vss coden_2\<0\> net065\<0\> 0) _sub11
+I81\<1\> (vdd vss coden_2\<1\> net065\<1\> 0) _sub11
+I81\<2\> (vdd vss coden_2\<2\> net065\<2\> 0) _sub11
+I81\<3\> (vdd vss coden_2\<3\> net065\<3\> 0) _sub11
+I81\<4\> (vdd vss coden_2\<4\> net065\<4\> 0) _sub11
+I81\<5\> (vdd vss coden_2\<5\> net065\<5\> 0) _sub11
+I81\<6\> (vdd vss coden_2\<6\> net065\<6\> 0) _sub11
+I81\<7\> (vdd vss coden_2\<7\> net065\<7\> 0) _sub11
+I81\<8\> (vdd vss coden_2\<8\> net065\<8\> 0) _sub11
+I81\<9\> (vdd vss coden_2\<9\> net065\<9\> 0) _sub11
+V2 (vss 0) vsource dc=0 type=dc
+V7 (vref 0) vsource dc=vref type=dc
+V1 (vic 0) vsource dc=vcm type=dc
+V0 (vdd 0) vsource dc=vdd type=dc
+V6 (vid 0) vsource dc=dc_in mag=0 type=sine ampl=amp freq=fin
+V10 (code\<5\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 5*tbit) \
+         rise=100p fall=100p width=5*tbit
+V8 (code\<2\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 2*tbit) \
+         rise=100p fall=100p width=8*tbit
+V4 (code\<1\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + tbit) \
+         rise=100p fall=100p width=9*tbit
+V12 (code\<8\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 8*tbit) \
+         rise=100p fall=100p width=2*tbit
+V13 (code\<3\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 3*tbit) \
+         rise=100p fall=100p width=7*tbit
+V15 (code\<9\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 9*tbit) \
+         rise=100p fall=100p width=1*tbit
+V11 (code\<7\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 7*tbit) \
+         rise=100p fall=100p width=3*tbit
+V14 (code\<4\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 4*tbit) \
+         rise=100p fall=100p width=6*tbit
+V9 (code\<6\> 0) vsource type=pulse val0=vdd val1=0 period=tper delay=(tper + 6*tbit) \
+         rise=100p fall=100p width=4*tbit
+V3 (phi_ext 0) vsource type=pulse val0=0 val1=vdd period=1/fs/12 \
+        delay=1/fs rise=100p fall=100p
+I69 (vid vic vip_2 vim_2) ideal_balun
+I44 (vid vic vip vim) ideal_balun
+I64 (vdd vss net14 phiS phi_ext 0) clk_gen
+I60 (phiS vdd vim_2 dacout_2_m vip_2 dacout_2_p vss) ideal_TH
+I43 (phiS vdd vim dacout_m vip dacout_p vss) ideal_TH
+I6\<0\> (vdd vss coden\<0\> conm\<0\> 0) BUFFD1
+I6\<1\> (vdd vss coden\<1\> conm\<1\> 0) BUFFD1
+I6\<2\> (vdd vss coden\<2\> conm\<2\> 0) BUFFD1
+I6\<3\> (vdd vss coden\<3\> conm\<3\> 0) BUFFD1
+I6\<4\> (vdd vss coden\<4\> conm\<4\> 0) BUFFD1
+I6\<5\> (vdd vss coden\<5\> conm\<5\> 0) BUFFD1
+I6\<6\> (vdd vss coden\<6\> conm\<6\> 0) BUFFD1
+I6\<7\> (vdd vss coden\<7\> conm\<7\> 0) BUFFD1
+I6\<8\> (vdd vss coden\<8\> conm\<8\> 0) BUFFD1
+I6\<9\> (vdd vss coden\<9\> conm\<9\> 0) BUFFD1
+I5\<0\> (vdd vss VDD! conp\<0\> 0) BUFFD1
+I5\<1\> (vdd vss code\<1\> conp\<1\> 0) BUFFD1
+I5\<2\> (vdd vss code\<2\> conp\<2\> 0) BUFFD1
+I5\<3\> (vdd vss code\<3\> conp\<3\> 0) BUFFD1
+I5\<4\> (vdd vss code\<4\> conp\<4\> 0) BUFFD1
+I5\<5\> (vdd vss code\<5\> conp\<5\> 0) BUFFD1
+I5\<6\> (vdd vss code\<6\> conp\<6\> 0) BUFFD1
+I5\<7\> (vdd vss code\<7\> conp\<7\> 0) BUFFD1
+I5\<8\> (vdd vss code\<8\> conp\<8\> 0) BUFFD1
+I5\<9\> (vdd vss code\<9\> conp\<9\> 0) BUFFD1
+I77\<0\> (VDD! coden_2\<0\> vdd vss 0) INVD1_schematic
+I77\<1\> (code\<1\> coden_2\<1\> vdd vss 0) INVD1_schematic
+I77\<2\> (code\<2\> coden_2\<2\> vdd vss 0) INVD1_schematic
+I77\<3\> (code\<3\> coden_2\<3\> vdd vss 0) INVD1_schematic
+I77\<4\> (code\<4\> coden_2\<4\> vdd vss 0) INVD1_schematic
+I77\<5\> (code\<5\> coden_2\<5\> vdd vss 0) INVD1_schematic
+I77\<6\> (code\<6\> coden_2\<6\> vdd vss 0) INVD1_schematic
+I77\<7\> (code\<7\> coden_2\<7\> vdd vss 0) INVD1_schematic
+I77\<8\> (code\<8\> coden_2\<8\> vdd vss 0) INVD1_schematic
+I77\<9\> (code\<9\> coden_2\<9\> vdd vss 0) INVD1_schematic
+I4\<0\> (VDD! coden\<0\> vdd vss 0) INVD1_schematic
+I4\<1\> (code\<1\> coden\<1\> vdd vss 0) INVD1_schematic
+I4\<2\> (code\<2\> coden\<2\> vdd vss 0) INVD1_schematic
+I4\<3\> (code\<3\> coden\<3\> vdd vss 0) INVD1_schematic
+I4\<4\> (code\<4\> coden\<4\> vdd vss 0) INVD1_schematic
+I4\<5\> (code\<5\> coden\<5\> vdd vss 0) INVD1_schematic
+I4\<6\> (code\<6\> coden\<6\> vdd vss 0) INVD1_schematic
+I4\<7\> (code\<7\> coden\<7\> vdd vss 0) INVD1_schematic
+I4\<8\> (code\<8\> coden\<8\> vdd vss 0) INVD1_schematic
+I4\<9\> (code\<9\> coden\<9\> vdd vss 0) INVD1_schematic
+I92 (vdd vss na_2_m\<8\> na_2_m\<7\> na_2_m\<6\> na_2_m\<5\> na_2_m\<4\> \
+        na_2_m\<3\> na_2_m\<2\> na_2_m\<1\> na_2_m\<0\> vref conm_2\<1\> \
+        conm_2\<2\> conm_2\<3\> conm_2\<4\> conm_2\<5\> conm_2\<6\> \
+        conm_2\<7\> conm_2\<8\> conm_2\<9\> 0) dac_switches_real_bot_A
+I93 (vdd vss nb_2_m\<8\> nb_2_m\<7\> nb_2_m\<6\> nb_2_m\<5\> nb_2_m\<4\> \
+        nb_2_m\<3\> nb_2_m\<2\> nb_2_m\<1\> nb_2_m\<0\> vref conm_2\<2\> \
+        conm_2\<3\> conm_2\<4\> conm_2\<5\> conm_2\<6\> conm_2\<7\> \
+        conm_2\<8\> conm_2\<9\> 0) dac_switches_real_bot_B
+I68 (vdd vss na_p\<8\> na_p\<7\> na_p\<6\> na_p\<5\> na_p\<4\> na_p\<3\> \
+        na_p\<2\> na_p\<1\> na_p\<0\> vref conp\<1\> conp\<2\> conp\<3\> \
+        conp\<4\> conp\<5\> conp\<6\> conp\<7\> conp\<8\> conp\<9\> 0) \
+        dac_switches_A
+I72 (vdd vss na_m\<8\> na_m\<7\> na_m\<6\> na_m\<5\> na_m\<4\> na_m\<3\> \
+        na_m\<2\> na_m\<1\> na_m\<0\> vref conm\<1\> conm\<2\> conm\<3\> \
+        conm\<4\> conm\<5\> conm\<6\> conm\<7\> conm\<8\> conm\<9\> 0) \
+        dac_switches_A
+I63 (na_2_p\<8\> na_2_p\<7\> na_2_p\<6\> na_2_p\<5\> na_2_p\<4\> \
+        na_2_p\<3\> na_2_p\<2\> na_2_p\<1\> na_2_p\<0\> nb_2_p\<8\> \
+        nb_2_p\<7\> nb_2_p\<6\> nb_2_p\<5\> nb_2_p\<4\> nb_2_p\<3\> \
+        nb_2_p\<2\> nb_2_p\<1\> nb_2_p\<0\> dacout_2_p) cap_DAC Cu=5f
+I61 (na_2_m\<8\> na_2_m\<7\> na_2_m\<6\> na_2_m\<5\> na_2_m\<4\> \
+        na_2_m\<3\> na_2_m\<2\> na_2_m\<1\> na_2_m\<0\> nb_2_m\<8\> \
+        nb_2_m\<7\> nb_2_m\<6\> nb_2_m\<5\> nb_2_m\<4\> nb_2_m\<3\> \
+        nb_2_m\<2\> nb_2_m\<1\> nb_2_m\<0\> dacout_2_m) cap_DAC Cu=5f
+I58 (na_p\<8\> na_p\<7\> na_p\<6\> na_p\<5\> na_p\<4\> na_p\<3\> na_p\<2\> \
+        na_p\<1\> na_p\<0\> nb_p\<8\> nb_p\<7\> nb_p\<6\> nb_p\<5\> \
+        nb_p\<4\> nb_p\<3\> nb_p\<2\> nb_p\<1\> nb_p\<0\> dacout_p) \
+        cap_DAC Cu=5f
+I66 (na_m\<8\> na_m\<7\> na_m\<6\> na_m\<5\> na_m\<4\> na_m\<3\> na_m\<2\> \
+        na_m\<1\> na_m\<0\> nb_m\<8\> nb_m\<7\> nb_m\<6\> nb_m\<5\> \
+        nb_m\<4\> nb_m\<3\> nb_m\<2\> nb_m\<1\> nb_m\<0\> dacout_m) \
+        cap_DAC Cu=5f
+I71 (vdd vss nb_p\<8\> nb_p\<7\> nb_p\<6\> nb_p\<5\> nb_p\<4\> nb_p\<3\> \
+        nb_p\<2\> nb_p\<1\> nb_p\<0\> vref conm\<2\> conm\<3\> conm\<4\> \
+        conm\<5\> conm\<6\> conm\<7\> conm\<8\> conm\<9\> 0) \
+        dac_switches_B
+I73 (vdd vss nb_m\<8\> nb_m\<7\> nb_m\<6\> nb_m\<5\> nb_m\<4\> nb_m\<3\> \
+        nb_m\<2\> nb_m\<1\> nb_m\<0\> vref conp\<2\> conp\<3\> conp\<4\> \
+        conp\<5\> conp\<6\> conp\<7\> conp\<8\> conp\<9\> 0) \
+        dac_switches_B
+I91 (vdd vss nb_2_p\<8\> nb_2_p\<7\> nb_2_p\<6\> nb_2_p\<5\> nb_2_p\<4\> \
+        nb_2_p\<3\> nb_2_p\<2\> nb_2_p\<1\> nb_2_p\<0\> vref conp_2\<2\> \
+        conp_2\<3\> conp_2\<4\> conp_2\<5\> conp_2\<6\> conp_2\<7\> \
+        conp_2\<8\> conp_2\<9\> 0) dac_switches_real_top_B
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=45n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts  where=rawfile
+saveOptions options save=allpub
+ahdl_include "/afs/ir.stanford.edu/class/ee315/opus/Project_Lib2/AND2/veriloga/veriloga.va"

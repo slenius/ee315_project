@@ -1,0 +1,4 @@
+    I2 (clk vim vimth) switch_ideal Ron=10
+    I0 (clk vip vipth) switch_ideal Ron=10
+ends ideal_TH
+// End of subcircuit definition.

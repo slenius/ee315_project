@@ -1,0 +1,5 @@
+
+// Library name: ee315_project
+// Cell name: BUFFD1_16-256
+// View name: schematic
+subckt _sub8 DVDD GND IN OUT inh_bulk_n

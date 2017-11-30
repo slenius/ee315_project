@@ -1,0 +1,5 @@
+
+// Library name: Project_Lib2
+// Cell name: ideal_TH
+// View name: schematic
+subckt ideal_TH clk vdd vim vimth vip vipth vss

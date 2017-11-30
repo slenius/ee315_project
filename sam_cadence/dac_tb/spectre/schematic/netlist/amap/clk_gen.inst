@@ -1,0 +1,12 @@
+HEADER
+"PSFversion" "1.00"
+"I6n I5n I3n I2n" "BUFFD1"
+"I4n" "INVD1"
+"I0n" "Project_Lib2_AND2_veriloga"
+"V0n" "ee315_vpulse_spectre"
+"DVDDv" ":1v"
+"GNDv" ":2v"
+"phiCv" ":3v"
+"phiSv" ":4v"
+"phi_extv" ":5v"
+"[@bulk_n:%:gnd!]v" ":6v"

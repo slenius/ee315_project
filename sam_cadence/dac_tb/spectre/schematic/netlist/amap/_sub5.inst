@@ -1,0 +1,9 @@
+HEADER
+"PSFversion" "1.00"
+"I5n" "_sub3"
+"I4n" "_sub4"
+"DVDDv" ":1v"
+"GNDv" ":2v"
+"INv" ":3v"
+"OUTv" ":4v"
+"[@bulk_n:%:gnd!]v" ":5v"

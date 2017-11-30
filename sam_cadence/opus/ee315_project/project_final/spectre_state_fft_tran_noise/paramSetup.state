@@ -1,4 +1,4 @@
-"_DEXPR_7" (tran_skipstart options VAR("Tskip"))
-"_DEXPR_3" (tran_stop fields VAR("Tstop"))
 "_DEXPR_6" (tran_noisefmax fields VAR("FMAX"))
+"_DEXPR_3" (tran_stop fields VAR("Tstop"))
+"_DEXPR_7" (tran_skipstart options VAR("Tskip"))
 "_DEXPR_8" (tran_outputstart options VAR("Tskip"))

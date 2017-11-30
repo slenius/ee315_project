@@ -1,0 +1,6 @@
+    I3 (net11 OUT DVDD GND inh_bulk_n) INVD1
+    I2 (net11 OUT DVDD GND inh_bulk_n) INVD1
+    I1 (net11 OUT DVDD GND inh_bulk_n) INVD1
+    I0 (IN net11 DVDD GND inh_bulk_n) INVD1
+ends BUFFD1
+// End of subcircuit definition.

@@ -1,0 +1,10 @@
+HEADER
+"PSFversion" "1.00"
+"I2n I0n" "switch_ideal"
+"clkv" ":1v"
+"vddv" ":2v"
+"vimv" ":3v"
+"vimthv" ":4v"
+"vipv" ":5v"
+"vipthv" ":6v"
+"vssv" ":7v"

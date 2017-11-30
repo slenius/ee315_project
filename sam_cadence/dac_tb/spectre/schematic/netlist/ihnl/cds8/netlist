@@ -1,0 +1,4 @@
+    K0 (d 0 p c) transformer n1=2
+    K1 (d 0 c n) transformer n1=2
+ends ideal_balun
+// End of subcircuit definition.

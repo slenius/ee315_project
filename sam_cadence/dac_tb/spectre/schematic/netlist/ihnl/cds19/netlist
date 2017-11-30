@@ -1,0 +1,27 @@
+    I28 (con\<9\> net15 DVDD GND inh_bulk_n) INVD1
+    I27 (con\<8\> net19 DVDD GND inh_bulk_n) INVD1
+    I26 (con\<7\> net18 DVDD GND inh_bulk_n) INVD1
+    I25 (con\<5\> net17 DVDD GND inh_bulk_n) INVD1
+    I24 (con\<4\> net16 DVDD GND inh_bulk_n) INVD1
+    I23 (con\<3\> net22 DVDD GND inh_bulk_n) INVD1
+    I22 (con\<2\> net21 DVDD GND inh_bulk_n) INVD1
+    I21 (con\<6\> net20 DVDD GND inh_bulk_n) INVD1
+    I17 (net15 GND NB\<8\>) switch_ideal Ron=10
+    I16 (con\<9\> NB\<8\> VREF) switch_ideal Ron=10
+    I15 (net19 GND NB\<7\>) switch_ideal Ron=10
+    I14 (con\<8\> NB\<7\> VREF) switch_ideal Ron=10
+    I13 (net18 GND NB\<6\>) switch_ideal Ron=10
+    I12 (con\<7\> NB\<6\> VREF) switch_ideal Ron=10
+    I11 (net20 GND NB\<5\>) switch_ideal Ron=10
+    I10 (con\<6\> NB\<5\> VREF) switch_ideal Ron=10
+    I9 (net17 GND NB\<4\>) switch_ideal Ron=10
+    I8 (con\<5\> NB\<4\> VREF) switch_ideal Ron=10
+    I7 (net16 GND NB\<3\>) switch_ideal Ron=10
+    I6 (con\<4\> NB\<3\> VREF) switch_ideal Ron=10
+    I5 (net22 GND NB\<2\>) switch_ideal Ron=10
+    I4 (con\<3\> NB\<2\> VREF) switch_ideal Ron=10
+    I3 (net21 GND NB\<1\>) switch_ideal Ron=10
+    I2 (con\<2\> NB\<1\> VREF) switch_ideal Ron=10
+    I1 (DVDD GND NB\<0\>) switch_ideal Ron=10
+ends dac_switches_B
+// End of subcircuit definition.

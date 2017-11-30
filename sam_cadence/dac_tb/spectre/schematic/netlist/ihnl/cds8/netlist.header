@@ -1,0 +1,5 @@
+
+// Library name: ee315
+// Cell name: ideal_balun
+// View name: schematic
+subckt ideal_balun d c p n

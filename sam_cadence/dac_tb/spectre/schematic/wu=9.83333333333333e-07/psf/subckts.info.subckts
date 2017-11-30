@@ -1,0 +1,104 @@
+HEADER
+"PSFversion" "1.00"
+"simulator" "spectre"
+"version" "10.1.1.260.isr16"
+"date" "11:05:23 PM, Sat Nov 25, 2017"
+"design" "// Generated for: spectre"
+"analysis type" "info.subckts"
+"analysis name" "subckts"
+"analysis description" "Circuit Information"
+"xVecSorted" "unsorted"
+"tolerance.relative" 0.00100000
+TYPE
+"subckt" STRUCT(
+"subckt_params" STRING *
+"subckt_terminals" STRING *
+) PROP(
+"key" "sub"
+)
+VALUE
+"dac_switches_A" "subckt" (
+""
+"DVDD GND NA<8> NA<7> NA<6> NA<5> NA<4> NA<3> NA<2> NA<1> NA<0> VREF con<1> con<2> con<3> con<4> con<5> con<6> con<7> con<8> con<9> inh_bulk_n 0"
+)
+"switch_ideal" "subckt" (
+"Ron"
+"clk s1 s2 0"
+)
+"ideal_balun" "subckt" (
+""
+"d c p n 0"
+)
+"_sub9" "subckt" (
+""
+"IN OUT VDD VSS inh_bulk_n"
+)
+"clk_gen" "subckt" (
+""
+"DVDD GND phiC phiS phi_ext inh_bulk_n"
+)
+"_sub6" "subckt" (
+""
+"IN OUT VDD VSS inh_bulk_n"
+)
+"dac_switches_B" "subckt" (
+""
+"DVDD GND NB<8> NB<7> NB<6> NB<5> NB<4> NB<3> NB<2> NB<1> NB<0> VREF con<2> con<3> con<4> con<5> con<6> con<7> con<8> con<9> inh_bulk_n 0"
+)
+"dac_switches_real_bot_A" "subckt" (
+""
+"DVDD GND NA<8> NA<7> NA<6> NA<5> NA<4> NA<3> NA<2> NA<1> NA<0> VREF con<1> con<2> con<3> con<4> con<5> con<6> con<7> con<8> con<9> inh_bulk_n"
+)
+"ideal_TH" "subckt" (
+""
+"clk vdd vim vimth vip vipth vss 0"
+)
+"_sub10" "subckt" (
+""
+"IN OUT VDD VSS inh_bulk_n"
+)
+"cap_DAC" "subckt" (
+"Cu"
+"NA<8> NA<7> NA<6> NA<5> NA<4> NA<3> NA<2> NA<1> NA<0> NB<8> NB<7> NB<6> NB<5> NB<4> NB<3> NB<2> NB<1> NB<0> TOP"
+)
+"dac_switches_real_top_B" "subckt" (
+""
+"DVDD GND NB<8> NB<7> NB<6> NB<5> NB<4> NB<3> NB<2> NB<1> NB<0> VREF con<2> con<3> con<4> con<5> con<6> con<7> con<8> con<9> inh_bulk_n"
+)
+"_sub7" "subckt" (
+""
+"IN OUT VDD VSS inh_bulk_n"
+)
+"BUFFD1" "subckt" (
+""
+"DVDD GND IN OUT inh_bulk_n"
+)
+"INVD1_schematic" "subckt" (
+""
+"IN OUT VDD VSS inh_bulk_n"
+)
+"dac_switches_real_top_A" "subckt" (
+""
+"DVDD GND NA<8> NA<7> NA<6> NA<5> NA<4> NA<3> NA<2> NA<1> NA<0> VREF con<1> con<2> con<3> con<4> con<5> con<6> con<7> con<8> con<9> inh_bulk_n"
+)
+"_sub8" "subckt" (
+""
+"DVDD GND IN OUT inh_bulk_n"
+)
+"dac_switches_real_bot_B" "subckt" (
+""
+"DVDD GND NB<8> NB<7> NB<6> NB<5> NB<4> NB<3> NB<2> NB<1> NB<0> VREF con<2> con<3> con<4> con<5> con<6> con<7> con<8> con<9> inh_bulk_n"
+)
+"_sub11" "subckt" (
+""
+"DVDD GND IN OUT inh_bulk_n"
+)
+"INV_DAC_SWITCHES" "subckt" (
+"wn wp"
+"IN OUT VDD VSS inh_bulk_n"
+)
+"INVD1" "subckt" (
+""
+"IN OUT VDD VSS inh_bulk_n"
+)
+END

@@ -1,0 +1,1822 @@
+
+Cadence (R) Virtuoso (R) Spectre (R) Circuit Simulator
+Version 10.1.1.260.isr16 64bit -- 26 Oct 2011
+Copyright (C) 1989-2010 Cadence Design Systems, Inc. All rights reserved worldwide. Cadence, Virtuoso and Spectre are registered trademarks of Cadence Design Systems, Inc. All others are the property of their respective holders.
+
+Protected by U.S. Patents: 
+        5,610,847; 5,790,436; 5,812,431; 5,859,785; 5,949,992; 5,987,238; 
+        6,088,523; 6,101,323; 6,151,698; 6,181,754; 6,260,176; 6,278,964; 
+        6,349,272; 6,374,390; 6,493,849; 6,504,885; 6,618,837; 6,636,839; 
+        6,778,025; 6,832,358; 6,851,097; 6,928,626; 7,024,652; 7,035,782; 
+        7,085,700; 7,143,021; 7,493,240; 7,571,401.
+
+Includes RSA BSAFE(R) Cryptographic or Security Protocol Software from RSA Security, Inc.
+
+User: sam   Host: sam-laptop-linux   HostID: 7F0101   PID: 29246
+Memory  available: 17.9517 GB  physical: 33.3156 GB
+CPU Type: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+          Processor PhysicalID CoreID Frequency
+              0         0        0     2100.8
+              1         0        0     1988.7
+              2         0        1     2014.8
+              3         0        1     1940.7
+              4         0        2     2102.4
+              5         0        2     2163.1
+              6         0        3     2100.6
+              7         0        3     2111.6
+
+
+Simulating `input.scs' on sam-laptop-linux at 11:04:21 PM, Sat Nov 25, 2017 (process id: 29246).
+Command line:
+     \
+        /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/spectre/bin/64bit/spectre  \
+        input.scs +escchars +log ../psf/spectre.out +inter=mpsc  \
+        +mpssession=spectre0_17667_11 -format sst2 -raw ../psf  \
+        +lqtimeout 900 -maxw 5 -maxn 5
+spectre pid = 29246
+
+Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libinfineon_sh.so ...
+Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libphilips_sh.so ...
+Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libsparam_sh.so ...
+Loading /afs/ir.stanford.edu/class/ee/cadence/MMSIM10/tools.lnx86/cmi/lib/64bit/5.0/libstmodels_sh.so ...
+
+Time for NDB Parsing: CPU = 108 ms, elapsed = 236.128 ms.
+Time accumulated: CPU = 108 ms, elapsed = 236.128 ms.
+Peak resident memory used = 61.8 Mbytes.
+
+
+Warning from spectre in `_sub6':`I86<0>.I7', in `_sub8':`I86<0>', during hierarchy flattening.
+    WARNING (SFE-30): "/afs/ir.stanford.edu/class/ee315/models/ee315_90nm.mod" 6: nmos: `PB' is not a valid parameter for an instance of `bsim4'.  Ignored.
+    WARNING (SFE-30): "/afs/ir.stanford.edu/class/ee315/models/ee315_90nm.mod" 47: pmos: `PB' is not a valid parameter for an instance of `bsim4'.  Ignored.
+
+
+Time for Elaboration: CPU = 48 ms, elapsed = 51.038 ms.
+Time accumulated: CPU = 156 ms, elapsed = 287.371 ms.
+Peak resident memory used = 69.2 Mbytes.
+
+
+Time for EDB Visiting: CPU = 20 ms, elapsed = 17.5641 ms.
+Time accumulated: CPU = 176 ms, elapsed = 305.101 ms.
+Peak resident memory used = 72.1 Mbytes.
+
+
+Notice from spectre during topology check.
+    No DC path from node `VDD!' to ground, Gmin installed to provide path.
+
+
+Circuit inventory:
+              nodes 353
+               AND2 1     
+              bsim4 534   
+          capacitor 220   
+              relay 74    
+           resistor 222   
+        transformer 4     
+            vsource 16    
+
+
+Time for parsing: CPU = 4 ms, elapsed = 16.52 ms.
+Time accumulated: CPU = 180 ms, elapsed = 321.766 ms.
+Peak resident memory used = 72.7 Mbytes.
+
+Entering remote command mode using MPSC service (spectre, ipi, v0.0, spectre0_17667_11, ).
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.2 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.05 ps    (24.5 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213.7 ps     (475 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 45 ps        (100 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+    tran: time = 35 ns       (77.8 %), step = 213.7 ps     (475 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 22.7 ps     (50.5 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.68 ps     (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.98 ns    (97.7 %), step = 169.8 ps     (377 m%)
+Number of accepted tran steps =             2814
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 24 ms, elapsed = 24.138 ms.
+Intrinsic tran analysis time:    CPU = 14.552 s, elapsed = 14.5954 s.
+Total time required for tran analysis `tran': CPU = 14.58 s, elapsed = 14.6388 s.
+Time accumulated: CPU = 14.772 s, elapsed = 15.0067 s.
+Peak resident memory used = 78.6 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.23 ps      (25 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.43 ns    (67.6 %), step = 58.14 ps     (129 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.15 ns    (82.5 %), step = 24.22 ps    (53.8 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.95 ns    (97.7 %), step = 79.95 ps     (178 m%)
+Number of accepted tran steps =             2872
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 36 ms, elapsed = 34.9562 ms.
+Intrinsic tran analysis time:    CPU = 14.844 s, elapsed = 14.8948 s.
+Total time required for tran analysis `tran': CPU = 14.884 s, elapsed = 14.9538 s.
+Time accumulated: CPU = 29.74 s, elapsed = 30.6296 s.
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.64 ps    (23.6 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.4 ns     (67.5 %), step = 51.76 ps     (115 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 16.9 ps     (37.6 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.92 ns    (97.6 %), step = 47.4 ps      (105 m%)
+Number of accepted tran steps =             2886
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 40 ms, elapsed = 38.7669 ms.
+Intrinsic tran analysis time:    CPU = 15.016 s, elapsed = 15.1191 s.
+Total time required for tran analysis `tran': CPU = 15.06 s, elapsed = 15.1834 s.
+Time accumulated: CPU = 44.864 s, elapsed = 46.1243 s.
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.56 ps    (23.5 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.4 ns     (67.6 %), step = 33.11 ps    (73.6 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 14.72 ps    (32.7 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.93 ns    (97.6 %), step = 59.69 ps     (133 m%)
+Number of accepted tran steps =             2912
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 24 ms, elapsed = 23.3331 ms.
+Intrinsic tran analysis time:    CPU = 15.052 s, elapsed = 15.186 s.
+Total time required for tran analysis `tran': CPU = 15.08 s, elapsed = 15.2309 s.
+Time accumulated: CPU = 60.008 s (1m  0.0s), elapsed = 61.6766 s (1m  1.7s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.63 ps    (23.6 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 30.14 ps      (67 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 15.45 ps    (34.3 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.91 ns    (97.6 %), step = 62.5 ps      (139 m%)
+Number of accepted tran steps =             2899
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 28.3742 ms.
+Intrinsic tran analysis time:    CPU = 15.1 s, elapsed = 15.2027 s.
+Total time required for tran analysis `tran': CPU = 15.132 s, elapsed = 15.2521 s.
+Time accumulated: CPU = 75.228 s (1m  15.2s), elapsed = 77.2741 s (1m  17.3s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.64 ns    (52.5 %), step = 13.46 ps    (29.9 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 37.97 ps    (84.4 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 15.45 ps    (34.3 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.9 ns     (97.5 %), step = 71.92 ps     (160 m%)
+Number of accepted tran steps =             2910
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 28.0089 ms.
+Intrinsic tran analysis time:    CPU = 15.036 s, elapsed = 15.0971 s.
+Total time required for tran analysis `tran': CPU = 15.068 s, elapsed = 15.1403 s.
+Time accumulated: CPU = 90.38 s (1m  30.4s), elapsed = 92.7058 s (1m  32.7s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.64 ns    (52.5 %), step = 13.43 ps    (29.8 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 24.72 ps    (54.9 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 14.95 ps    (33.2 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.98 ns    (97.7 %), step = 111.5 ps     (248 m%)
+Number of accepted tran steps =             2925
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 28.6131 ms.
+Intrinsic tran analysis time:    CPU = 14.764 s, elapsed = 14.8052 s.
+Total time required for tran analysis `tran': CPU = 14.796 s, elapsed = 14.8548 s.
+Time accumulated: CPU = 105.24 s (1m  45.2s), elapsed = 107.93 s (1m  47.9s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.56 ps    (25.7 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 27.84 ps    (61.9 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 15.2 ps     (33.8 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.98 ns    (97.7 %), step = 116.1 ps     (258 m%)
+Number of accepted tran steps =             2923
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 32 ms, elapsed = 33.555 ms.
+Intrinsic tran analysis time:    CPU = 15.284 s, elapsed = 15.3323 s.
+Total time required for tran analysis `tran': CPU = 15.32 s, elapsed = 15.3976 s.
+Time accumulated: CPU = 120.628 s (2m  0.6s), elapsed = 123.645 s (2m  3.6s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.64 ns    (52.5 %), step = 13.57 ps    (30.2 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 23.34 ps    (51.9 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 15.95 ps    (35.4 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.89 ns    (97.5 %), step = 81.95 ps     (182 m%)
+Number of accepted tran steps =             2912
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 32 ms, elapsed = 28.9102 ms.
+Intrinsic tran analysis time:    CPU = 14.932 s, elapsed = 14.9693 s.
+Total time required for tran analysis `tran': CPU = 14.968 s, elapsed = 15.0143 s.
+Time accumulated: CPU = 135.66 s (2m  15.7s), elapsed = 138.954 s (2m  19.0s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 9.943 ps    (22.1 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.4 ns     (67.5 %), step = 23.08 ps    (51.3 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 15.83 ps    (35.2 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.91 ns    (97.6 %), step = 91.75 ps     (204 m%)
+Number of accepted tran steps =             2920
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 29.429 ms.
+Intrinsic tran analysis time:    CPU = 15.42 s, elapsed = 15.5234 s.
+Total time required for tran analysis `tran': CPU = 15.452 s, elapsed = 15.5745 s.
+Time accumulated: CPU = 151.188 s (2m  31.2s), elapsed = 154.88 s (2m  34.9s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 9.986 ps    (22.2 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 22.19 ps    (49.3 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 15.11 ps    (33.6 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.93 ns    (97.6 %), step = 104.8 ps     (233 m%)
+Number of accepted tran steps =             2924
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 27.523 ms.
+Intrinsic tran analysis time:    CPU = 15.46 s, elapsed = 15.5106 s.
+Total time required for tran analysis `tran': CPU = 15.492 s, elapsed = 15.5518 s.
+Time accumulated: CPU = 166.74 s (2m  46.7s), elapsed = 170.757 s (2m  50.8s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.43 ps    (25.4 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 21.55 ps    (47.9 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 13.96 ps      (31 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 44.01 ns    (97.8 %), step = 144.9 ps     (322 m%)
+Number of accepted tran steps =             2935
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 27.2498 ms.
+Intrinsic tran analysis time:    CPU = 15.032 s, elapsed = 15.1197 s.
+Total time required for tran analysis `tran': CPU = 15.06 s, elapsed = 15.1622 s.
+Time accumulated: CPU = 181.864 s (3m  1.9s), elapsed = 186.225 s (3m  6.2s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.21 ps    (24.9 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 20.87 ps    (46.4 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 15.11 ps    (33.6 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 44.02 ns    (97.8 %), step = 155.4 ps     (345 m%)
+Number of accepted tran steps =             2935
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 32 ms, elapsed = 30.288 ms.
+Intrinsic tran analysis time:    CPU = 14.888 s, elapsed = 14.9424 s.
+Total time required for tran analysis `tran': CPU = 14.924 s, elapsed = 14.9888 s.
+Time accumulated: CPU = 196.852 s (3m  16.9s), elapsed = 201.596 s (3m  21.6s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.64 ns    (52.5 %), step = 13.58 ps    (30.2 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 21.88 ps    (48.6 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 17.77 ps    (39.5 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.96 ns    (97.7 %), step = 129.2 ps     (287 m%)
+Number of accepted tran steps =             2925
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 44 ms, elapsed = 43.1361 ms.
+Intrinsic tran analysis time:    CPU = 14.8 s, elapsed = 14.9295 s.
+Total time required for tran analysis `tran': CPU = 14.848 s, elapsed = 14.999 s.
+Time accumulated: CPU = 211.764 s (3m  31.8s), elapsed = 216.92 s (3m  36.9s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.27 ps      (25 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 20.21 ps    (44.9 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 14.98 ps    (33.3 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.89 ns    (97.5 %), step = 98.79 ps     (220 m%)
+Number of accepted tran steps =             2930
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 40 ms, elapsed = 40.8258 ms.
+Intrinsic tran analysis time:    CPU = 14.824 s, elapsed = 14.8642 s.
+Total time required for tran analysis `tran': CPU = 14.868 s, elapsed = 14.9415 s.
+Time accumulated: CPU = 226.712 s (3m  46.7s), elapsed = 232.167 s (3m  52.2s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 9.951 ps    (22.1 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 20.53 ps    (45.6 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 15.6 ps     (34.7 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.99 ns    (97.8 %), step = 145.4 ps     (323 m%)
+Number of accepted tran steps =             2931
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 32 ms, elapsed = 32.4411 ms.
+Intrinsic tran analysis time:    CPU = 14.752 s, elapsed = 14.8634 s.
+Total time required for tran analysis `tran': CPU = 14.788 s, elapsed = 14.9115 s.
+Time accumulated: CPU = 241.564 s (4m  1.6s), elapsed = 247.41 s (4m  7.4s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.64 ns    (52.5 %), step = 13.46 ps    (29.9 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 20.67 ps    (45.9 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 18.87 ps    (41.9 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 44 ns       (97.8 %), step = 154.1 ps     (343 m%)
+Number of accepted tran steps =             2934
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 36 ms, elapsed = 34.1139 ms.
+Intrinsic tran analysis time:    CPU = 14.864 s, elapsed = 14.9583 s.
+Total time required for tran analysis `tran': CPU = 14.904 s, elapsed = 15.0137 s.
+Time accumulated: CPU = 256.528 s (4m  16.5s), elapsed = 262.785 s (4m  22.8s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.04 ps    (22.3 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 19.93 ps    (44.3 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 18.35 ps    (40.8 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 44.04 ns    (97.9 %), step = 177.3 ps     (394 m%)
+Number of accepted tran steps =             2925
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 40 ms, elapsed = 38.2211 ms.
+Intrinsic tran analysis time:    CPU = 14.776 s, elapsed = 14.8251 s.
+Total time required for tran analysis `tran': CPU = 14.82 s, elapsed = 14.8866 s.
+Time accumulated: CPU = 271.42 s (4m  31.4s), elapsed = 278.008 s (4m  38.0s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.63 ps    (23.6 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 19.8 ps       (44 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 14.13 ps    (31.4 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.91 ns    (97.6 %), step = 113.6 ps     (252 m%)
+Number of accepted tran steps =             2931
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 32 ms, elapsed = 30.7889 ms.
+Intrinsic tran analysis time:    CPU = 14.856 s, elapsed = 14.8894 s.
+Total time required for tran analysis `tran': CPU = 14.892 s, elapsed = 14.9501 s.
+Time accumulated: CPU = 286.392 s (4m  46.4s), elapsed = 293.296 s (4m  53.3s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.63 ps    (23.6 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 19.17 ps    (42.6 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 15.58 ps    (34.6 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.91 ns    (97.6 %), step = 110.9 ps     (246 m%)
+Number of accepted tran steps =             2924
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 32 ms, elapsed = 28.924 ms.
+Intrinsic tran analysis time:    CPU = 14.84 s, elapsed = 14.9276 s.
+Total time required for tran analysis `tran': CPU = 14.876 s, elapsed = 14.9798 s.
+Time accumulated: CPU = 301.332 s (5m  1.3s), elapsed = 308.59 s (5m  8.6s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.53 ps    (25.6 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.4 ns     (67.5 %), step = 21.42 ps    (47.6 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 16.7 ps     (37.1 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.97 ns    (97.7 %), step = 143.1 ps     (318 m%)
+Number of accepted tran steps =             2923
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 28 ms, elapsed = 25.3069 ms.
+Intrinsic tran analysis time:    CPU = 15.056 s, elapsed = 15.1198 s.
+Total time required for tran analysis `tran': CPU = 15.088 s, elapsed = 15.1603 s.
+Time accumulated: CPU = 316.496 s (5m  16.5s), elapsed = 324.125 s (5m  24.1s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10 ps       (22.2 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 18.66 ps    (41.5 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.14 ns    (82.5 %), step = 15.79 ps    (35.1 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.9 ns     (97.6 %), step = 109.7 ps     (244 m%)
+Number of accepted tran steps =             2956
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 36 ms, elapsed = 35.6238 ms.
+Intrinsic tran analysis time:    CPU = 15.132 s, elapsed = 15.2932 s.
+Total time required for tran analysis `tran': CPU = 15.172 s, elapsed = 15.3546 s.
+Time accumulated: CPU = 331.748 s (5m  31.7s), elapsed = 339.838 s (5m  39.8s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.1 ps     (22.4 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 17.9 ps     (39.8 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+    tran: time = 37.13 ns    (82.5 %), step = 14.41 ps      (32 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.91 ns    (97.6 %), step = 116.7 ps     (259 m%)
+Number of accepted tran steps =             2968
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 24 ms, elapsed = 24.5421 ms.
+Intrinsic tran analysis time:    CPU = 15.324 s, elapsed = 15.4777 s.
+Total time required for tran analysis `tran': CPU = 15.352 s, elapsed = 15.525 s.
+Time accumulated: CPU = 347.164 s (5m  47.2s), elapsed = 355.631 s (5m  55.6s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 11.52 ps    (25.6 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.38 ns    (67.5 %), step = 17.24 ps    (38.3 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+
+Warning from spectre at time = 36.8618 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I3.net9.
+Warning from spectre at time = 36.8749 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I73.I3.net9.
+
+    tran: time = 37.14 ns    (82.5 %), step = 14.62 ps    (32.5 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 44.01 ns    (97.8 %), step = 165.5 ps     (368 m%)
+Number of accepted tran steps =             2985
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 24 ms, elapsed = 25.0361 ms.
+Intrinsic tran analysis time:    CPU = 17.688 s, elapsed = 17.7307 s.
+Total time required for tran analysis `tran': CPU = 17.716 s, elapsed = 17.7698 s.
+Time accumulated: CPU = 364.94 s (6m  4.9s), elapsed = 373.668 s (6m  13.7s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+************************************************
+Transient Analysis `tran': time = (0 s -> 45 ns)
+************************************************
+Important parameter values:
+    start = 0 s
+    outputstart = 0 s
+    stop = 45 ns
+    step = 45 ps
+    maxstep = 900 ps
+    ic = all
+    useprevic = no
+    skipdc = no
+    reltol = 1e-03
+    abstol(V) = 1 uV
+    abstol(I) = 1 pA
+    temp = 27 C
+    tnom = 27 C
+    tempeffects = all
+    errpreset = moderate
+    method = traponly
+    lteratio = 3.5
+    relref = sigglobal
+    cmin = 0 F
+    gmin = 1 pS
+
+    tran: time = 1.395 ns     (3.1 %), step = 720 ps        (1.6 %)
+    tran: time = 4.095 ns     (9.1 %), step = 900 ps          (2 %)
+    tran: time = 5.895 ns    (13.1 %), step = 900 ps          (2 %)
+    tran: time = 8.595 ns    (19.1 %), step = 900 ps          (2 %)
+    tran: time = 10.39 ns    (23.1 %), step = 900 ps          (2 %)
+    tran: time = 13.09 ns    (29.1 %), step = 900 ps          (2 %)
+    tran: time = 14.89 ns    (33.1 %), step = 900 ps          (2 %)
+    tran: time = 17.59 ns    (39.1 %), step = 900 ps          (2 %)
+    tran: time = 19.4 ns     (43.1 %), step = 900 ps          (2 %)
+    tran: time = 21.42 ns    (47.6 %), step = 242.3 ps     (538 m%)
+    tran: time = 23.63 ns    (52.5 %), step = 10.13 ps    (22.5 m%)
+    tran: time = 25.88 ns    (57.5 %), step = 50.03 ps     (111 m%)
+    tran: time = 28.33 ns      (63 %), step = 213 ps       (473 m%)
+    tran: time = 30.39 ns    (67.5 %), step = 19.72 ps    (43.8 m%)
+    tran: time = 32.65 ns    (72.6 %), step = 50.03 ps     (111 m%)
+
+Warning from spectre at time = 33.4465 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16780): LTE tolerance was temporarily relaxed to step over a discontinuity in the signal: I68.I15.net9.
+
+    tran: time = 35 ns       (77.8 %), step = 213 ps       (473 m%)
+
+Warning from spectre at time = 36.8617 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16266): Error requirements were not satisfied because of convergence difficulties.
+Warning from spectre at time = 36.8617 ns during transient analysis `tran'.
+    WARNING (SPECTRE-16266): Error requirements were not satisfied because of convergence difficulties.
+
+    tran: time = 37.13 ns    (82.5 %), step = 20.85 ps    (46.3 m%)
+    tran: time = 39.38 ns    (87.5 %), step = 8.681 ps    (19.3 m%)
+    tran: time = 41.67 ns    (92.6 %), step = 240.5 ps     (534 m%)
+    tran: time = 43.92 ns    (97.6 %), step = 119.7 ps     (266 m%)
+Number of accepted tran steps =             3043
+
+Notice from spectre during transient analysis `tran'.
+    Trapezoidal ringing is detected during tran analysis.
+        Please use method=trap for better results and performance.
+
+Initial condition solution time: CPU = 36 ms, elapsed = 35.2449 ms.
+Intrinsic tran analysis time:    CPU = 21.404 s, elapsed = 21.4971 s.
+Total time required for tran analysis `tran': CPU = 21.444 s, elapsed = 21.5575 s.
+Time accumulated: CPU = 386.472 s (6m  26.5s), elapsed = 395.656 s (6m  35.7s).
+Peak resident memory used = 82.2 Mbytes.
+
+finalTimeOP: writing operating point information to rawfile.
+modelParameter: writing model parameter values to rawfile.
+element: writing instance parameter values to rawfile.
+outputParameter: writing output parameter values to rawfile.
+designParamVals: writing netlist parameters to rawfile.
+primitives: writing primitives to rawfile.
+subckts: writing subcircuits to rawfile.
+
+Aggregate audit (11:10:59 PM, Sat Nov 25, 2017):
+Time used: CPU = 387 s (6m  26.5s), elapsed = 398 s (6m  37.6s), util. = 97.2%.
+Time spent in licensing: elapsed = 177 ms.
+Peak memory used = 82.2 Mbytes.
+Simulation started at: 11:04:21 PM, Sat Nov 25, 2017, ended at: 11:10:59 PM, Sat Nov 25, 2017, with elapsed time (wall clock): 398 s (6m  37.6s).
+spectre completes with 0 errors, 30 warnings, and 26 notices.

@@ -1,0 +1,7 @@
+// Generated for: spectre
+// Generated on: Nov 25 21:54:08 2017
+// Design library name: ee315_project
+// Design cell name: dac_tb
+// Design view name: schematic
+simulator lang=spectre
+global 0 VDD!

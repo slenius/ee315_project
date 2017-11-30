@@ -79,7 +79,7 @@ tmp9 = make_sevVariableStruct()
 tmp9 = (ncons nil)
 )
 tmp9->name = "tau"
-tmp9->expression = "50p"
+tmp9->expression = "17p"
 tmp9->index = 9
 (unless tmp10
 tmp10 = make_sevVariableStruct()

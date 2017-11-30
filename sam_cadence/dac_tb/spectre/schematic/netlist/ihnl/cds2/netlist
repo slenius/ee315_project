@@ -1,0 +1,4 @@
+    I7 (net11 OUT DVDD GND inh_bulk_n) _sub6
+    I6 (IN net11 DVDD GND inh_bulk_n) _sub7
+ends _sub8
+// End of subcircuit definition.

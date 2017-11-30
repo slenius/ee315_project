@@ -1,0 +1,6 @@
+
+// Library name: ee315
+// Cell name: switch_ideal
+// View name: schematic
+subckt switch_ideal clk s1 s2
+parameters Ron=10

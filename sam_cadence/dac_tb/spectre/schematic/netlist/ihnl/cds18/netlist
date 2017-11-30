@@ -1,0 +1,20 @@
+    C18 (TOP NB\<0\>) capacitor c=Cu
+    C17 (TOP NB\<1\>) capacitor c=Cu
+    C16 (TOP NB\<2\>) capacitor c=Cu m=2
+    C15 (TOP NB\<3\>) capacitor c=Cu m=4
+    C14 (TOP NB\<4\>) capacitor c=Cu m=8
+    C13 (TOP NB\<5\>) capacitor c=Cu m=16
+    C12 (TOP NB\<6\>) capacitor c=Cu m=32
+    C11 (TOP NB\<7\>) capacitor c=Cu m=64
+    C10 (TOP NB\<8\>) capacitor c=Cu m=128
+    C8 (TOP NA\<8\>) capacitor c=Cu m=128
+    C7 (TOP NA\<7\>) capacitor c=Cu m=64
+    C6 (TOP NA\<6\>) capacitor c=Cu m=32
+    C5 (TOP NA\<5\>) capacitor c=Cu m=16
+    C4 (TOP NA\<4\>) capacitor c=Cu m=8
+    C3 (TOP NA\<3\>) capacitor c=Cu m=4
+    C2 (TOP NA\<2\>) capacitor c=Cu m=2
+    C1 (TOP NA\<1\>) capacitor c=Cu
+    C0 (TOP NA\<0\>) capacitor c=Cu
+ends cap_DAC
+// End of subcircuit definition.

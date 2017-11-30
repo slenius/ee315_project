@@ -1,0 +1,20 @@
+    I54 (con\<8\> NB\<7\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*64 \
+        wp=wu_bot_p*pn_b*64
+    I48 (DVDD NB\<0\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu \
+        wp=wu_bot_p*pn_b
+    I56 (con\<9\> NB\<8\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*128 \
+        wp=wu_bot_p*pn_b*128
+    I50 (con\<4\> NB\<3\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*4 \
+        wp=wu_bot_p*pn_b*4
+    I51 (con\<3\> NB\<2\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*2 \
+        wp=wu_bot_p*pn_b*2
+    I49 (con\<2\> NB\<1\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu \
+        wp=wu_bot_p*pn_b
+    I55 (con\<7\> NB\<6\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*32 \
+        wp=wu_bot_p*pn_b*32
+    I53 (con\<6\> NB\<5\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*16 \
+        wp=wu_bot_p*pn_b*16
+    I52 (con\<5\> NB\<4\> VREF GND inh_bulk_n) INV_DAC_SWITCHES wn=wu*8 \
+        wp=wu_bot_p*pn_b*8
+ends dac_switches_real_bot_B
+// End of subcircuit definition.

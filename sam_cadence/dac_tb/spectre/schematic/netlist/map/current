@@ -1,0 +1,68 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "dac_tb"
+  repList "spectre cmos_sch cmos.sch schematic veriloga"
+  stopList "spectre"
+  globalList "gnd! VDD!"
+  hierDelim "."
+  netlistDir "/home/sam/ee315_project/sam_cadence/simulation/dac_tb/spectre/schematic/netlist"
+ )
+( instViewTable
+ )
+( net
+( "gnd!" "0" )
+ )
+( inst
+ )
+( model
+( "Project_Lib2/cap_DAC/schematic" "cap_DAC" )
+( "ee315_project/dac_tb/schematic" "dac_tb" )
+( "Project_Lib2/INVD1/schematic" "INVD1" )
+( "Project_Lib2/ideal_TH/schematic" "ideal_TH" )
+( "ee315_project/dac_switches_real_top_B/schematic" "dac_switches_real_top_B" )
+( "ee315_project/BUFFD1_16-256/schematic" "_sub8" )
+( "ee315_project/INV_DAC_SWITCHES/schematic" "INV_DAC_SWITCHES" )
+( "ee315/switch_ideal/schematic" "switch_ideal" )
+( "ee315_project/INVD1_16-64/schematic" "_sub7" )
+( "ee315_project/dac_switches_real_top_A/schematic" "dac_switches_real_top_A" )
+( "ee315_project/INVD1_64-256/schematic" "_sub6" )
+( "ee315_project/INVD1/schematic" "INVD1_schematic" )
+( "Project_Lib2/dac_switches_B/schematic" "dac_switches_B" )
+( "ee315_project/BUFFD1_1-16/schematic" "_sub11" )
+( "ee315_project/dac_switches_real_bot_B/schematic" "dac_switches_real_bot_B" )
+( "ee315/ideal_balun/schematic" "ideal_balun" )
+( "Project_Lib2/dac_switches_A/schematic" "dac_switches_A" )
+( "Project_Lib2/clk_gen/schematic" "clk_gen" )
+( "ee315_project/INVD1_1-4/schematic" "_sub9" )
+( "ee315_project/INVD1_4-16/schematic" "_sub10" )
+( "Project_Lib2/BUFFD1/schematic" "BUFFD1" )
+( "ee315_project/dac_switches_real_bot_A/schematic" "dac_switches_real_bot_A" )
+ )
+( term
+ )
+( param
+ )
+( "ideal_TH" "ihnl/cds13/map" )
+( "switch_ideal" "ihnl/cds12/map" )
+( "clk_gen" "ihnl/cds11/map" )
+( "_sub9" "ihnl/cds5/map" )
+( "INV_DAC_SWITCHES" "ihnl/cds3/map" )
+( "_sub8" "ihnl/cds2/map" )
+( "_sub11" "ihnl/cds7/map" )
+( "dac_switches_A" "ihnl/cds17/map" )
+( "dac_switches_real_bot_A" "ihnl/cds15/map" )
+( "_sub6" "ihnl/cds0/map" )
+( "dac_tb" "ihnl/cds21/map" )
+( "dac_switches_B" "ihnl/cds19/map" )
+( "INVD1" "ihnl/cds9/map" )
+( "_sub10" "ihnl/cds6/map" )
+( "dac_switches_real_top_A" "ihnl/cds4/map" )
+( "cap_DAC" "ihnl/cds18/map" )
+( "dac_switches_real_top_B" "ihnl/cds20/map" )
+( "ideal_balun" "ihnl/cds8/map" )
+( "dac_switches_real_bot_B" "ihnl/cds16/map" )
+( "INVD1_schematic" "ihnl/cds14/map" )
+( "BUFFD1" "ihnl/cds10/map" )
+( "_sub7" "ihnl/cds1/map" )
+ )

@@ -1,0 +1,5 @@
+
+// Library name: Project_Lib2
+// Cell name: BUFFD1
+// View name: schematic
+subckt BUFFD1 DVDD GND IN OUT inh_bulk_n
