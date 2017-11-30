@@ -254,8 +254,37 @@ Fourth, after the bit is sampled, we reset the comparator. Here again we use the
 Fifth, once all 10 bits are shiftd out, we assert the done signal internally to the logic and the comparator is held in low power reset, ready for when the next sample comes in.
 
 % TODO(sam) reference
-[2006 Chen] gives us a speedup achievable for using asynchronous logic in equation 3 of that paper. Here Chen shows that as the number of bits in a converter increases that asynchronous processing will yield a speedup of up to a factor of two.
-This means that for no additional energy per bit, that a converter using asynchronous logic can run twice as fast as it's synchronous counterpart. The decision to use asynchronous logic here is obvious.
+[2006 Chen] gives us a speedup achievable for using asynchronous logic in equation 5 of that paper. Here Chen shows that the expected speedup for an N bit converter approaches 2 for a large number of bits, for our 10 bit converter, the expected speedup is 1.56.
+This means that for no additional energy per bit, that a converter using asynchronous logic can run over 1.5 times as fast as it's synchronous counterpart. The decision to use asynchronous logic here is obvious.
+
+For computing the sampling frequency in our converter we use this speedup factor as a guideline. First we compute the maximum synchronous sampling speed given our specifications for \P_{meta} and the measured performance characteristics of the circuit. Our comparator has a measured regeneration time of 16.7ps and a slewing time of 64ps. We require two FO4 buffers to connect our comparator to our SAR logic block, each with a delay of 40ps. Maximum synchronous sampling speed assuming a 50\% duty cycle clock, 12 clocks per conversion can be computed as follows:
+
+\begin{equation}
+  N_{taus} = ln\left(\frac{N_{codes}}{P_{meta}}\right) = 20.7
+\end{equation}
+
+\begin{equation}
+  T_{clock,high} = N_{taus} * \tau_{comp} + 2 * T_{FO4} + T_{slew} = \SI{490}{\pico\seconds}
+\end{equation}
+
+\begin{equation}
+  T_{clock} = 2 * T_{clock,high}
+\end{equation}
+
+\begin{equation}
+  F_{clock,max} = \SI{1.02}{\giga\hertz}
+\end{equation}
+
+\begin{equation}
+  T_{sample,sync} = 12 * T_{clock}
+\end{equation}
+
+\begin{equation}
+  F_{sample,max} = \SI{1.02}{\giga\hertz}
+\end{equation}
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

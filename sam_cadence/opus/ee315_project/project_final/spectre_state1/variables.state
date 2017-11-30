@@ -25,7 +25,7 @@ tmp3 = make_sevVariableStruct()
 tmp3 = (ncons nil)
 )
 tmp3->name = "fs"
-tmp3->expression = "130M"
+tmp3->expression = "125M"
 tmp3->index = 3
 (unless tmp4
 tmp4 = make_sevVariableStruct()
@@ -88,7 +88,7 @@ tmp10 = make_sevVariableStruct()
 tmp10 = (ncons nil)
 )
 tmp10->name = "fin"
-tmp10->expression = "3/64*fs"
+tmp10->expression = "32/64*fs"
 tmp10->index = 10
 list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10)
 )

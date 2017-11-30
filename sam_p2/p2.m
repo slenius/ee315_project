@@ -18,7 +18,7 @@ tau = 16.7e-12;
 n_taus = 20.7;
 regen_time = n_taus * tau;
 fo4_time = 40e-12;
-slew_time = 65e-12;
+slew_time = 64e-12;
 high_time = regen_time + 2 * fo4_time + slew_time;
 bit_time = high_time * 2;
 sync_time = bit_time * 12;
@@ -28,7 +28,7 @@ async_speed = speedup * sync_speed;
 
 % ideal quantizer
 %data_dir = '../sam_cadence/pt_2_tran_psf';
-data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate_2';
+data_dir = '../sam_cadence/pt_2_tran_noise_psf_moderate_32_64';
 
 
 ideal_vod = cds_srr(data_dir, 'tran-tran', 'vod');
@@ -39,7 +39,7 @@ figure()
 plot(ideal_vid.time, ideal_vid.V, 'b-*');
 hold on
 plot(ideal_vod.time, ideal_vod.V * (p2_c.v_fs / 2) / 0.5, 'r-*');
-title('Noiseless Transient Simulation');
+title('Transient Noise Simulation');
 legend('vid', 'vod (scaled)');
 xlabel('Time');
 ylabel('Voltage');
@@ -49,11 +49,12 @@ N = 64;
 
 d = ideal_vod.V(1:N);
 
-fs = 100e6;
+fs = 125e6;
 
 [s_dbfs, f] = my_psd_dbfs(d, fs, N);
 [~, idx] = max(s_dbfs);
 input_freq = f(idx);
+fprintf('Sampling Frequency = %f MHz\n', fs/1e6);
 fprintf('Input Frequency = %f MHz\n', input_freq/1e6);
 
 % compute snr
@@ -61,7 +62,7 @@ snr_fft = my_snr_fft(d, fs);
 
 figure();
 plot(f/1e6, s_dbfs)
-title_s = sprintf('Noiselsess Transient Simulation - SNR = %0.2fdB', snr_fft);
+title_s = sprintf('Transient Noise Simulation - SNR = %0.2fdB', snr_fft);
 title(title_s);
 ylabel('dBFS');
 xlabel('Frequency (MHz)')
