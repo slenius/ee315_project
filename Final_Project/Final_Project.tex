@@ -230,7 +230,7 @@ $C_{p2}$ & \SI{200}{\femto\farad}  \\ \hline
 \end{figure}
 
 % TODO(sam) reference
-Here we implement a 9 bit capacitive constant common mode top plate sampling DAC as in [2013 Tripathi].
+Here we implement a 9 bit capacitive constant common mode top plate sampling DAC as in \cite{Tripathi:2013}.
 
 Each bit of the DAC is binary weighted with a single dummy value in the
 sequence 1, 1, 2, 4, 8, 16, 32, 64, 128.
@@ -240,6 +240,7 @@ In order to have equal time constants between capacitors and inverter cells, equ
 
 One complication of this approach is that the electrical effort to drive the inverters scales with this same sequence. 
 Hence as the driver inverters scale up, the sequence of gate drive buffers must as well for optimal delay and power consumption.
+
 This leads to each DAC inverter cell being designed individually for the expected range of electrical effort of that cell across optimization.
 
 % TODO(sam) put a real circuit here
@@ -280,8 +281,7 @@ Accounting for the 1\% parasitic capacitance to ground on the top plate of the D
 
 % TODO(sam) timing diagram
 
-% TODO(sam) reference
-In this ADC we implement asynchronous reset logic as in [2006 Chen]. The state machine that our asynchronous logic implements is as follows.
+In this ADC we implement asynchronous reset logic as in \cite{Chen:2006}. The state machine that our asynchronous logic implements is as follows.
 
 First the sampling clock edge rises, this opens the sampling gates and resets the internal state of the logic.
 
@@ -296,18 +296,14 @@ Fourth, after the bit is sampled, we reset the comparator. Here again we use the
 
 Fifth, once all 10 bits are shiftd out, we assert the done signal internally to the logic and the comparator is held in low power reset, ready for when the next sample comes in.
 
-% TODO(sam) reference
-[2006 Chen] gives us a speedup achievable for using asynchronous logic in equation 5 of that paper. Here Chen shows that the expected speedup for an N bit converter approaches 2 for a large number of bits, for our 10 bit converter, the expected speedup is 1.56.
-This means that for no additional energy per bit, that a converter using asynchronous logic can run over 1.5 times as fast as it's synchronous counterpart. The decision to use asynchronous logic here is obvious.
-
-For computing the sampling frequency in our converter we use this speedup factor as a guideline. First we compute the maximum synchronous sampling speed given our specifications for \P_{meta} and the measured performance characteristics of the circuit. Our comparator has a measured regeneration time of 16.7ps and a slewing time of 64ps. We require two FO4 buffers to connect our comparator to our SAR logic block, each with a delay of 40ps. Maximum synchronous sampling speed assuming a 50\% duty cycle clock, 12 clocks per conversion can be computed as follows:
+We compute the maximum synchronous sampling speed given our specifications for $P_{meta}$ and the measured performance characteristics of the circuit. Our comparator has a measured regeneration time of 16.7ps and a slewing time of 64ps. We require two FO4 buffers to connect our comparator to our SAR logic block, each with a delay of 40ps. Maximum synchronous sampling speed assuming a 50\% duty cycle clock, 12 clocks per conversion can be computed as follows:
 
 \begin{equation}
   N_{taus} = ln\left(\frac{N_{codes}}{P_{meta}}\right) = 20.7
 \end{equation}
 
 \begin{equation}
-  T_{clock,high} = N_{taus} * \tau_{comp} + 2 * T_{FO4} + T_{slew} = \SI{490}{\pico\seconds}
+  T_{clock,high} = N_{taus} * \tau_{comp} + 2 * T_{FO4} + T_{slew} = \SI{490}{\pico\second}
 \end{equation}
 
 \begin{equation}
@@ -315,19 +311,21 @@ For computing the sampling frequency in our converter we use this speedup factor
 \end{equation}
 
 \begin{equation}
-  F_{clock,max} = \SI{1.02}{\giga\hertz}
-\end{equation}
-
-\begin{equation}
   T_{sample,sync} = 12 * T_{clock}
 \end{equation}
 
 \begin{equation}
-  F_{sample,max} = \SI{1.02}{\giga\hertz}
+  F_{sample,sync} = \SI{85.1}{\mega\siemens\per\second}
 \end{equation}
 
+\cite{Chen:2006} gives us a speedup achievable for using asynchronous logic in equation 5 of that article. Here Chen shows that the expected speedup for an N bit converter approaches 2 for a large number of bits, for our 10 bit converter, the expected speedup is 1.56.
+This means that for no additional energy per bit, that a converter using asynchronous logic can run over 1.5 times as fast as it's synchronous counterpart. The decision to use asynchronous logic here is obvious.
 
+\begin{equation}
+  F_{sample,async} = F_{sample,sync} * AsyncSpeedup = \SI{133.2}{\mega\siemens\per\second}
+\end{equation}
 
+This establishes the maximum achievable speed of our device while maintaining the $P_{meta}$ specification.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

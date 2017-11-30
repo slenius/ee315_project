@@ -9,12 +9,15 @@ assert(c, 'N is not a power of two!');
 % compute SNR from FFT directly
 s = abs(fft(x));
 s = s/max(s);
-s = s(1:N/2);
-f = [0:1:(N/2-1)]*fs/N;
+s = s(1:(1+N/2));
+f = [0:1:(N/2)]*fs/N;
 [~, i_fund] = max(s);
 fin = f(i_fund);
-i_3rd = find(f==fin*3);
-i_5th = find(f==fin*5);
+fmax = max(f);
+ 
+
+%i_3rd = find(f==fin*3);
+%i_5th = find(f==fin*5);
 
 % compute the power by squaring
 r = s.^2;
@@ -23,10 +26,10 @@ r = s.^2;
 r_no_h = r;
 r_no_h(1) = 0;
 r_no_h(i_fund) = 0;
-r_no_h(i_3rd) = 0;
-r_no_h(i_5th) = 0;
+%r_no_h(i_3rd) = 0;
+%r_no_h(i_5th) = 0;
 
-a = r(4);
+a = r(i_fund);
 b = sum(r_no_h);
 
 snr_fft = 10*log10(a/b);
