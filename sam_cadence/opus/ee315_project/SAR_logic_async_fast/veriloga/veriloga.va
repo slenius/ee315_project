@@ -4,16 +4,16 @@
 `include "constants.vams"
 `include "disciplines.vams"
 
-module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_clk_async_n, debug) ;
+module SAR_logic(phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_clk_async_n, ready) ;
 
   output [0:9] Dout;
   output [0:9] conP;
   output [0:9] conM;
   output sar_clk_async;
   output sar_clk_async_n;
-  output debug;
+  output ready;
 
-  input ready, phiS, outp, outm;
+  input phiS, outp, outm;
 
   electrical [0:9] Dout;
   electrical [0:9] conP;
@@ -26,7 +26,6 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_c
   parameter real vl = 0.0;
   parameter real vth = 0.6;
   parameter real tt = 50p from [0:inf); //Transition time, do not change
-  parameter real tx = 1p from [0:inf);
 
   real adc_out[0:bits-1];
   real dac_controlP[0:bits-1];
@@ -149,7 +148,7 @@ module SAR_logic(ready, phiS, outp, outm, Dout, conP, conM, sar_clk_async, sar_c
 
   V(sar_clk_async) <+ transition(clk_out,tL,tt);
   V(sar_clk_async_n) <+ transition(clk_out_n,tL,tt);
-  V(debug) <+ transition(ready_int,tx,tx);
+  V(ready) <+ transition(ready_int,tL,tt);
 
 
 end
